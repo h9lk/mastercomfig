@@ -51,7 +51,19 @@ Note that the OpenGL optimizations will set `lighting_ex=high` to avoid lighting
 
 This is a bug with TF2's legacy ToGL renderer and an interaction with the Mesa drivers. You can fix it by adding `lighting_ex=high` to your `modules.cfg`, or by using the Vulkan version of the game. If you apply OpenGL optimizations (see previous section), they will automatically set `lighting_ex=high`.
 
-You can also configure the drirc file (optionally using the adriconf GUI) to set `disable_uniform_array_resize` to `true` for Team Fortress 2.
+You can also configure the ~/.drirc file to set `disable_uniform_array_resize` to `true` for Team Fortress 2 (or any program), such as:
+```c
+<driconf>
+    <device driver="XXXX">
+        <application name="Default">
+            <option name="disable_uniform_array_resize" value="true" />
+        </application>
+    </device>
+</driconf>
+```
+where you need to find your driver ID using for example `lspci -k | grep -E1 'VGA'` and looking for a 4 letter code (should be last).
+
+Or optionally using the adriconf GUI under `debugging` -> `disable the glsl optimization that resizes uniform arrays`.
 
 ## My chat is disabled
 
