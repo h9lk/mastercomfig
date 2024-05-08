@@ -45,7 +45,19 @@ r_drawviewmodel 1
 
 Это ошибка с более поздними версиями Mesa.  Вы можете исправить это, добавив `lighting_ex=high` в ваш `modules.cfg`.
 
-Вы также можете сконфигурировать файл drirc (опционально с помощью графического интерфейса adriconf), чтобы установить `disable_uniform_array_resize` на `true` для Team Fortress 2.
+Вы также можете сконфигурировать файл ~/.drirc чтобы установить `disable_uniform_array_resize` на `true` для Team Fortress 2 (или любой другой программы), например, так:
+```c
+<driconf>
+    <device driver="XXXX">
+        <application name="Default">
+            <option name="disable_uniform_array_resize" value="true" />
+        </application>
+    </device>
+</driconf>
+```
+где нужно найти идентификатор драйвера, например, с помощью `lspci -k | grep -E1 'VGA'` и поискать 4-буквенный код (должен быть последним).
+
+Или, как вариант, используя adriconf GUI в разделе `debugging` -> `disable the glsl optimization that resizes uniform arrays`.
 
 ## Мой чат отключен
 
