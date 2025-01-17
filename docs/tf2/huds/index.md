@@ -11,7 +11,7 @@ The HUD uses a vast system called VGUI2, and it is documented by many HUD author
 ## Text guides
 
 * [JarateKing HUD reference](https://github.com/JarateKing/TF2-Hud-Reference) - A great reference for all sorts of HUD editing, both from the basics to clever advanced and technical aspects
-* [DoodleStuff TF2 HUD Editing Guide](http://doodlesstuff.com/?p=tf2hud) - A well known, easy to use guide that goes over how to get familiar with most of HUD editing
+* [DoodleStuff TF2 HUD Editing Guide](https://doodlesstuff.com/?p=tf2hud) - A well known, easy to use guide that goes over how to get familiar with most of HUD editing
 * [Flame's Guide to HUDs](https://issuu.com/stefanbunduc/docs/flamehud) - A PDF guide that goes over common HUD elements
 * Boen's Guide to HUDs - [Part 1](https://mods.fightingamphibians.org/hud1.png) and [Part 2](https://mods.fightingamphibians.org/hud2.jpg)
 * [Revan's resource file list](https://github.com/cooolbros/tf2-res-file-list) - A list of HUD elements with images and how to edit them
