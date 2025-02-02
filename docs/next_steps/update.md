@@ -15,4 +15,4 @@ sure you stay up to date with the changes to mastercomfig.
 mastercomfig gets updates frequently, so to get the latest improvements, make
 sure you check here for new releases frequently, or you can get notifications
 about updates on [Discord](https://discord.gg/comfig),
-[Steam Group](https://steamcommunity.com/groups/comfig), or its [Steam Chat](https://s.team/chat/IM8fJTnx).
+[Steam Group](https://steamcommunity.com/groups/comfig.
