@@ -557,7 +557,6 @@ texture_quality=high
 
 Настройка по умолчанию: в зависимости от того, какой пресет вы используете в данный момент.
 
-* **`texture_filter=bilinear`**: Билинейная фильтрация
 * **`texture_filter=trilinear`**: Трилинейная фильтрация
 * **`texture_filter=aniso2x`**: Анизотропная фильтрация 2x
 * **`texture_filter=aniso4x`**: Анизотропная фильтрация 4x

@@ -490,10 +490,6 @@
             "value": "blocky"
           },
           {
-            "value": "bilinear",
-            "display": "Bilinear filtering"
-          },
-          {
             "value": "trilinear",
             "display": "Trilinear filtering"
           },
@@ -868,7 +864,9 @@
         "name": "snapshot_buffer",
         "description": "Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.",
         "advanced_display": "Also known as linear interpolation (lerp or interp).",
-        "tags": ["advanced"],
+        "tags": [
+          "advanced"
+        ],
         "values": [
           {
             "value": "auto",

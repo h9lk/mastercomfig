@@ -21,7 +21,7 @@ if ( IsHolidayActive( Constants.EHoliday.kHoliday_Halloween ) )
 }
 // Play Taps during soldier holiday
 else if ( IsHolidayActive( Constants.EHoliday.kHoliday_Soldier ) ) {
-    sConCommands += "holiday/gamestartup_solider.mp3";
+    sConCommands += "holiday/gamestartup_soldier.mp3";
 }
 // Randomly pick from the regular main menu music tracks
 else {

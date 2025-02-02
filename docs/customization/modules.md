@@ -561,7 +561,6 @@ Controls texture smoothing/filtering.
 Default setting: based on which preset you are currently using.
 
 - **`texture_filter=blocky`**: Blocky textures and world lighting
-- **`texture_filter=bilinear`**: Bilinear filtering
 - **`texture_filter=trilinear`**: Trilinear filtering
 - **`texture_filter=aniso2x`**: Anisotropic filtering 2x
 - **`texture_filter=aniso4x`**: Anisotropic filtering 4x
