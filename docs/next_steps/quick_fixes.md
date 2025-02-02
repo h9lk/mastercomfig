@@ -7,7 +7,7 @@ description: Having trouble with mastercomfig? Here's where to go to first for s
 This is a list of common issues users experience with mastercomfig, and how to solve them.
 
 If you find that you need more assistance, reach out to our community on
-[Discord](https://discord.gg/comfig).
+[Discord](https://comfig.app/discord).
 
 ## mastercomfig isn't loading! / My custom configs aren't loading!
 

@@ -64,7 +64,7 @@ Also, the quality of English prose may be checked with `pnpm prose`. This is not
 
 ## Support
 
-You can help users who ask questions on [Discord](https://discord.gg/comfig).
+You can help users who ask questions on [Discord](https://comfig.app/discord).
 
 ## Config
 
