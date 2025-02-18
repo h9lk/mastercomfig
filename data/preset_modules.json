@@ -13,7 +13,7 @@
     "default": "large"
   },
   "bandwidth": {
-    "default": "1.0Mbps"
+    "default": "2.0Mbps"
   },
   "download": {
     "default": "custom"
