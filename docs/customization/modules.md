@@ -61,6 +61,18 @@ This means that you can change this alias in the game and have multiple versions
 
 ## Networking modules
 
+### Local Server
+
+Whether to allow remote connections to your local server.
+
+- **CPU usage:** none
+- **GPU usage:** none
+
+Default setting: **`local_server=deny`** (all presets).
+
+- **`local_server=deny`**: Block remote connections.
+- **`local_server=allow`**: Allow remote connections (still needs port forwarding / firewall access, unless you use SDR).
+
 ### Packet Rate
 
 Controls how fast you send to and receive from the server.
@@ -185,6 +197,7 @@ Controls extended lighting commands which cause a material system reload.
 Default setting: based on which preset you are currently using.
 
 - **`lighting_ex=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs, due to rendering reloads.
+- **`lighting_ex=medium`**: Disables phong, but keeps material paths for specular and bumpmaps, as disabling these can cause glitches on DX9. May reduce performance on modern PCs, due to rendering reloads.
 - **`lighting_ex=high`**: Uses whatever the material's lighting needs (enables bumpmaps, specular and phong).
 
 ### Shadows

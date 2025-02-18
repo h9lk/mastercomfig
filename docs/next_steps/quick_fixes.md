@@ -147,3 +147,7 @@ Check to see if you have `-dxlevel 100` in your TF2 launch options, it may have 
 ## I got banned from the Discord server
 
 You can submit a single [ban appeal](https://dyno.gg/form/dae64461) a few days after receiving your ban.
+
+## What happened to the OpenGL addon?
+
+OpenGL was replaced with Vulkan by default in the April 18, 2024 update. It's highly recommended that you use Vulkan. However, if you are not able to find a supported driver for your system and must use the legacy ToGL renderer, you can use the `apply_opengl_opts` command in your `cfg/overrides/post_comfig.cfg` to apply the OpenGL optimizations like the addon used to.

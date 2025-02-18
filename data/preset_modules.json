@@ -1,4 +1,7 @@
 {
+  "local_server": {
+    "default": "deny"
+  },
   "packet_rate": {
     "default": "standard",
     "very-low": "congestion"
@@ -37,11 +40,12 @@
     "default": "high",
     "very-low": "low",
     "low": "low",
-    "medium-low": "low",
+    "medium-low": "medium",
     "none": ""
   },
   "shadows": {
     "default": "off",
+    "medium-low": "very_low",
     "medium": "medium",
     "medium-high": "medium",
     "high": "high",
