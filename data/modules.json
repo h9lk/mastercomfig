@@ -753,12 +753,6 @@
             "value": "off"
           },
           {
-            "value": "preload"
-          },
-          {
-            "value": "itemtest"
-          },
-          {
             "value": "dustbowl"
           }
         ]
@@ -805,18 +799,6 @@
   },
   "misc": {
     "modules": [
-      {
-        "name": "mod_support",
-        "type": "switch",
-        "values": [
-          {
-            "value": "off"
-          },
-          {
-            "value": "on"
-          }
-        ]
-      },
       {
         "name": "party_mode",
         "display": "Party Join Mode",

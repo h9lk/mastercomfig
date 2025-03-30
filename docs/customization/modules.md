@@ -821,7 +821,7 @@ Default setting: based on which preset you are currently using.
 
 ### Map Background
 
-Controls the live map that appears in the background of the main menu. Some options automatically exit immediately, for the sake of preloading assets.
+Controls the live map that appears in the background of the main menu.
 
 - **CPU usage:** none
 - **GPU usage:** none
@@ -829,8 +829,6 @@ Controls the live map that appears in the background of the main menu. Some opti
 Default setting: **`dynamic_background=off`** (all presets).
 
 - **`dynamic_background=off`**: No main menu map background on startup.
-- **`dynamic_background=preload`**: `preload_room` map background for yttrium's preloading (auto disconnects). **You have to install [the map](https://github.com/Yttrium-tYcLief/CompVMInstaller/blob/master/Project/CompVMInstaller/Resources/preload_room.bsp?raw=true) to `tf/maps`, or else this will not function.**
-- **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
 - **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
 
 ## Sound modules
@@ -867,21 +865,6 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 - **`voice_chat=on`**: Enables the in-game voice chat system.
 
 ## Misc modules
-
-### Mod Support
-
-Ensures compatibility with animation and model mods.
-
-!!! info
-    You may want to also enable preloading using the [Map Background module](#map-background).
-
-- **CPU usage:** none
-- **GPU usage:** none
-
-Default setting: **`mod_support=on`** (all presets).
-
-- **`mod_support=off`**: Does not block settings that may cause crashes with animation and model mods.
-- **`mod_support=on`**: Blocks settings that may cause crashes with animation and model mods.
 
 ### Party Join Mode
 

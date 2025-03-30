@@ -295,9 +295,6 @@
     "default": "on",
     "very-low": "off"
   },
-  "mod_support": {
-    "default": "on"
-  },
   "party_mode": {
     "default": "invite"
   },
