@@ -834,18 +834,6 @@
   "networking": {
     "modules": [
       {
-        "name": "local_server",
-        "description": "Whether to allow remote connections to your local server.",
-        "values": [
-          {
-            "value": "deny"
-          },
-          {
-            "value": "allow"
-          }
-        ]
-      },
-      {
         "name": "packet_rate",
         "description": "Controls how fast you send to and receive from the server.",
         "values": [

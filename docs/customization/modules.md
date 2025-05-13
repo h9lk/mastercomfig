@@ -61,18 +61,6 @@ This means that you can change this alias in the game and have multiple versions
 
 ## Networking modules
 
-### Local Server
-
-Whether to allow remote connections to your local server.
-
-- **CPU usage:** none
-- **GPU usage:** none
-
-Default setting: **`local_server=deny`** (all presets).
-
-- **`local_server=deny`**: Block remote connections.
-- **`local_server=allow`**: Allow remote connections (still needs port forwarding / firewall access, unless you use SDR).
-
 ### Packet Rate
 
 Controls how fast you send to and receive from the server.

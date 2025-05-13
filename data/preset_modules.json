@@ -1,7 +1,4 @@
 {
-  "local_server": {
-    "default": "deny"
-  },
   "packet_rate": {
     "default": "standard",
     "very-low": "congestion"
