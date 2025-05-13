@@ -25,7 +25,7 @@
   "lighting": {
     "default": "medium_high",
     "very-low": "very_low",
-    "low": "low",
+    "low": "medium",
     "medium-low": "medium",
     "medium": "medium_high",
     "medium-high": "medium_high",
