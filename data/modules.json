@@ -384,9 +384,6 @@
         "name": "ragdolls",
         "values": [
           {
-            "value": "hidden"
-          },
-          {
             "value": "off"
           },
           {
@@ -465,9 +462,6 @@
         "display": "Texture Quality",
         "values": [
           {
-            "value": "very_low"
-          },
-          {
             "value": "low"
           },
           {
@@ -490,7 +484,8 @@
         "type": "slider",
         "values": [
           {
-            "value": "blocky"
+            "value": "blocky",
+            "display": "Blocky textures and world lighting with bilinear filtering"
           },
           {
             "value": "trilinear",
@@ -855,7 +850,7 @@
         "values": [
           {
             "value": "auto",
-            "display": "Automatic"
+            "display": "Automatic (recommended)"
           },
           {
             "value": "safe"

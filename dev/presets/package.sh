@@ -23,6 +23,7 @@ for F in ../../config/cfg/presets/*; do
         printf "exec overrides/setup_hook.cfg;"
         printf "preset;"
         printf "exec comfig/addons.cfg;"
+        printf "exec comfig/legacy_tweaks.cfg;"
         printf "modules_c;"
         printf "run_modules;"
         printf "exec comfig/echo.cfg;"

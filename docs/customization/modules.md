@@ -82,7 +82,7 @@ Controls how reliable to consider the snapshots you receive from the server to a
 
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
-- **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer_safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer_low`. For Spy this sets `snapshot_buffer_safe`.
+- **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer_safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer_low`. For Spy this sets `snapshot_buffer_safe`. **This is the recommended setting.**
 - **`alias snapshot_buffer snapshot_buffer_low`**: A dangerously minimal buffering time which does not have room for any networking or server delays or drops (**15ms lerp** when using `packet_rate=standard`, or **30ms lerp** when using `packet_rate=congestion`). There is almost no reason to use this option, except in LAN scenarios, as `snapshot_buffer=auto` will optimize lag compensation for each class.
 - **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30ms lerp** when using `packet_rate=standard`, or **60ms lerp** when using `packet_rate=congestion`).
 - **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45ms lerp** when using `packet_rate=standard`, or **90ms lerp** when using `packet_rate=congestion`).
@@ -112,7 +112,7 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`bandwidth=1.0Mbps`** (all presets).
+Default setting: **`bandwidth=2.0Mbps`** (all presets).
 
 - **`bandwidth=128Kbps`**: 128Kbps game traffic bandwidth.
 - **`bandwidth=192Kbps`**: 192Kbps game traffic bandwidth.
@@ -179,13 +179,16 @@ Default setting: based on which preset you are currently using.
 
 Controls extended lighting commands which cause a material system reload.
 
+!!! warning
+    Using any other level than **`lighting_ex=high`** can cause visual glitches in items and props. Mainly, this affects weapon warpaints and Australium weapons.
+
 - **CPU usage:** low
 - **GPU usage:** high
 
 Default setting: based on which preset you are currently using.
 
-- **`lighting_ex=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs, due to rendering reloads.
-- **`lighting_ex=medium`**: Disables phong, but keeps material paths for specular and bumpmaps, as disabling these can cause glitches on DX9. May reduce performance on modern PCs, due to rendering reloads.
+- **`lighting_ex=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs due to rendering reloads.
+- **`lighting_ex=medium`**: Disables phong, but keeps material paths for specular and bumpmaps, as disabling these can cause glitches on DirectX 9. May reduce performance on modern PCs due to rendering reloads.
 - **`lighting_ex=high`**: Uses whatever the material's lighting needs (enables bumpmaps, specular and phong).
 
 ### Shadows
@@ -391,8 +394,9 @@ Controls blood on hurt players and some bullet decals on props.
 Default setting: based on which preset you are currently using.
 
 - **`decals_models=off`**: Disables model decals.
-- **`decals_models=low`**: Allow up to 9 model decals.
-- **`decals_models=high`**: Allow up to 50 model decals.
+- **`decals_models=low`**: Allows up to 1 model decal.
+- **`decals_models=medium`**: Allows up to 9 model decals.
+- **`decals_models=high`**: Allows up to 50 model decals.
 
 ### Map Decals
 
@@ -470,7 +474,7 @@ Controls physics simulation and fading for bodies that spawn on death.
 
 Default setting: based on which preset you are currently using.
 
-- **`ragdolls=hidden`**: Makes ragdolls invisible, but keeps them in the map, decreasing performance over time.
+- **`ragdolls=hidden`** and **`ragdolls=low`**: Deprecated settings. They are the same as `ragdolls=off`.
 - **`ragdolls=off`**: Disables ragdolls by fading them out quickly.
 - **`ragdolls=medium`**: Enables standard physics ragdolls.
 - **`ragdolls=high`**: Enables ragdolls with collisions with a high fade out time, as well as special animations like decapitation.
@@ -561,7 +565,7 @@ Controls texture smoothing/filtering.
 
 Default setting: based on which preset you are currently using.
 
-- **`texture_filter=blocky`**: Blocky textures and world lighting
+- **`texture_filter=blocky`**: Blocky textures and world lighting with bilinear filtering
 - **`texture_filter=trilinear`**: Trilinear filtering
 - **`texture_filter=aniso2x`**: Anisotropic filtering 2x
 - **`texture_filter=aniso4x`**: Anisotropic filtering 4x
@@ -625,7 +629,7 @@ Default setting: **`fpscap=400`** (all presets).
 - **`fpscap=360`**: Sets FPS cap to 360 FPS.
 - **`fpscap=400`**: Sets FPS cap to 400 FPS.
 - **`fpscap=1000`**: Sets FPS cap to 1000 FPS (maximum safe value).
-- **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000FPS in meaningful game scenarios.
+- **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000 FPS in meaningful game scenarios.
 
 ### VSync
 
@@ -859,7 +863,7 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 Controls the privacy of your Casual/Competitive matchmaking party.
 
 !!! warning
-    The Friends Only restriction for parties can be bypassed, which means anyone can join your party if they have your Steam ID. Leaving your party open can result in anyone to join your party and spam party chat, causing lag, sound spam and other disruptions.
+    The Friends-Only restriction for parties can be bypassed, which means anyone can join your party if they have your Steam ID. Leaving your party open can result in anyone to join your party and spam party chat, causing lag, sound spam and other disruptions.
 
 - **CPU usage:** none
 - **GPU usage:** none
