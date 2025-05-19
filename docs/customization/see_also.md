@@ -24,13 +24,6 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 * [Paysus Animation Overhauls](https://steamcommunity.com/groups/PaysusSkins)
   — First-person animation mods which greatly enhance the animations
 
-* [yttrium's viewmodels](https://github.com/Yttrium-tYcLief/CompVMInstaller/releases/latest)
-  — Customize hiding individual viewmodels
-
-!!! info
-
-    yttrium's viewmodels installer will add an `autoexec.cfg` inside of your `tf/cfg` folder. You may delete it if you want since it is not used and not needed.
-
 * [Horsie's Viewmodel Editor](https://github.com/a-horsey/horsies-viewmodel-editor)
   — Edit your viewmodels however you want
 
@@ -82,8 +75,10 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 
 * [RGL](https://rgl.gg/)
   — The Largest NA TF2 Competitive League
+
 * [ETF2L](https://etf2l.org/)
   — European Team Fortress 2 Competitive League
+
 * [TF2 Coaching Central](https://discord.com/invite/tf2-coaching-central-tf2cc-727627956058325052)
   — TF2CC is a hub for coaches and new players to provide guides, mentoring, demo reviews, pugs and a Newcomer's Cup!
 
