@@ -15,9 +15,9 @@ Thus, it's highly appreciated to benchmark mastercomfig and any changes you make
 1. Download the [`sbmrk24` 24-player benchmark file](https://drive.google.com/file/d/1xbuiBnZb301EXFyYuQP17KS21AWM_v5o/view) by shounic.
 2. Move it to the `tf/` folder.
 3. Launch the game.
-4. Enter `timedemo benchmark_test`
+4. Enter `timedemo sbmrk24`
 5. Record your timedemo output from the console `X frames X seconds X fps (X ms/f) X fps variability`.
-6. Repeat `timedemo benchmark_test` as many times as you like to decrease the effects of systemic variation.
+6. Repeat `timedemo sbmrk24` as many times as you like to decrease the effects of systemic variation.
 
 ## Benchmark data
 

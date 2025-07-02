@@ -3,11 +3,12 @@ site_author: mastercoms
 site_url: "https://docs.comfig.app/"
 site_description: A modern customization framework.
 copyright: >-
-  Copyright &copy; 2016-2024 mastercoms<br><br>Valve, the Valve logo, Steam, the
+  Copyright &copy; 2016-2025 mastercoms<br><br>Valve, the Valve logo, Steam, the
   Steam logo, Team Fortress, the Team Fortress logo, Source, the Source logo are
   trademarks and/or registered trademarks of Valve Corporation in the U.S.
-  and/or other countries.<br><br>mastercomfig is not sponsored, endorsed,
-  licensed by, or affiliated with Valve Corporation.
+  and/or other countries. All other trademarks are property of their
+  respective owners in the US and other countries.<br><br>mastercomfig is
+  not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.
 nav:
   - About:
       - Home: index.md
@@ -234,7 +235,7 @@ extra:
   social:
     - icon: fontawesome/brands/discord
       name: Discord
-      link: "https://discord.gg/mastercomfig-389089828249010188"
+      link: "https://comfig.app/discord"
     - icon: fontawesome/brands/steam
       name: Steam Group
       link: "https://steamcommunity.com/groups/comfig"

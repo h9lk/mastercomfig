@@ -4,9 +4,22 @@ description: Help me work on and improve mastercomfig!
 
 # Support me
 
-You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) with money, or gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N). There's also a $2.99 supporter subscription on the [Discord server](https://discord.com/servers/mastercomfig-389089828249010188).
+## Monetarily
 
-You can also gift me using Steam Wallet Funds! [Add me as a friend on Steam](https://steamcommunity.com/id/mastercoms/) (leave a comment about gifting!) Then, you can gift me a [Steam Digital Card](https://store.steampowered.com/digitalgiftcards/selectgiftcard) or gift me a [wishlisted game](https://store.steampowered.com/wishlist/profiles/76561198046110893/#sort=price).
+You can support mastercoms with direct financial contributions through the following services:
+
+* [Ko-fi](https://ko-fi.com/mastercoms)
+* [Liberapay](https://liberapay.com/mastercoms/)
+* [GitHub Sponsors](https://github.com/sponsors/mastercoms)
+* [Discord Supporter ($2.99 subscription)](https://discord.com/servers/mastercomfig-389089828249010188)
+
+## Gifts
+
+You can gift me using Steam Wallet Funds! [Add me as a friend on Steam](https://steamcommunity.com/id/mastercoms/) (leave a comment about gifting!) Then, you can gift me a [Steam Digital Card](https://store.steampowered.com/digitalgiftcards/selectgiftcard) or gift me a [wishlisted game](https://store.steampowered.com/wishlist/profiles/76561198046110893/#sort=price). You can also [give me a Steam Award](https://steamcommunity.com/id/mastercoms?award=17) using Steam Points.
+
+Or you can gift me Amazon items through [Throne](https://throne.com/mastercoms).
+
+## Epic Games Creator
 
 If you cannot directly support me, I have a [Support-A-Creator](https://www.epicgames.com/fortnite/en-US/news/support-a-creator-faq) code: `mastercoms`,
 which you can set in
@@ -14,8 +27,6 @@ which you can set in
 [Rocket League](https://www.rocketleague.com/support-a-creator/),
 and other games on the [Epic Games Store](https://store.epicgames.com/), as well as purchasing games and DLC on the store itself.
 In connection with Epic Games’ Support-A-Creator Program, I receive a commission from these purchases.
-
-Lastly, you can [give me a Steam Award](https://steamcommunity.com/id/mastercoms?award=17).
 
 ## Fortnite Maps
 

@@ -82,10 +82,6 @@ There are a few types of client string commands:
 ### Spectator
 
 * `spectate`: enters spectator mode
-* `spec_next`: moves to next player in spectate
-* `spec_prev`: moves to prev player in spectate
-* `spec_mode`: changes camera mode for spectate
-* `spec_player`: spectates by SteamID, player name or server #UserID
 * `spec_goto`: spectates at coordinates x y z pitch yaw
 
 ### Voice

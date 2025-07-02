@@ -7,7 +7,7 @@ description: Having trouble with mastercomfig? Here's where to go to first for s
 This is a list of common issues users experience with mastercomfig, and how to solve them.
 
 If you find that you need more assistance, reach out to our community on
-[Discord](https://discord.gg/mastercomfig-389089828249010188).
+[Discord](https://comfig.app/discord).
 
 ## mastercomfig isn't loading! / My custom configs aren't loading!
 
@@ -41,15 +41,17 @@ r_drawviewmodel 1
 
 Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
+## What happened to the OpenGL addon?
+
+OpenGL was replaced with Vulkan by default in the April 18, 2024 update. It's highly recommended that you use Vulkan. However, if you are not able to find a supported driver for your system and must use the legacy ToGL renderer, you can use the `apply_opengl_opts` command in your `cfg/overrides/setup_hook.cfg` file to apply the OpenGL optimizations like the addon used to.
+
+Note that the OpenGL optimizations will set `lighting_ex=high` to avoid lighting issues exclusive to the ToGL renderer. This overrides your preset's setting, but respects any user-defined override for the module.
+
 ## Black artifacts all over the screen on Linux
 
-This is a bug with later versions of Mesa. You can fix it by adding `lighting_ex=high` to your `modules.cfg`.
+This is a bug with TF2's legacy ToGL renderer and an interaction with the Mesa drivers. You can fix it by adding `lighting_ex=high` to your `modules.cfg`, or by using the Vulkan version of the game. If you apply OpenGL optimizations (see previous section), they will automatically set `lighting_ex=high`.
 
 You can also configure the drirc file (optionally using the adriconf GUI) to set `disable_uniform_array_resize` to `true` for Team Fortress 2.
-
-## Ragdolls aren't instantly disappearing
-
-There was a bug fix to `ragdolls=off`, to avoid the issue where ragdolls would still be present on the map and accumulate over time, causing performance issues. The cost of this was compared to the very short physics initialization and simulation, and it was determined that it would be better to avoid a leak from ragdolls never getting deleted by enabling physics on ragdolls. You can get the old behavior by using `ragdolls=hidden` in `modules.cfg`, at the cost of this increased overhead, if you prefer the visuals.
 
 ## My chat is disabled
 
@@ -66,14 +68,6 @@ You will have to restart the game to unlock the hidden settings and revert the c
 ## TF2 exits on startup
 
 Make sure you don't have any infinite loops caused by an `exec autoexec` in your custom configs (like in your `autoexec.cfg`). Additionally, make sure your custom configs don't contain `quit`, and that your launch options don't contain `+quit`.
-
-## Preloading animation and/or model mods not working or crashing
-
-If you're trying to preload a mod to bypass `sv_pure`, async disk loading has been found to be incompatible with this. Make sure you do not have `mod_support=off` in your `modules.cfg` to avoid enabling some async disk loading features. The `mod_support` module is enabled in all presets by default.
-
-You may also want to preload mods with the `dynamic_background=itemtest` module. **If** you are using yttrium's viewmodels, use `dynamic_background=preload` instead.
-
-Optionally, you may delete any `autoexec.cfg` files created automatically in TF2's `cfg` folder by the yttrium's viewmodels program. These won't conflict with mastercomfig, since files in VPKs will always be chosen over files in the `cfg` folder.
 
 ## TF2 crashing on a custom map
 

@@ -92,8 +92,6 @@ Class configs are also a reliable way to periodically run some commands during a
 * Clearing all decals, including permanent ones inaccessible by other commands
 * Fixing client desync bugs periodically without interrupting demos
 * Improving load times after first map load
-* Fixing cases where animation and model mods can stop working after many server loads
-* Fixing issues where animation and models mods could be reset
 
 **mastercomfig overrides class configs because:**
 

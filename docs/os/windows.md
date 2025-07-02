@@ -78,16 +78,6 @@ If you are looking to squeeze performance out of your games, especially at 1400p
 
 Intel Panel Self Refresh can ruin frame latency and timings, especially on hybrid (Optimus) laptops. Disable it in Power options within your Intel graphics settings app.
 
-## Disable Fullscreen Optimizations
-
-Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low-level borderless window, which gets equivalent or better than fullscreen performance with the fast alt-tabbing of windowed mode.
-
-You can find more information on the [DirectX Developer Blog](https://devblogs.microsoft.com/directx/demystifying-full-screen-optimizations/) and in [this Reddit thread](https://old.reddit.com/r/Windows10/comments/645ukf/windows_10_cu_fullscreen_optimizations/dg330ub/?context=3).
-
-You may encounter problems with it enabled, involving brightness, refresh rates, or other display issues. If you are encountering these issues, open your game folder through Steam. Then, right-click on `hl2.exe`, click Properties, go to the Compatibility tab, and then select the box that says `Disable Fullscreen Optimizations`.
-
-If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback), so they can improve it in the future.
-
 ## Networking optimization
 
 Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your internet settings.

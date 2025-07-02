@@ -24,13 +24,6 @@ description: Некоторые крутые TF2 модификации, кот�
 * [Paysus Animation Overhauls](https://steamcommunity.com/groups/PaysusSkins)
   — Мод анимации от первого лица, который значительно улучшает анимации
 
-* [yttrium's viewmodels](https://github.com/Yttrium-tYcLief/CompVMInstaller/releases)
-  — Настройка скрытия отдельных моделей обзора
-  
-!!! Информация
-
-    Лаунчер yttrium's viewmodels добавит файл `autoexec.cfg` в папку `tf/cfg`. При необходимости его можно удалить, так как он не используется и не нужен. Вместо этого используйте модуль **`dynamic_background=preload`**.
-
 * [Horsie's Viewmodel Editor](https://github.com/a-horsey/horsies-viewmodel-editor)
   — Редактируйте свои вью-модели, как вам захочется
 

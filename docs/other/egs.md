@@ -25,7 +25,7 @@ For many on stable and fast Internet connections, although EGS has decent speeds
 1. Open Epic Games Store.
 2. Click your Profile Icon and click Settings.
 3. Enable Throttle Downloads.
-4. Enter your max Internet speed in kilobytes per second. This will allow EGS to stably target your download speed, which seems to reduce cases of huge amounts of variance and jitter in download speeds. For example, assuming a fiber connection, setting this to `100000`, instead of the download speed jumping up and down between 99MB/s and 80MB/s, you can remain at a stable 100MB/s with this setting.
+4. Enter your max Internet speed in kilobytes per second. This will allow EGS to stably target your download speed, which seems to reduce cases of huge amounts of variance and jitter in download speeds. For example, assuming a fiber connection, setting this to `1000000`, instead of the download speed jumping up and down between 99MB/s and 80MB/s, you can remain at a stable 100MB/s with this setting.
 5. Close Epic Games Store.
 6. Go to `%localappdata%/EpicGamesLauncher/Saved/Config/Windows`
 7. Open `Engine.ini`.

@@ -61,7 +61,6 @@ This is a list of features that come out of the box with mastercomfig, so you ca
 
 ## Networking
 
-- Reduced latency of client commands (opening class menu, switching spectators, kill, MvM buyback and more!)
 - Increased data rate
 - Reduced choke
 - Reduced packet loss and improved reliability

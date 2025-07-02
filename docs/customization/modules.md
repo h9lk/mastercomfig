@@ -13,7 +13,7 @@ Modules are groups of related commands with specific values for a certain use ca
 Modules are used in presets to set quality levels and can also be used in your very own `tf/cfg/overrides/modules.cfg` file to customize your config easily without searching for individual console variable values. You can find out what module levels your preset uses by [viewing their respective cfg file](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets). To set a custom module level, put it in `overrides/modules.cfg`. For example:
 
 ```c
-textures=high
+texture_quality=high
 ```
 
 will set the texture quality to `high`.
@@ -33,7 +33,7 @@ These usage levels are merely a relative estimate, not a precise indicator of th
 You can check what module level you have selected for a module by entering `module_level` into the console. For example, `textures_level` will output:
 
 ```c
-textures=high
+texture_quality=high
 ```
 
 or similar.
@@ -49,7 +49,7 @@ You can also view selected levels for all modules by entering `module_levels` in
 
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
-If you want to disable running a module entirely, you can put (for example) `alias textures` in `overrides/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception to this rule is the Snapshot Buffer module. To fully disabled it, you must use `snapshot_buffer=custom`.
+If you want to disable running a module entirely, you can put (for example) `alias texture_quality` in `overrides/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception to this rule is the Snapshot Buffer module. To fully disabled it, you must use `snapshot_buffer=custom`.
 
 Since module aliases act like normal commands, you can use them in the console to change game settings easily. For example, enter `textures_high` into the console to temporarily set your texture quality to high for that game session. You can reset your modules to what they were on startup by entering `run_modules` into the console.
 
@@ -60,18 +60,6 @@ The modules you choose in `overrides/modules.cfg` are executed by the `modules_c
 This means that you can change this alias in the game and have multiple versions of your modules for different quality preferences you may have. You can apply these new modules using `apply_overrides`.
 
 ## Networking modules
-
-### SourceTV Compatibility
-
-Optimizes spectator view or ensures compatibility with SourceTV.
-
-- **CPU usage:** none
-- **GPU usage:** none
-
-Default setting: **`sourcetv=on`** (all presets).
-
-- **`sourcetv=off`**: Reduces the latency of changing spectator targets, but breaks compatibility with SourceTV. Cannot be switched off until a game restart.
-- **`sourcetv=on`**: Keeps compatibility with SourceTV.
 
 ### Packet Rate
 
@@ -94,7 +82,7 @@ Controls how reliable to consider the snapshots you receive from the server to a
 
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
-- **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer_safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer_low`. For Spy this sets `snapshot_buffer_safe`.
+- **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer_safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer_low`. For Spy this sets `snapshot_buffer_safe`. **This is the recommended setting.**
 - **`alias snapshot_buffer snapshot_buffer_low`**: A dangerously minimal buffering time which does not have room for any networking or server delays or drops (**15ms lerp** when using `packet_rate=standard`, or **30ms lerp** when using `packet_rate=congestion`). There is almost no reason to use this option, except in LAN scenarios, as `snapshot_buffer=auto` will optimize lag compensation for each class.
 - **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30ms lerp** when using `packet_rate=standard`, or **60ms lerp** when using `packet_rate=congestion`).
 - **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45ms lerp** when using `packet_rate=standard`, or **90ms lerp** when using `packet_rate=congestion`).
@@ -124,7 +112,7 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`bandwidth=1.0Mbps`** (all presets).
+Default setting: **`bandwidth=2.0Mbps`** (all presets).
 
 - **`bandwidth=128Kbps`**: 128Kbps game traffic bandwidth.
 - **`bandwidth=192Kbps`**: 192Kbps game traffic bandwidth.
@@ -148,11 +136,11 @@ Filters what custom content is allowed to be downloaded from the server.
 
 Default setting: **`download=custom`** (all presets).
 
-* **`download=custom`**: Whatever the user sets in the game settings.
-* **`download=all`**: Download all custom files from servers.
-* **`download=nosounds`**: Download everything but sounds from servers.
-* **`download=mapsonly`**: Download only maps from servers.
-* **`download=nothing`**: Do not download any custom files from servers.
+- **`download=custom`**: Whatever the user sets in the game settings.
+- **`download=all`**: Download all custom files from servers.
+- **`download=nosounds`**: Download everything but sounds from servers.
+- **`download=mapsonly`**: Download only maps from servers.
+- **`download=nothing`**: Do not download any custom files from servers.
 
 ## Graphics modules
 
@@ -179,24 +167,28 @@ Controls lighting fidelity: dynamic lights, detailed lighting, rimlights, light 
 
 Default setting: based on which preset you are currently using.
 
-- **`lighting=very_low`**: No dynamic lights. Skips all world lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-- **`lighting=low`**: No dynamic lights. Skips dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-- **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-- **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting.
-- **`lighting=high`**: 6 dynamic lights. Detailed lighting.
-- **`lighting=very_high`**: 12 dynamic lights. Detailed lighting.
-- **`lighting=ultra`**: 32 dynamic lights. Extremely detailed lighting.
+- **`lighting=very_low`**: No dynamic lights. Skips all non-static lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
+- **`lighting=low`**: No dynamic lights. Skips dim non-static lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
+- **`lighting=medium`**: No dynamic lights. Detailed non-static lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
+- **`lighting=medium_high`**: No dynamic lights. Detailed non-static lighting.
+- **`lighting=high`**: 1 dynamic light. Detailed non-static lighting.
+- **`lighting=very_high`**: 4 dynamic lights. Detailed non-static lighting.
+- **`lighting=ultra`**: 32 dynamic lights. Extremely detailed non-static lighting.
 
 ### Lighting Ex
 
 Controls extended lighting commands which cause a material system reload.
+
+!!! warning
+    Using any other level than **`lighting_ex=high`** can cause visual glitches in items and props. Mainly, this affects weapon warpaints and Australium weapons.
 
 - **CPU usage:** low
 - **GPU usage:** high
 
 Default setting: based on which preset you are currently using.
 
-- **`lighting_ex=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs, due to rendering reloads. Also can cause black rendering artifacts on Linux Mesa graphics drivers.
+- **`lighting_ex=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs due to rendering reloads.
+- **`lighting_ex=medium`**: Disables phong, but keeps material paths for specular and bumpmaps, as disabling these can cause glitches on DirectX 9. May reduce performance on modern PCs due to rendering reloads.
 - **`lighting_ex=high`**: Uses whatever the material's lighting needs (enables bumpmaps, specular and phong).
 
 ### Shadows
@@ -211,14 +203,17 @@ Default setting: based on which preset you are currently using.
 - **`shadows=off`**: No shadows.
 - **`shadows=very_low`**: Blobby shadows.
 - **`shadows=low`**: Up to 3 low quality shadows.
-- **`shadows=medium`**: Up to 7 high quality shadows, and low robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
-- **`shadows=high`**: Up to 11 high quality shadows, and medium robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
+- **`shadows=medium`**: Up to 23 high quality shadows, and low robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
+- **`shadows=high`**: Up to 23 high quality shadows, and medium robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
 - **`shadows=very_high`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
 - **`shadows=ultra`**: Up to 160 high quality shadows, and unlimited robot/Halloween boss shadow distance. Uses highest quality model (at root LOD) to render shadows.
 
 ### Flashlight
 
 Controls flashlight support. Flashlights are not used in TF2, so you should keep it disabled unless you need it for a certain community server mod, like Slender, or some Deathrun servers.
+
+!!! warning
+    Turning on flashlight support will cause rendering artifacts on some maps, especially when Pyroland is enabled!
 
 - **CPU usage:** low
 - **GPU usage:** medium
@@ -255,11 +250,11 @@ Controls water reflections.
 Default setting: based on which preset you are currently using.
 
 - **`water=very_low`**: Makes water black. 32x water render resolution.
-- **`water=low`**: Makes water solid. 256x water render resolution.
-- **`water=medium`**: Uses standard water with no reflections. Fades out to low quality solid/black water at reasonable ranges. 512x water render resolution.
-- **`water=medium_high`**: Uses standard water with basic reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
+- **`water=low`**: Makes water solid. 128x water render resolution. Fades out to low quality solid/black water at short ranges.
+- **`water=medium`**: Uses standard water with no reflections. Fades out to low quality solid/black water at reasonable ranges. 256x water render resolution.
+- **`water=medium_high`**: Uses standard water with basic reflections. Fades out to low quality solid/black water at reasonable ranges. 512x water render resolution.
 - **`water=high`**: Uses standard water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
-- **`water=very_high`**: Uses high quality water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 2K water render resolution.
+- **`water=very_high`**: Uses high quality water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
 - **`water=ultra`**: Uses high quality water with all reflections. Never fades out to low quality water. 2K water render resolution.
 
 ### Particles
@@ -271,11 +266,11 @@ Controls particle effects.
 
 Default setting: based on which preset you are currently using.
 
-- **`particles=very_low`**: Collapses spawning particles into existing particles (including bullet tracers and flames) together, disables weather particles, reduces particle density/quality, disables bullet impact flecks.
-- **`particles=low`**: Disables weather particles, reduces particle density/quality, disables bullet impact flecks.
-- **`particles=medium`**: Disables weather particles, reduces particle density/quality, enables bullet impact flecks.
-- **`particles=high`**: Enables weather particles, uses full particle density/quality, enables bullet impact flecks.
-- **`particles=ultra`**: Enables weather particles, uses full particle density/quality, enables bullet impact flecks and forces full simulation for all particles.
+- **`particles=very_low`**: Collapses spawning particles into existing particles (including bullet tracers and flames) together, disables weather particles, reduces particle density/quality.
+- **`particles=low`**: Disables weather particles, reduces particle density/quality.
+- **`particles=medium`**: Disables weather particles, reduces particle density/quality.
+- **`particles=high`**: Enables weather particles, uses full particle density/quality.
+- **`particles=ultra`**: Enables weather particles, uses full particle density/quality, and forces full simulation for all particles.
 
 ### General Post-Processing
 
@@ -340,7 +335,7 @@ Controls MSAA anti-aliasing.
     On Linux, enabling may cause rendering errors with Wayland.
 
 !!! warning
-    On Windows, enabling MSAA may increase input latency on non-exclusive fullscreen modes.
+    On DirectX, enabling MSAA may increase input latency.
 
 - **CPU usage:** none
 - **GPU usage:** medium
@@ -351,25 +346,6 @@ Default setting: based on which preset you are currently using.
 - **`anti_aliasing=msaa_2x`**: Enables MSAA 2x.
 - **`anti_aliasing=msaa_4x`**: Enables MSAA 4x.
 - **`anti_aliasing=msaa_8x`**: Enables MSAA 8x.
-
-### Texture Filtering
-
-Controls texture smoothing/filtering.
-
-!!! warning
-    Texture filtering will only work on `textures=low` and higher.
-
-- **CPU usage:** none
-- **GPU usage:** low
-
-Default setting: based on which preset you are currently using.
-
-- **`texture_filter=bilinear`**: Bilinear filtering
-- **`texture_filter=trilinear`**: Trilinear filtering
-- **`texture_filter=aniso2x`**: Anisotropic filtering 2x
-- **`texture_filter=aniso4x`**: Anisotropic filtering 4x
-- **`texture_filter=aniso8x`**: Anisotropic filtering 8x
-- **`texture_filter=aniso16x`**: Anisotropic filtering 16x
 
 ### Characters
 
@@ -418,8 +394,9 @@ Controls blood on hurt players and some bullet decals on props.
 Default setting: based on which preset you are currently using.
 
 - **`decals_models=off`**: Disables model decals.
-- **`decals_models=low`**: Allow up to 9 model decals.
-- **`decals_models=high`**: Allow up to 50 model decals.
+- **`decals_models=low`**: Allows up to 1 model decal.
+- **`decals_models=medium`**: Allows up to 9 model decals.
+- **`decals_models=high`**: Allows up to 50 model decals.
 
 ### Map Decals
 
@@ -497,7 +474,7 @@ Controls physics simulation and fading for bodies that spawn on death.
 
 Default setting: based on which preset you are currently using.
 
-- **`ragdolls=hidden`**: Makes ragdolls invisible, but keeps them in the map, decreasing performance over time.
+- **`ragdolls=hidden`** and **`ragdolls=low`**: Deprecated settings. They are the same as `ragdolls=off`.
 - **`ragdolls=off`**: Disables ragdolls by fading them out quickly.
 - **`ragdolls=medium`**: Enables standard physics ragdolls.
 - **`ragdolls=high`**: Enables ragdolls with collisions with a high fade out time, as well as special animations like decapitation.
@@ -546,7 +523,7 @@ Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
 
 ### Killstreak Sheens Tint Intensity
 
-Controls how intense the color tint is on the killstreak sheen glow for weapons.
+Controls how intense the color tint is on light reflections for the killstreak sheen glow for weapons.
 
 !!! note
     This module will have no effect if `sheens_speed` is set to `off`.
@@ -573,12 +550,27 @@ Controls texture quality.
 
 Default setting: based on which preset you are currently using.
 
-- **`textures=very_low`**: Low texture quality, blocky textures, disables texture blending.
-- **`textures=low`**: Low texture quality, disables texture blending.
-- **`textures=medium`**: Medium texture quality.
-- **`textures=high`**: High texture quality.
-- **`textures=very_high`**: Very High texture quality.
-- **`textures=ultra`**: Maximum texture quality.
+- **`texture_quality=low`**: Low texture quality, disables texture blending.
+- **`texture_quality=medium`**: Medium texture quality.
+- **`texture_quality=high`**: High texture quality.
+- **`texture_quality=very_high`**: Very High texture quality.
+- **`texture_quality=ultra`**: Maximum texture quality.
+
+### Texture Filtering
+
+Controls texture smoothing/filtering.
+
+- **CPU usage:** none
+- **GPU usage:** low
+
+Default setting: based on which preset you are currently using.
+
+- **`texture_filter=blocky`**: Blocky textures and world lighting with bilinear filtering
+- **`texture_filter=trilinear`**: Trilinear filtering
+- **`texture_filter=aniso2x`**: Anisotropic filtering 2x
+- **`texture_filter=aniso4x`**: Anisotropic filtering 4x
+- **`texture_filter=aniso8x`**: Anisotropic filtering 8x
+- **`texture_filter=aniso16x`**: Anisotropic filtering 16x
 
 ### Ropes
 
@@ -637,7 +629,7 @@ Default setting: **`fpscap=400`** (all presets).
 - **`fpscap=360`**: Sets FPS cap to 360 FPS.
 - **`fpscap=400`**: Sets FPS cap to 400 FPS.
 - **`fpscap=1000`**: Sets FPS cap to 1000 FPS (maximum safe value).
-- **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000FPS in meaningful game scenarios.
+- **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000 FPS in meaningful game scenarios.
 
 ### VSync
 
@@ -680,10 +672,10 @@ Controls the Contracts HUD seen at the top right corner of the screen during gam
 
 Default setting: **`hud_contracts=custom`** (all presets, except Very Low).
 
-* **`hud_contracts=custom`**: Whatever the user set in the game settings.
-* **`hud_contracts=hide`**: Hides the Contracts HUD.
-* **`hud_contracts=all`**: Shows all Contracts available.
-* **`hud_contracts=active`**: Only shows active Contracts.
+- **`hud_contracts=custom`**: Whatever the user set in the game settings.
+- **`hud_contracts=hide`**: Hides the Contracts HUD.
+- **`hud_contracts=all`**: Shows all Contracts available.
+- **`hud_contracts=active`**: Only shows active Contracts.
 
 ### Panels
 
@@ -771,7 +763,7 @@ Controls the HUD achievements tracker.
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`hud_achievement=off`** (all presets).
+Default setting: **`hud_achievement=on`** (all presets).
 
 - **`hud_achievement=off`**: Disables achievement tracker panel completely.
 - **`hud_achievement=on`**: Enables support for achievement tracker panel.
@@ -821,7 +813,7 @@ Default setting: based on which preset you are currently using.
 
 ### Map Background
 
-Controls the live map that appears in the background of the main menu. Some options automatically exit immediately, for the sake of preloading assets.
+Controls the live map that appears in the background of the main menu.
 
 - **CPU usage:** none
 - **GPU usage:** none
@@ -829,8 +821,6 @@ Controls the live map that appears in the background of the main menu. Some opti
 Default setting: **`dynamic_background=off`** (all presets).
 
 - **`dynamic_background=off`**: No main menu map background on startup.
-- **`dynamic_background=preload`**: `preload_room` map background for yttrium's preloading (auto disconnects). **You have to install [the map](https://github.com/Yttrium-tYcLief/CompVMInstaller/blob/master/Project/CompVMInstaller/Resources/preload_room.bsp?raw=true) to `tf/maps`, or else this will not function.**
-- **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
 - **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
 
 ## Sound modules
@@ -868,32 +858,17 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 
 ## Misc modules
 
-### Mod Support
-
-Ensures compatibility with animation and model mods.
-
-!!! info
-    You may want to also enable preloading using the [Map Background module](#map-background).
-
-- **CPU usage:** none
-- **GPU usage:** none
-
-Default setting: **`mod_support=on`** (all presets).
-
-- **`mod_support=off`**: Does not block settings that may cause crashes with animation and model mods.
-- **`mod_support=on`**: Blocks settings that may cause crashes with animation and model mods.
-
 ### Party Join Mode
 
 Controls the privacy of your Casual/Competitive matchmaking party.
 
 !!! warning
-    The Friends Only restriction for parties can be bypassed, which means anyone can join your party if they have your Steam ID. Leaving your party open can result in anyone to join your party and spam party chat, causing lag, sound spam and other disruptions.
+    The Friends-Only restriction for parties can be bypassed, which means anyone can join your party if they have your Steam ID. Leaving your party open can result in anyone to join your party and spam party chat, causing lag, sound spam and other disruptions.
 
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`party_mode=request`** (all presets).
+Default setting: **`party_mode=invite`** (all presets).
 
 - **`party_mode=open`**: Open party (people can join anytime).
 - **`party_mode=request`**: Request-only party (people can only join if you accept their request or if you invite them).

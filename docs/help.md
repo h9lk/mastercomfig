@@ -17,4 +17,4 @@ Check these resources out:
 
 Still can't find your answer and want to ask for help?
 
-- [Ask in help-forums on Discord](https://discord.gg/mastercomfig-389089828249010188)
+- [Ask in help-forums on Discord](https://comfig.app/discord)
