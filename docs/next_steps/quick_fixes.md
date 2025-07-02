@@ -138,6 +138,10 @@ Please note that running this may reset some personal preferences back to defaul
 
 Check to see if you have `-dxlevel 100` in your TF2 launch options, it may have a different number next to it. You only needed to launch with this launch option one time.
 
+## View flickers when going underwater
+
+Disabling 3D sky on some AMD graphics cards in DirectX can cause flickering when going underwater. Either use the `-vulkan` launch option, or turn on 3D sky.
+
 ## I got banned from the Discord server
 
 You can submit a single [ban appeal](https://dyno.gg/form/dae64461) a few days after receiving your ban.

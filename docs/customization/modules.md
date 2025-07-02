@@ -491,6 +491,9 @@ Default setting: based on which preset you are currently using.
 - **`3dsky=off`**: Disables 3D sky.
 - **`3dsky=on`**: Enables 3D sky.
 
+!!! warning
+    Disabling 3D sky on some AMD graphics cards in DirectX can cause flickering when going underwater. Either use the `-vulkan` launch option, or turn on 3D sky.
+
 ### Jigglebones
 
 Controls cloth and joint physics on some items like the fish and skull bat.
