@@ -1,7 +1,7 @@
 {
   "packet_rate": {
     "default": "standard",
-    "very-low": "congestion"
+    "destitute": "congestion"
   },
   "snapshot_buffer": {
     "default": "auto"
@@ -24,7 +24,7 @@
   },
   "lighting": {
     "default": "medium_high",
-    "very-low": "very_low",
+    "destitute": "very_low",
     "low": "medium",
     "medium-low": "medium",
     "medium": "medium_high",
@@ -35,7 +35,7 @@
   },
   "lighting_ex": {
     "default": "high",
-    "very-low": "low",
+    "destitute": "low",
     "low": "low",
     "medium-low": "medium",
     "none": ""
@@ -63,7 +63,7 @@
   },
   "water": {
     "default": "high",
-    "very-low": "very_low",
+    "destitute": "very_low",
     "low": "low",
     "medium-low": "medium",
     "medium": "medium",
@@ -74,7 +74,7 @@
   },
   "particles": {
     "default": "low",
-    "very-low": "very_low",
+    "destitute": "very_low",
     "medium-high": "medium",
     "high": "high",
     "ultra": "ultra",
@@ -112,7 +112,7 @@
   },
   "characters": {
     "default": "low",
-    "very-low": "very_low",
+    "destitute": "very_low",
     "low": "very_low",
     "medium-high": "high",
     "high": "high",
@@ -136,7 +136,7 @@
   },
   "decals_art": {
     "default": "on",
-    "very-low": "off",
+    "destitute": "off",
     "low": "off",
     "medium-low": "off",
     "none": ""
@@ -157,7 +157,7 @@
   },
   "props": {
     "default": "medium",
-    "very-low": "low",
+    "destitute": "low",
     "high": "high",
     "ultra": "ultra",
     "none": ""
@@ -184,7 +184,7 @@
   },
   "sheens_speed": {
     "default": "slow",
-    "very-low": "off",
+    "destitute": "off",
     "none": ""
   },
   "sheens_tint": {
@@ -199,7 +199,7 @@
   },
   "texture_filter": {
     "default": "trilinear",
-    "very-low": "blocky",
+    "destitute": "blocky",
     "medium": "aniso2x",
     "medium-high": "aniso4x",
     "high": "aniso8x",
@@ -230,35 +230,35 @@
   },
   "hud_contracts": {
     "default": "custom",
-    "very-low": "off"
+    "destitute": "off"
   },
   "hud_panels": {
     "default": "high",
-    "very-low": "off",
+    "destitute": "off",
     "low": "low"
   },
   "hud_avatars": {
     "default": "everyone",
-    "very-low": "off",
+    "destitute": "off",
     "low": "off",
     "medium-low": "friends",
     "medium": "friends"
   },
   "match_hud": {
     "default": "on",
-    "very-low": "off"
+    "destitute": "off"
   },
   "messages": {
     "default": "on",
-    "very-low": "off"
+    "destitute": "off"
   },
   "killfeed": {
     "default": "on",
-    "very-low": "off"
+    "destitute": "off"
   },
   "killstreaks": {
     "default": "high",
-    "very-low": "off",
+    "destitute": "off",
     "low": "low"
   },
   "hud_achievement": {
@@ -266,14 +266,14 @@
   },
   "console": {
     "default": "on",
-    "very-low": "off"
+    "destitute": "off"
   },
   "htmlmotd": {
     "default": "off"
   },
   "outlines": {
     "default": "low",
-    "very-low": "off",
+    "destitute": "off",
     "low": "off",
     "high": "high",
     "ultra": "high",
@@ -292,13 +292,13 @@
   },
   "voice_chat": {
     "default": "on",
-    "very-low": "off"
+    "destitute": "off"
   },
   "party_mode": {
     "default": "invite"
   },
   "logo": {
     "default": "on",
-    "very-low": "off"
+    "destitute": "off"
   }
 }

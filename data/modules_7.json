@@ -968,12 +968,10 @@
       "description": "Controls if footsteps play at all.",
       "levels": {
         "on": {
-          "values": {
-          }
+          "values": {}
         },
         "off": {
-          "values": {
-          },
+          "values": {},
           "footsteps": "off"
         }
       }
@@ -982,12 +980,10 @@
       "description": "Controls the soundscapes (ambient noise) of maps playing.",
       "levels": {
         "on": {
-          "values": {
-          }
+          "values": {}
         },
         "off": {
-          "values": {
-          },
+          "values": {},
           "soundscapes": "off"
         }
       }

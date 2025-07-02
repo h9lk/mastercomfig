@@ -55,7 +55,7 @@ You can also configure the drirc file (optionally using the adriconf GUI) to set
 
 ## My chat is disabled
 
-[A TF2 update](https://www.teamfortress.com/post.php?id=62459) introduced the ability to completely disable text chat. mastercomfig was updated shortly after to accommodate this change, with the Very Low preset disabling chat completely. If you are using Very Low preset or the `messages=off` module, you can re-enable chat by adding `messages=on` to your `modules.cfg` file. To disable chat the old way you can use the `messages=hide` module.
+[A TF2 update](https://www.teamfortress.com/post.php?id=62459) introduced the ability to completely disable text chat. mastercomfig was updated shortly after to accommodate this change, with the Destitute preset disabling chat completely. If you are using Destitute preset or the `messages=off` module, you can re-enable chat by adding `messages=on` to your `modules.cfg` file. To disable chat the old way you can use the `messages=hide` module.
 
 ## TF2 crashes when entering a Competitive Mode match
 
@@ -82,7 +82,7 @@ Add `tf_time_loading_item_panels .0005` to your `autoexec.cfg`.
 
 ## Why don't my killstreak sheens show?
 
-On the Very Low preset, killstreak sheens are disabled by default. To enable killstreak sheens, use the module `sheens_speed=slow`.
+On the Destitute preset, killstreak sheens are disabled by default. To enable killstreak sheens, use the module `sheens_speed=slow`.
 
 ## Grappling hook is invisible (in Mannpower and custom servers)
 
@@ -128,9 +128,9 @@ On some mastercomfig presets, outlines are disabled. The outline settings includ
 
 This is caused by a bug in TF2, where wood props do not look up the correct decal texture when prop decals are disabled and instead display the red ERROR texture. Put `r_decalstaticprops 1` in your `autoexec.cfg` to enable prop decals and avoid this bug at the cost of some performance.
 
-## I switched from Very Low to another preset but some settings persist
+## I switched from Destitute to another preset but some settings persist
 
-Enter `very_low_reset` into the console. It will reset the remaining settings that were left saved in your game.
+Enter `destitute_reset` into the console. It will reset the remaining settings that were left saved in your game.
 
 Please note that running this may reset some personal preferences back to default.
 

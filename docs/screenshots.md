@@ -22,7 +22,7 @@ description: mastercomfig screenshots for all presets.
 
 ## Destitute
 
-![sawmill very low](https://comfig.app/img/presets/destitute-hq.webp){ loading=lazy }
+![sawmill destitute](https://comfig.app/img/presets/destitute-hq.webp){ loading=lazy }
 
 ## Preset Screenshot Config
 

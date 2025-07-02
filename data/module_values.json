@@ -1,6 +1,6 @@
 {
   "graphics.textures": {
-    "very_low": {
+    "destitute": {
       "mat_picmip": 2,
       "mat_filtertextures": 0,
       "mat_filterlightmaps": 0,
@@ -58,7 +58,7 @@
     }
   },
   "graphics.lighting": {
-    "very_low": {
+    "destitute": {
       "r_ambientboost": 0,
       "r_lightaverage": 0,
       "r_dynamic": 0,

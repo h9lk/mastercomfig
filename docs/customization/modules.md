@@ -68,7 +68,7 @@ Controls how fast you send to and receive from the server.
 - **CPU usage:** medium
 - **GPU usage:** none
 
-Default setting: **`packet_rate=standard`** (all presets, except Very Low).
+Default setting: **`packet_rate=standard`** (all presets, except Destitute).
 
 - **`packet_rate=congestion`**: A halved (33) packet rate for congested networks, usually bad Wi-Fi, or very slow CPUs.
 - **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all normal servers.
@@ -221,7 +221,7 @@ Controls flashlight support. Flashlights are not used in TF2, so you should keep
 Default setting: **`flashlight=off`** (all presets).
 
 - **`flashlight=off`**: Disables flashlight support.
-- **`flashlight=on`**: Enables flashlight support. If the `shadows` module is `off`, this will set it to the `very_low` level.
+- **`flashlight=on`**: Enables flashlight support. If the `shadows` module is `off`, this will set it to the `low` level.
 
 ### Effects
 
@@ -371,7 +371,7 @@ Default setting: based on which preset you are currently using.
 Controls bullet holes and overall decal support.
 
 !!! note
-    In the Very Low preset, decals are forced invisible.
+    In the Destitute preset, decals are forced invisible.
 
 - **CPU usage:** medium
 - **GPU usage:** medium
@@ -517,7 +517,7 @@ Controls how fast the animation is on the killstreak sheen glow for weapons.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
+Default setting: **`sheens_speed=slow`** (all presets, except Destitute).
 
 - **`sheens_speed=off`**: Skips updating sheen glow animation.
 - **`sheens_speed=slow`**: Slow speed.
@@ -673,7 +673,7 @@ Controls the Contracts HUD seen at the top right corner of the screen during gam
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`hud_contracts=custom`** (all presets, except Very Low).
+Default setting: **`hud_contracts=custom`** (all presets, except Destitute).
 
 - **`hud_contracts=custom`**: Whatever the user set in the game settings.
 - **`hud_contracts=hide`**: Hides the Contracts HUD.
@@ -687,7 +687,7 @@ Controls health/player info panels and target ID translucency.
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`hud_panels=high`** (all presets, except Low and Very Low).
+Default setting: **`hud_panels=high`** (all presets, except Low and Destitute).
 
 - **`hud_panels=off`**: Disables health/player info panels that appear when looking at a player, disables target ID box.
 - **`hud_panels=low`**: Enables health/player info panels that appear when looking at a player, enables opaque target ID box.
@@ -716,7 +716,7 @@ Toggles match status HUD at the top of the screen.
 - **CPU usage:** high
 - **GPU usage:** none
 
-Default setting: **`match_hud=on`** (all presets, except Very Low).
+Default setting: **`match_hud=on`** (all presets, except Destitute).
 
 - **`match_hud=off`**: Disables match status HUD.
 - **`match_hud=on`**: Enables match status HUD.
@@ -728,7 +728,7 @@ Controls text chat, which displays player messages and voice messages.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`messages=on`** (all presets, except Very Low).
+Default setting: **`messages=on`** (all presets, except Destitute).
 
 - **`messages=off`**: Disables text chat.
 - **`messages=hide`**: Hides text chat.
@@ -741,7 +741,7 @@ Controls death and objective notifications in the top right corner.
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`killfeed=on`** (all presets, except Very Low).
+Default setting: **`killfeed=on`** (all presets, except Destitute).
 
 - **`killfeed=off`**: Disables killfeed.
 - **`killfeed=on`**: Enables killfeed.
@@ -753,7 +753,7 @@ Controls banners that appear at the top center of the screen, notifying you of a
 - **CPU usage:** medium
 - **GPU usage:** none
 
-Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
+Default setting: **`killstreaks=high`** (all presets, except Low and Destitute).
 
 - **`killstreaks=off`**: Disables killstreak banner.
 - **`killstreaks=low`**: Enables killstreak opaque banner.
@@ -778,7 +778,7 @@ Controls developer console.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`console=on`** (all presets, except Very Low).
+Default setting: **`console=on`** (all presets, except Destitute).
 
 - **`console=off`**: Disables developer console.
 - **`console=on`**: Enables developer console.
@@ -833,7 +833,7 @@ Default setting: **`dynamic_background=off`** (all presets).
 Controls a variety of sound effects, including spatialization and positional effects.
 
 !!! note
-    In the Low and Very Low preset VPKs, spatialization and positional effects (called [DSP](https://developer.valvesoftware.com/wiki/DSP) in the Source Engine) are completely disabled.
+    In the Low and Destitute preset VPKs, spatialization and positional effects (called [DSP](https://developer.valvesoftware.com/wiki/DSP) in the Source Engine) are completely disabled.
 
 - **CPU usage:** high
 - **GPU usage:** none
@@ -853,7 +853,7 @@ Controls player voice chat.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`voice_chat=on`** (all presets, except Very Low).
+Default setting: **`voice_chat=on`** (all presets, except Destitute).
 
 - **`voice_chat=off`**: Fully disables the in-game voice chat system, does not receive audio and cannot be re-enabled until reconnect.
 - **`voice_chat=hidden`**: Disables the in-game voice chat system by blocking audio from playing.
@@ -884,7 +884,7 @@ Controls the mastercomfig logo which appears in console on start up.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`logo=on`** (all presets, except Very Low).
+Default setting: **`logo=on`** (all presets, except Destitute).
 
 - **`logo=off`**: Does not print logo in console on startup.
 - **`logo=on`**: Prints logo in console on startup.
