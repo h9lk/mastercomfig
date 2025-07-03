@@ -28,7 +28,7 @@
       },
       {
         "name": "lighting",
-        "description": "Controls lighting fidelity: dynamic lights, detailed lighting, rimlights, light averaging, lightwarps, and ambient boost.",
+        "description": "Controls lighting fidelity",
         "cpu": 2,
         "gpu": 3,
         "values": [
@@ -106,7 +106,7 @@
       {
         "name": "flashlight",
         "type": "switch",
-        "description": "Controls flashlight support. FLashlights are not used in TF2, so you should keep it disabled unless you need it for a certain community server mod, like Slender, or some Deathrun servers.",
+        "description": "Controls flashlight support. Flashlights are not used in TF2, so you should keep it disabled unless you need it for a certain community server mod, like Slender, or some Deathrun servers.",
         "notes": [
           {
             "level": "warning",
@@ -117,10 +117,12 @@
         "gpu": 2,
         "values": [
           {
-            "value": "off"
+            "value": "off",
+            "description": "Disables flashlight support."
           },
           {
-            "value": "on"
+            "value": "on",
+            "description": "Enables flashlight support. If the `shadows` module is `off`, this will set it to the `low` level."
           }
         ]
       },
