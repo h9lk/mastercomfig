@@ -45,11 +45,11 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 OpenGL was replaced with Vulkan by default in the April 18, 2024 update. It's highly recommended that you use Vulkan. However, if you are not able to find a supported driver for your system and must use the legacy ToGL renderer, you can use the `apply_opengl_opts` command in your `cfg/overrides/setup_hook.cfg` file to apply the OpenGL optimizations like the addon used to.
 
-Note that the OpenGL optimizations will set `lighting_ex=high` to avoid lighting issues exclusive to the ToGL renderer. This overrides your preset's setting, but respects any user-defined override for the module.
+Note that the OpenGL optimizations will set `shaders=high` to avoid lighting issues exclusive to the ToGL renderer. This overrides your preset's setting, but respects any user-defined override for the module.
 
 ## Black artifacts all over the screen on Linux
 
-This is a bug with TF2's legacy ToGL renderer and an interaction with the Mesa drivers. You can fix it by adding `lighting_ex=high` to your `modules.cfg`, or by using the Vulkan version of the game. If you apply OpenGL optimizations (see previous section), they will automatically set `lighting_ex=high`.
+This is a bug with TF2's legacy ToGL renderer and an interaction with the Mesa drivers. You can fix it by adding `shaders=high` to your `modules.cfg`, or by using the Vulkan version of the game. If you apply OpenGL optimizations (see previous section), they will automatically set `shaders=high`.
 
 You can also configure the ~/.drirc file to set `disable_uniform_array_resize` to `true` for Team Fortress 2 (or any program), such as:
 ```c
@@ -83,7 +83,7 @@ Make sure you don't have any infinite loops caused by an `exec autoexec` in your
 
 ## TF2 crashing on a custom map
 
-If TF2 crashes to desktop after a custom map loading or after picking a class on a custom map, add `lighting_ex=high` to your `modules.cfg`.
+If TF2 crashes to desktop after a custom map loading or after picking a class on a custom map, add `shaders=high` to your `modules.cfg`.
 
 The crashes are caused by lightmapped props and phong must be enabled to allow the map to load properly. No Valve map uses lightmapped props, excluding `rd_asteroid`.  
 More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.24682/).

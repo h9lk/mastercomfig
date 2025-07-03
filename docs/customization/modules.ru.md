@@ -184,9 +184,9 @@ texture_quality=high
 
 Настройка по умолчанию: в зависимости от того, какой пресет вы используете в данный момент.
 
-* **`lighting_ex=low`**: Затенение выкл.
-* **`lighting_ex=medium`**
-* **`lighting_ex=high`**: Затенение вкл.
+* **`shaders=low`**: Затенение выкл.
+* **`shaders=medium`**
+* **`shaders=high`**: Затенение вкл.
 
 ### Тени
 
@@ -543,7 +543,9 @@ texture_quality=high
 
 Настройка по умолчанию: в зависимости от того, какой пресет вы используете в данный момент.
 
+- **`texture_filter=blocky`**:
 * **`texture_filter=trilinear`**: Трилинейная фильтрация
+- **`texture_filter=trilinear_plus`**: Трилинейная фильтрация
 * **`texture_filter=aniso2x`**: Анизотропная фильтрация 2x
 * **`texture_filter=aniso4x`**: Анизотропная фильтрация 4x
 * **`texture_filter=aniso8x`**: Анизотропная фильтрация 8x

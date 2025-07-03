@@ -175,21 +175,21 @@ Default setting: based on which preset you are currently using.
 - **`lighting=very_high`**: 4 dynamic lights. Detailed non-static lighting.
 - **`lighting=ultra`**: 32 dynamic lights. Extremely detailed non-static lighting.
 
-### Lighting Ex
+### Shaders
 
 Controls extended lighting commands which cause a material system reload.
 
 !!! warning
-    Using any other level than **`lighting_ex=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons.
+    Using any other level than **`shaders=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons.
 
 - **CPU usage:** low
 - **GPU usage:** high
 
 Default setting: based on which preset you are currently using.
 
-- **`lighting_ex=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs due to rendering reloads.
-- **`lighting_ex=medium`**: Disables phong, but keeps material paths for specular and bumpmaps, as disabling these can cause glitches on DirectX 9. May reduce performance on modern PCs due to rendering reloads.
-- **`lighting_ex=high`**: Uses whatever the material's lighting needs (enables bumpmaps, specular and phong).
+- **`shaders=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs due to rendering reloads.
+- **`shaders=medium`**: Disables phong, but keeps material paths for specular and bumpmaps, as disabling these can cause glitches on DirectX 9. May reduce performance on modern PCs due to rendering reloads.
+- **`shaders=high`**: Uses whatever the material's lighting needs (enables bumpmaps, specular and phong).
 
 ### Shadows
 
@@ -554,8 +554,9 @@ Controls texture smoothing/filtering.
 
 Default setting: based on which preset you are currently using.
 
-- **`texture_filter=blocky`**: Blocky textures and world lighting with bilinear filtering
-- **`texture_filter=trilinear`**: Trilinear filtering
+- **`texture_filter=blocky`**: Blocky textures and world lighting
+- **`texture_filter=trilinear`**: Trilinear filtering without bicubic lightmaps
+- **`texture_filter=trilinear_plus`**: Trilinear filtering
 - **`texture_filter=aniso2x`**: Anisotropic filtering 2x
 - **`texture_filter=aniso4x`**: Anisotropic filtering 4x
 - **`texture_filter=aniso8x`**: Anisotropic filtering 8x

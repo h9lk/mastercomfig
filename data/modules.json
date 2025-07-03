@@ -55,15 +55,15 @@
         ]
       },
       {
-        "name": "lighting_ex",
-        "display": "Lighting Extensions",
+        "name": "shaders",
+        "display": "Shaders",
         "description": "Controls extended lighting commands which cause a material system reload.",
         "cpu": 1,
         "gpu": 3,
         "values": [
           {
             "value": "low",
-            "description": "Disables bumpmaps, specular and phong, which allows for a lighting fast path in certain cases. May reduce performance on modern PCs due to rendering reloads."
+            "description": "Disables bumpmaps, specular and phong, which allows for a shader fast path in certain cases. May reduce performance on modern PCs due to rendering reloads."
           },
           {
             "value": "medium",
@@ -71,7 +71,7 @@
           },
           {
             "value": "high",
-            "description": "Uses whatever the material's lighting needs (enables bumpmaps, specular and phong)."
+            "description": "Uses whatever the material's shader needs (enables bumpmaps, specular and phong)."
           }
         ]
       },
@@ -494,10 +494,14 @@
         "values": [
           {
             "value": "blocky",
-            "display": "Blocky textures and world lighting with bilinear filtering"
+            "display": "Blocky textures and world lighting"
           },
           {
             "value": "trilinear",
+            "display": "Trilinear filtering without bicubic lightmaps"
+          },
+          {
+            "value": "trilinear_plus",
             "display": "Trilinear filtering"
           },
           {

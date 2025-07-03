@@ -33,7 +33,7 @@
     "ultra": "ultra",
     "none": ""
   },
-  "lighting_ex": {
+  "shaders": {
     "default": "high",
     "destitute": "low",
     "low": "low",
