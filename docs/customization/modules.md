@@ -595,7 +595,7 @@ Setting it higher can reduce input delay.
     This module is only provided for general convenience and accessibility. The built-in FPS cap
     in Team Fortress 2 has precision problems depending on your CPU (such as Intel Skylake platform and above)
     as well as accuracy problems on Windows due to usage of millisecond timers. It is recommended you use
-    a more reliable FPS cap tool, like [Rivatuner](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html)
+    a more reliable FPS cap tool, like [Rivatuner for Windows](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html) or [MangoHud for Linux](https://github.com/flightlessmango/MangoHud)
     and set `fpscap=unlimited` to disable the in-game FPS cap.
 
 - **CPU usage:** low

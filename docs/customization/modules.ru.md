@@ -583,7 +583,7 @@ texture_quality=high
     Этот модуль предоставляется только для общего удобства и доступности. Встроенное ограничение FPS
     в Team Fortress 2 есть проблемы с точностью в зависимости от вашего процессора (например, платформа Intel Skylake и выше)
     а также проблемы с точностью в Windows из-за использования миллисекундных таймеров. Рекомендуется использовать
-    более надежный инструмент ограничения FPS, например [Rivatuner](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html)
+    более надежный инструмент ограничения FPS, например [Rivatuner](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html), [MangoHud](https://github.com/flightlessmango/MangoHud)
     и установите `fpscap=unlimited`, чтобы отключить ограничение FPS в игре.
 
 * **Использование ЦП:** низкое
