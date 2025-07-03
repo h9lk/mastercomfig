@@ -746,6 +746,9 @@
           },
           {
             "value": "high"
+          },
+          {
+            "value": "ultra"
           }
         ]
       },

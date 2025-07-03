@@ -795,10 +795,11 @@ Controls the outlines that appear through walls for players, some objectives (pa
 
 Default setting: based on which preset you are currently using.
 
-- **`outlines=off`**: Disables outlines and nametags.
-- **`outlines=low`**: Enables nametags, disable outlines.
-- **`outlines=medium`**: Disables nametags and player outlines, enable objective outlines.
-- **`outlines=high`**: Enables nametags and outlines.
+- **`outlines=off`**: Disables nametags and all outlines.
+- **`outlines=low`**: Enables nametags, disables all outlines.
+- **`outlines=medium`**: Disables nametags and player outlines, enables all other outlines.
+- **`outlines=high`**: Enables nametags and player outlines for spectating only, enables all other outlines.
+- **`outlines=ultra`**: Enables nametags and all outlines.
 
 ### Map Background
 

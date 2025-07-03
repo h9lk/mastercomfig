@@ -267,8 +267,8 @@
     "default": "low",
     "destitute": "off",
     "low": "off",
-    "high": "high",
-    "ultra": "high",
+    "high": "ultra",
+    "ultra": "ultra",
     "none": ""
   },
   "dynamic_background": {
