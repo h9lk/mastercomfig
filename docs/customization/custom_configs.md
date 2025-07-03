@@ -73,7 +73,7 @@ You can also re-alias them to use entirely custom network settings.
 
 ## Changing your preset
 
-mastercomfig supports selecting a preset after download. Add a file to your `overrides` folder called `pre_comfig.cfg`. In this file, put your desired preset as `preset=presetname`. Preset names are:
+mastercomfig supports selecting a preset after download. Add a file to your `overrides` folder called `setup_hook.cfg`. In this file, put your desired preset as `preset=presetname`. Preset names are:
 
 - none
 - ultra
@@ -108,9 +108,9 @@ If you want to run something only the first time you spawn and never run again w
 
 When diving deep into customization of the core of mastercomfig, you may find it useful to run things directly before and after mastercomfig's `comfig.cfg`, which provides core functionality and aliases.
 
-You can use `overrides/pre_comfig.cfg` to run things before `comfig.cfg`, and `overrides/setup_hook.cfg` to run things after `comfig.cfg`.
+You can use `overrides/pre_init.cfg` to run things before `comfig.cfg`, and `overrides/setup_hook.cfg` to run things after `comfig.cfg`.
 
-Examples of `overrides/pre_comfig.cfg` uses can be things like customizing your preset detailed above or turning on debugging options to monitor the launch process of mastercomfig itself (ex: `sv_cheats 1;mat_debugalttab 1`).
+Examples of `overrides/pre_init.cfg` uses can be things like customizing your preset detailed above or turning on debugging options to monitor the launch process of mastercomfig itself (ex: `sv_cheats 1;mat_debugalttab 1`).
 
 Uses of `overrides/setup_hook.cfg` are rarer but still valid. With this, you can directly override all aliases defined in mastercomfig's core. You can use this to change the default modules file, make your own modules or module levels, customize the built-in ones, and more!
 
