@@ -148,8 +148,7 @@
     "none": ""
   },
   "props": {
-    "default": "medium",
-    "destitute": "low",
+    "default": "low",
     "high": "high",
     "ultra": "ultra",
     "none": ""
