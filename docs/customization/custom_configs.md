@@ -34,12 +34,11 @@ Some modules set something called game overrides, which apply settings that over
 
 If you want to override this part of the module, you must use their game override alias in `tf/cfg/overrides/autoexec.cfg`. This comprises of an override alias, ran during game overrides, and an override option, which has the settings ran by the override alias.
 
-* `lighting`: Uses `lightmaps_override` to control if lighting is blocky or smoothed out
-    * `lightmaps_off`: Makes lighting blocky
+- `lighting`: Uses `lightmaps_override` to control if lighting is blocky or smoothed out
 
-* `shadows`: Uses `shadowlod_override` to control the model quality shadows render with
-    * `shadowlod_low`: Uses the lowest model quality to render shadows
-    * `shadowlod_high`: Uses the highest model quality (at root LOD) to render shadows
+  - `lightmaps_off`: Makes lighting blocky
+
+- `shadows`: Uses `shadowlod_override` to control the model quality shadows render with
 
   - `shadowlod_low`: Uses the lowest model quality to render shadows
   - `shadowlod_high`: Uses the highest model quality (at root LOD) to render shadows
@@ -68,9 +67,9 @@ You can run them manually in your class config if you play a subclass, like Demo
 
 You can also re-alias them to use entirely custom network settings.
 
-* `net_projectiles`: Alias for network settings on projectile classes (Soldier, Pyro, Demoman, Medic) (`snapshot_buffer_low`).
-* `net_hitscan`: Alias for network settings on hitscan classes (Scout, Heavy, Engineer, Sniper) (`snapshot_buffer_safe`).
-* `net_spy`: Alias for network settings on Spy (`snapshot_buffer_low`).
+- `net_projectiles`: Alias for network settings on projectile classes (Soldier, Pyro, Demoman, Medic) (`snapshot_buffer_low`).
+- `net_hitscan`: Alias for network settings on hitscan classes (Scout, Heavy, Engineer, Sniper) (`snapshot_buffer_safe`).
+- `net_spy`: Alias for network settings on Spy (`snapshot_buffer_low`).
 
 ## Changing your preset
 
