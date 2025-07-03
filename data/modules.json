@@ -170,26 +170,6 @@
         ]
       },
       {
-        "name": "particles",
-        "values": [
-          {
-            "value": "very_low"
-          },
-          {
-            "value": "low"
-          },
-          {
-            "value": "medium"
-          },
-          {
-            "value": "high"
-          },
-          {
-            "value": "ultra"
-          }
-        ]
-      },
-      {
         "name": "post_processing",
         "display": "General Post-Processing",
         "values": [

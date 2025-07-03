@@ -72,14 +72,6 @@
     "ultra": "ultra",
     "none": ""
   },
-  "particles": {
-    "default": "low",
-    "destitute": "very_low",
-    "medium-high": "medium",
-    "high": "high",
-    "ultra": "ultra",
-    "none": ""
-  },
   "post_processing": {
     "default": "off",
     "medium": "low",

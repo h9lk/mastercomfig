@@ -88,7 +88,7 @@ You can check the currently selected preset by entering `preset_level` into the 
 ## Optional Aliases
 
 !!! warning
-Optional aliases are **entirely optional** and are **only** for **advanced** customization.
+    Optional aliases are **entirely optional** and are **only** for **advanced** customization.
 
 Your override preferences can have multiple options, sort of like presets! You can use this to have different quality choices or game configurations for different scenarios or moods.
 
@@ -118,7 +118,7 @@ Uses of `overrides/setup_hook.cfg` are rarer but still valid. With this, you can
 ## Optional User Config Template
 
 !!! warning
-These steps are entirely optional and are only for advanced customization.
+    These steps are entirely optional and are only for advanced customization.
 
 To get an idea about what to put in your `overrides/autoexec.cfg` and select options,
 you can download the autoexec template from the [latest release](https://github.com/mastercomfig/mastercomfig/releases/latest).

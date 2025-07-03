@@ -225,7 +225,7 @@ Default setting: **`flashlight=off`** (all presets).
 
 ### Effects
 
-Controls weapon and other miscellaneous effects.
+Controls weapon effects, particles, and other miscellaneous effects
 
 !!! note
     The way TF2 uses these settings is inconsistent and may not apply in all cases.
@@ -235,10 +235,11 @@ Controls weapon and other miscellaneous effects.
 
 Default setting: based on which preset you are currently using.
 
-- **`effects=low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision. Disables monitors.
-- **`effects=medium`**: Disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, disables temp ent (syringe) collision. 512x render resolution for monitors.
-- **`effects=high`**: Disables shell casing ejection, disables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 1K render resolution for monitors.
-- **`effects=ultra`**: Enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 2K render resolution for monitors.
+- **`effects=very_low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision. Disables monitors. Collapses spawning particles into existing particles (including bullet tracers and flames) together, disables weather particles, reduces particle density/quality.
+- **`effects=low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision. Disables weather particles, reduces particle density/quality.
+- **`effects=medium`**: Disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, disables temp ent (syringe) collision. 512x render resolution for monitors. Disables weather particles, reduces particle density/quality.
+- **`effects=high`**: Disables shell casing ejection, disables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 1K render resolution for monitors. Enables weather particles, uses full particle density/quality.
+- **`effects=ultra`**: Enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 2K render resolution for monitors. Enables weather particles, uses full particle density/quality, and forces full simulation for all particles.
 
 ### Water
 
@@ -256,21 +257,6 @@ Default setting: based on which preset you are currently using.
 - **`water=high`**: Uses standard water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
 - **`water=very_high`**: Uses high quality water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
 - **`water=ultra`**: Uses high quality water with all reflections. Never fades out to low quality water. 2K water render resolution.
-
-### Particles
-
-Controls particle effects.
-
-- **CPU usage:** medium
-- **GPU usage:** medium
-
-Default setting: based on which preset you are currently using.
-
-- **`particles=very_low`**: Collapses spawning particles into existing particles (including bullet tracers and flames) together, disables weather particles, reduces particle density/quality.
-- **`particles=low`**: Disables weather particles, reduces particle density/quality.
-- **`particles=medium`**: Disables weather particles, reduces particle density/quality.
-- **`particles=high`**: Enables weather particles, uses full particle density/quality.
-- **`particles=ultra`**: Enables weather particles, uses full particle density/quality, and forces full simulation for all particles.
 
 ### General Post-Processing
 
