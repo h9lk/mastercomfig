@@ -19,7 +19,7 @@ autoexec_file=mastercomfig-base/cfg/autoexec.cfg
   printf "modules_c;"
   printf "run_modules;"
   printf "exec comfig/echo.cfg;"
-  printf "exec app/.cfg;"
+  printf "exec app/addons.cfg;"
   printf "exec overrides/autoexec.cfg;exec app/autoexec.cfg;"
   printf "exec comfig/finalize.cfg"
 } > "${autoexec_file}"

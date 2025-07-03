@@ -180,7 +180,7 @@ Default setting: based on which preset you are currently using.
 Controls extended lighting commands which cause a material system reload.
 
 !!! warning
-    Using any other level than **`lighting_ex=high`** can cause visual glitches in items and props. Mainly, this affects weapon warpaints and Australium weapons.
+    Using any other level than **`lighting_ex=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons.
 
 - **CPU usage:** low
 - **GPU usage:** high
