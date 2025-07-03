@@ -4,90 +4,117 @@
       {
         "name": "lod",
         "display": "Model Quality",
+        "description": "Controls how detailed models are.",
+        "cpu": 1,
+        "gpu": 2,
         "values": [
           {
-            "value": "low"
+            "value": "low",
+            "description": "Low model detail"
           },
           {
-            "value": "medium"
+            "value": "medium",
+            "description": "Medium model detail"
           },
           {
-            "value": "high"
+            "value": "high",
+            "description": "High model detail"
           },
           {
-            "value": "ultra"
+            "value": "ultra",
+            "description": "Forces high model detail regardless of distance"
           }
         ]
       },
       {
         "name": "lighting",
+        "description": "Controls lighting fidelity: dynamic lights, detailed lighting, rimlights, light averaging, lightwarps, and ambient boost.",
+        "cpu": 2,
+        "gpu": 3,
         "values": [
           {
-            "value": "very_low"
+            "value": "very_low",
+            "description": "No dynamic lightmaps and skips all movable lighting. No lightwarps or rimlights."
           },
           {
-            "value": "low"
+            "value": "low",
+            "description": "No dynamic lightmaps and only applies ambient movable lighting. No lightwarps or rimlights."
           },
           {
-            "value": "medium"
+            "value": "medium",
+            "description": "No dynamic lightmaps and applies only the most relevant movable lighting"
           },
           {
-            "value": "medium_high"
+            "value": "high",
+            "description": "1 dynamic lightmap and applies detailed movable lighting"
           },
           {
-            "value": "high"
-          },
-          {
-            "value": "very_high"
-          },
-          {
-            "value": "ultra"
+            "value": "ultra",
+            "description": "Maximum dynamic lightmaps and applies extremely detailed movable lighting"
           }
         ]
       },
       {
         "name": "lighting_ex",
+        "display": "Lighting Extensions",
+        "description": "Controls extended lighting commands which cause a material system reload.",
+        "cpu": 1,
+        "gpu": 3,
         "values": [
           {
-            "value": "low"
+            "value": "low",
+            "description": "Disables bumpmaps, specular and phong, which allows for a lighting fast path in certain cases. May reduce performance on modern PCs due to rendering reloads."
           },
           {
-            "value": "medium"
+            "value": "medium",
+            "description": "Disables phong, but keeps bumpmaps and specular, as disabling these can cause glitches. May reduce performance on modern PCs due to rendering reloads."
           },
           {
-            "value": "high"
+            "value": "high",
+            "description": "Uses whatever the material's lighting needs (enables bumpmaps, specular and phong)."
           }
         ]
       },
       {
         "name": "shadows",
+        "description": "Controls shadow quality. Shadow limits affect rendered shadows. Shadows above the limit will be blobby.",
+        "cpu": 3,
+        "gpu": 2,
         "values": [
           {
-            "value": "off"
+            "value": "off",
+            "description": "No dynamic shadows"
           },
           {
-            "value": "very_low"
+            "value": "low",
+            "description": "Blobby shadows"
           },
           {
-            "value": "low"
+            "value": "medium",
+            "description": "Up to 3 low quality shadows"
           },
           {
-            "value": "medium"
+            "value": "high",
+            "description": "Up to 23 high quality shadows and limited NPC shadow distance"
           },
           {
-            "value": "high"
-          },
-          {
-            "value": "very_high"
-          },
-          {
-            "value": "ultra"
+            "value": "ultra",
+            "description": "Up to 160 ultra quality movable shadows and unlimited NPC shadow distance"
           }
         ]
       },
       {
         "name": "flashlight",
         "type": "switch",
+        "description": "Controls flashlight support. FLashlights are not used in TF2, so you should keep it disabled unless you need it for a certain community server mod, like Slender, or some Deathrun servers.",
+        "notes": [
+          {
+            "level": "warning",
+            "content": "Turning on flashlight support will cause rendering artifacts on some maps, especially when Pyroland is enabled"
+          }
+        ],
+        "cpu": 1,
+        "gpu": 2,
         "values": [
           {
             "value": "off"
