@@ -30,11 +30,10 @@ Giving more room for processor power to scale individually per core allows the O
 
 Currently, there is a bug with Windows Defender where it will spam an Intel CPU feature until another program has used it. This can significantly reduce performance by up to 6%. You can use [Counter Control](https://www.techpowerup.com/download/counter-control/)'s Reset button to mark this feature as used and stop the spam from Defender. [Read more here](https://www.pcmag.com/news/intel-cpu-performance-takes-a-big-hit-due-to-windows-defender-bug).
 
-## Disable Nvidia Low Latency Mode
+## Enable Nvidia Low Latency Mode
 
-The Source Engine has a frame syncing method that is tuned for its material threading system.
-By constraining queued frames in the driver, you can cause unexpected stalls in the frame submission process, which can reduce frame rate and increase input delay.
-Because of this, it is recommended you keep Low Latency Mode in the Nvidia Control Panel to its default value of `Off` for Team Fortress 2.
+Nvidia allows for driver-level latency optimizations which can improve input latency.
+Thus, it is recommended you set Low Latency Mode in the Nvidia App Graphics Global Settings to `Ultra`.
 
 ## Disable Radeon Chill
 
