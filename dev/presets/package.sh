@@ -31,20 +31,6 @@ cp -rf ../../config/mastercomfig/* mastercomfig-base/
 
 cleanItems
 
-# TODO: do in app
-
-# Disable dsp on destitute and low
-#declare -a dsp_off=("destitute" "low")
-#for P in "${dsp_off[@]}"; do
-#  sed -i "s/ConVar.dsp_off 0/ConVar.dsp_off 1/g" mastercomfig-"${P}"-preset/dxsupport_override.cfg
-#done
-
-# Hide decals on destitute
-#declare -a decals_depth=("destitute")
-#for P in "${decals_depth[@]}"; do
-#  sed -i "s/ConVar.mat_slopescaledepthbias_decal -0.5/ConVar.mat_slopescaledepthbias_decal 0.000001/g" mastercomfig-"${P}"-preset/dxsupport_override.cfg
-#done
-
 packageItems
 
 printf "\n"
