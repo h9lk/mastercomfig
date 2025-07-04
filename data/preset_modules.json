@@ -17,7 +17,6 @@
   },
   "lod": {
     "default": "low",
-    "medium-high": "high",
     "high": "high",
     "ultra": "ultra",
     "none": ""
@@ -26,9 +25,7 @@
     "default": "medium_high",
     "destitute": "very_low",
     "low": "medium",
-    "medium-low": "medium",
     "medium": "medium_high",
-    "medium-high": "medium_high",
     "high": "very_high",
     "ultra": "ultra",
     "none": ""
@@ -37,14 +34,11 @@
     "default": "high",
     "destitute": "low",
     "low": "low",
-    "medium-low": "medium",
     "none": ""
   },
   "shadows": {
     "default": "off",
-    "medium-low": "very_low",
     "medium": "medium",
-    "medium-high": "medium",
     "high": "high",
     "ultra": "ultra",
     "none": ""
@@ -56,7 +50,6 @@
   "effects": {
     "default": "low",
     "medium": "medium",
-    "medium-high": "medium",
     "high": "high",
     "ultra": "ultra",
     "none": ""
@@ -65,9 +58,7 @@
     "default": "high",
     "destitute": "very_low",
     "low": "low",
-    "medium-low": "medium",
     "medium": "medium",
-    "medium-high": "high",
     "high": "very_high",
     "ultra": "ultra",
     "none": ""
@@ -75,14 +66,12 @@
   "post_processing": {
     "default": "off",
     "medium": "low",
-    "medium-high": "high",
     "high": "high",
     "ultra": "high",
     "none": ""
   },
   "pyrovision": {
     "default": "low",
-    "medium-high": "medium",
     "high": "high",
     "ultra": "high",
     "none": ""
@@ -97,7 +86,6 @@
   },
   "anti_aliasing": {
     "default": "off",
-    "medium-high": "msaa_4x",
     "high": "msaa_8x",
     "ultra": "msaa_8x",
     "none": ""
@@ -106,7 +94,6 @@
     "default": "low",
     "destitute": "very_low",
     "low": "very_low",
-    "medium-high": "high",
     "high": "high",
     "ultra": "ultra",
     "none": ""
@@ -114,14 +101,13 @@
   "decals": {
     "default": "off",
     "medium": "low",
-    "medium-high": "low",
     "high": "medium",
     "ultra": "ultra",
     "none": ""
   },
   "decals_models": {
     "default": "off",
-    "medium-high": "low",
+    "medium": "low",
     "high": "medium",
     "ultra": "high",
     "none": ""
@@ -130,7 +116,6 @@
     "default": "on",
     "destitute": "off",
     "low": "off",
-    "medium-low": "off",
     "none": ""
   },
   "sprays": {
@@ -142,7 +127,6 @@
   },
   "gibs": {
     "default": "off",
-    "medium-high": "low",
     "high": "medium",
     "ultra": "high",
     "none": ""
@@ -155,7 +139,6 @@
   },
   "ragdolls": {
     "default": "off",
-    "medium-high": "medium",
     "high": "high",
     "ultra": "high",
     "none": ""
@@ -168,7 +151,6 @@
   },
   "jigglebones": {
     "default": "off",
-    "medium-high": "on",
     "high": "on",
     "ultra": "force_on",
     "none": ""
@@ -192,14 +174,12 @@
     "default": "trilinear",
     "destitute": "blocky",
     "medium": "aniso2x",
-    "medium-high": "aniso4x",
     "high": "aniso8x",
     "ultra": "aniso16x",
     "none": ""
   },
   "ropes": {
     "default": "off",
-    "medium-high": "low",
     "high": "high",
     "ultra": "ultra",
     "none": ""
@@ -214,7 +194,6 @@
   "hud_player_model": {
     "default": "off",
     "medium": "on",
-    "medium-high": "on",
     "high": "on",
     "ultra": "on",
     "none": ""
@@ -232,7 +211,6 @@
     "default": "everyone",
     "destitute": "off",
     "low": "off",
-    "medium-low": "friends",
     "medium": "friends"
   },
   "match_hud": {
@@ -276,7 +254,6 @@
   "sound": {
     "default": "low",
     "medium": "medium",
-    "medium-high": "high",
     "high": "very_high",
     "ultra": "ultra",
     "none": ""
