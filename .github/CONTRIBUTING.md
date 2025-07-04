@@ -163,13 +163,13 @@ the existing modules if applicable, then add documentation for it at the
 
 The first part of adding modules is a multi-step process in `config/mastercomfig/cfg/comfig/comfig.cfg`:
 
-- Add the module level alias(es) (`alias module_level "cvar1 1;cvar2 0`). For every command in the module, all levels must set that command unless there is no impact at that level.
-- Add the set module level alias(es) (`alias module=level"alias module module_level"`).
-- Possibly adjust presets in `config/cfg/presets` to use the new module or levels to an existing module.
+- Add the module option alias(es) (`alias module_option "cvar1 1;cvar2 0;alias module_level echo module=option"`). For every command in the module, all options must set that command unless there is no impact at that option.
+- Add the set module option alias(es) (`alias module=option"alias module module_option"`).
+- Possibly adjust presets in `config/cfg/presets` to use the new module or options to an existing module.
 
-If you are adding a new module, you will also need to add a new `module` entry in `config/mastercomfig/cfg/comfig/modules_run.cfg`
+If you are adding a new module, you will also need to add a new `module` entry in `config/mastercomfig/cfg/comfig/modules_run.cfg` and `config/mastercomfig/cfg/comfig/modules_levels.cfg`.
 
-You also have to add your new module or levels to `data/modules.json` for app support.
+You also have to add your new module or options to `data/modules.json` for app support.
 
 #### Texture preload list
 

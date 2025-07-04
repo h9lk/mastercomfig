@@ -99,7 +99,7 @@ It's generally recommended that you use the video options instead of these launc
 - `-small -w 768 -h 432` : Small resolution, hides chat messages
 - `-small -w 640 -h 360` : Smaller resolution, hides chat messages
 
-You can still use chat even while it is hidden at smaller resolutions, so you may want to use the `messages=off` module level for it to work optimally.
+You can still use chat even while it is hidden at smaller resolutions, so you may want to use the `messages=off` module option for it to work optimally.
 
 ### DirectX 8
 

@@ -61,7 +61,7 @@ Or, if you are using a lower water module, but do not want to use cheap water, y
 
 ## Network Aliases
 
-mastercomfig uses these aliases to apply network settings per class (as listed below) when using the `snapshot_buffer=auto` module level.
+mastercomfig uses these aliases to apply network settings per class (as listed below) when using the `snapshot_buffer=auto` module option.
 
 You can run them manually in your class config if you play a subclass, like Demoknight (`net_hitscan`) or Huntsman (`net_projectiles`).
 
@@ -112,7 +112,7 @@ You can use `overrides/pre_init.cfg` to run things before `comfig.cfg`, and `ove
 
 Examples of `overrides/pre_init.cfg` uses can be things like customizing your preset detailed above or turning on debugging options to monitor the launch process of mastercomfig itself (ex: `sv_cheats 1;mat_debugalttab 1`).
 
-Uses of `overrides/setup_hook.cfg` are rarer but still valid. With this, you can directly override all aliases defined in mastercomfig's core. You can use this to change the default modules file, make your own modules or module levels, customize the built-in ones, and more!
+Uses of `overrides/setup_hook.cfg` are rarer but still valid. With this, you can directly override all aliases defined in mastercomfig's core. You can use this to change the default modules file, make your own modules or module options, customize the built-in ones, and more!
 
 ## Optional User Config Template
 

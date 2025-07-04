@@ -179,7 +179,7 @@ Default setting: based on which preset you are currently using.
 Controls advanced shading commands which cause a materail system reload.
 
 !!! warning
-    Using any other level than **`shading=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons.
+    Using any other option than **`shading=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons.
 
 - **CPU usage:** low
 - **GPU usage:** high
@@ -218,7 +218,7 @@ Controls flashlight support. Flashlights are not used in TF2, so you should keep
 Default setting: **`flashlight=off`** (all presets).
 
 - **`flashlight=off`**: Disables flashlight support.
-- **`flashlight=on`**: Enables flashlight support. If the `shadows` module is `off`, this will set it to the `low` level.
+- **`flashlight=on`**: Enables flashlight support. If the `shadows` module is `off`, this will set it to the `low` option.
 
 ### Effects
 
@@ -413,8 +413,8 @@ Controls decals sprayed by players.
 Default setting: **`sprays=off`** (all presets).
 
 - **`sprays=off`**: Completely disables downloading, uploading and displaying sprays. Deletes temporary spray files on shutdown.
-- **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. Deletes temporary spray files on shutdown. If the `decals` module is `off`, this will set it to the `low` level.
-- **`sprays=keep`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. Keeps temporary spray files on shutdown. If the `decals` module is `off`, this will set it to the `low` level.
+- **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. Deletes temporary spray files on shutdown. If the `decals` module is `off`, this will set it to the `low` option.
+- **`sprays=keep`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. Keeps temporary spray files on shutdown. If the `decals` module is `off`, this will set it to the `low` option.
 
 ### Gibs
 
