@@ -147,7 +147,7 @@ Add your alternatives uncommented in the applicable presets/addons or use module
 ##### Addons
 
 - `no-footsteps`: Removes footstep sounds
-- `disable-pyroland`: Removes Pyroland map textures
+- `no-pyroland`: Removes Pyroland map textures
 - `no-soundscapes`: Removes soundscapes (ambient map noise) and bird noises
 - `no-tutorial`: Disables tutorial messages and other popups
 - `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration, and 1:1 zoom sensitivity
