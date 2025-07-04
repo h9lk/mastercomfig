@@ -655,7 +655,7 @@ Default setting: based on which preset you are currently using.
 - **`hud_player_model=off`**: Disables the player model.
 - **`hud_player_model=on`**: Enables the player model.
 
-### Server Text
+### Server Messages
 
 Controls server / game mode text messages at the center of the screen.
 
