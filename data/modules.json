@@ -42,22 +42,22 @@
           },
           {
             "value": "medium",
-            "description": "No dynamic lightmaps and applies only the most relevant movable lighting"
+            "description": "No dynamic lightmaps and applies only the most relevant movable lighting."
           },
           {
             "value": "high",
-            "description": "1 dynamic lightmap and applies detailed movable lighting"
+            "description": "1 dynamic lightmap and applies detailed movable lighting."
           },
           {
             "value": "ultra",
-            "description": "Maximum dynamic lightmaps and applies extremely detailed movable lighting"
+            "description": "Maximum dynamic lightmaps and applies extremely detailed movable lighting."
           }
         ]
       },
       {
-        "name": "shaders",
-        "display": "Shaders",
-        "description": "Controls extended lighting commands which cause a material system reload.",
+        "name": "shading",
+        "display": "Shading",
+        "description": "Controls advanced shading commands which cause a material system reload.",
         "cpu": 1,
         "gpu": 3,
         "values": [
@@ -130,6 +130,9 @@
         "name": "effects",
         "values": [
           {
+            "value": "very_low"
+          },
+          {
             "value": "low"
           },
           {
@@ -156,13 +159,7 @@
             "value": "medium"
           },
           {
-            "value": "medium_high"
-          },
-          {
             "value": "high"
-          },
-          {
-            "value": "very_high"
           },
           {
             "value": "ultra"
@@ -177,13 +174,41 @@
             "value": "off"
           },
           {
-            "value": "low"
+            "value": "default"
           },
           {
-            "value": "medium"
+            "value": "calm",
+            "display": "Calm (recommended)"
           },
           {
-            "value": "high"
+            "value": "vivid"
+          },
+          {
+            "value": "washed"
+          },
+          {
+            "value": "dreamy"
+          }
+        ]
+      },
+      {
+        "name": "color_filter",
+        "display": "Color Filter",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "grayscale"
+          },
+          {
+            "value": "desaturated"
+          },
+          {
+            "value": "warm"
+          },
+          {
+            "value": "cool"
           }
         ]
       },
@@ -262,13 +287,7 @@
             "value": "medium"
           },
           {
-            "value": "medium_high"
-          },
-          {
             "value": "high"
-          },
-          {
-            "value": "ultra"
           }
         ]
       },
@@ -347,12 +366,6 @@
           },
           {
             "value": "low"
-          },
-          {
-            "value": "medium_low"
-          },
-          {
-            "value": "medium"
           },
           {
             "value": "high"
@@ -583,6 +596,19 @@
       {
         "name": "hud_player_model",
         "display": "Player Model",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "hud_server_text",
+        "display": "Server Messages",
         "type": "switch",
         "values": [
           {

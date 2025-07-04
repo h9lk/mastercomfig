@@ -16,29 +16,31 @@
     "default": "custom"
   },
   "lod": {
-    "default": "low",
+    "destitute": "very_low",
+    "low": "low",
+    "medium": "medium",
     "high": "high",
     "ultra": "ultra",
     "none": ""
   },
   "lighting": {
-    "default": "medium_high",
     "destitute": "very_low",
-    "low": "medium",
-    "medium": "medium_high",
-    "high": "very_high",
+    "low": "low",
+    "medium": "medium",
+    "high": "high",
     "ultra": "ultra",
     "none": ""
   },
-  "shaders": {
-    "default": "high",
-    "destitute": "low",
-    "low": "low",
+  "shading": {
+    "default": "low",
+    "medium": "medium",
+    "high": "high",
+    "ultra": "high",
     "none": ""
   },
   "shadows": {
     "default": "off",
-    "medium": "medium",
+    "medium": "low",
     "high": "high",
     "ultra": "ultra",
     "none": ""
@@ -48,30 +50,34 @@
     "none": ""
   },
   "effects": {
-    "default": "low",
+    "destitute": "very_low",
+    "low": "low",
     "medium": "medium",
     "high": "high",
     "ultra": "ultra",
     "none": ""
   },
   "water": {
-    "default": "high",
     "destitute": "very_low",
     "low": "low",
     "medium": "medium",
-    "high": "very_high",
+    "high": "high",
     "ultra": "ultra",
     "none": ""
   },
   "post_processing": {
     "default": "off",
-    "medium": "low",
-    "high": "high",
-    "ultra": "high",
+    "high": "calm",
+    "ultra": "calm",
+    "none": ""
+  },
+  "color_filter": {
+    "default": "off",
     "none": ""
   },
   "pyrovision": {
     "default": "low",
+    "medium": "medium",
     "high": "high",
     "ultra": "high",
     "none": ""
@@ -86,16 +92,16 @@
   },
   "anti_aliasing": {
     "default": "off",
-    "high": "msaa_8x",
+    "medium": "msaa_2x",
+    "high": "msaa_4x",
     "ultra": "msaa_8x",
     "none": ""
   },
   "characters": {
-    "default": "low",
-    "destitute": "very_low",
-    "low": "very_low",
+    "default": "very_low",
+    "medium": "medium",
     "high": "high",
-    "ultra": "ultra",
+    "ultra": "high",
     "none": ""
   },
   "decals": {
@@ -127,7 +133,8 @@
   },
   "gibs": {
     "default": "off",
-    "high": "medium",
+    "medium": "low",
+    "high": "low",
     "ultra": "high",
     "none": ""
   },
@@ -139,6 +146,7 @@
   },
   "ragdolls": {
     "default": "off",
+    "medium": "medium",
     "high": "high",
     "ultra": "high",
     "none": ""
@@ -151,6 +159,7 @@
   },
   "jigglebones": {
     "default": "off",
+    "medium": "on",
     "high": "on",
     "ultra": "force_on",
     "none": ""
@@ -166,13 +175,14 @@
   },
   "texture_quality": {
     "default": "high",
-    "high": "very_high",
+    "low": "medium",
+    "high": "ultra",
     "ultra": "ultra",
     "none": ""
   },
   "texture_filter": {
-    "default": "trilinear",
     "destitute": "blocky",
+    "low": "trilinear",
     "medium": "aniso2x",
     "high": "aniso8x",
     "ultra": "aniso16x",
@@ -180,6 +190,7 @@
   },
   "ropes": {
     "default": "off",
+    "medium": "low",
     "high": "high",
     "ultra": "ultra",
     "none": ""
@@ -198,9 +209,13 @@
     "ultra": "on",
     "none": ""
   },
+  "hud_server_text": {
+    "default": "on",
+    "destitute": "off"
+  },
   "hud_contracts": {
     "default": "custom",
-    "destitute": "off"
+    "destitute": "hide"
   },
   "hud_panels": {
     "default": "high",
@@ -210,8 +225,7 @@
   "hud_avatars": {
     "default": "everyone",
     "destitute": "off",
-    "low": "off",
-    "medium": "friends"
+    "low": "off"
   },
   "match_hud": {
     "default": "on",
@@ -231,7 +245,8 @@
     "low": "low"
   },
   "hud_achievement": {
-    "default": "on"
+    "default": "on",
+    "destitute": "off"
   },
   "console": {
     "default": "on",
@@ -241,9 +256,8 @@
     "default": "off"
   },
   "outlines": {
-    "default": "low",
-    "destitute": "off",
-    "low": "off",
+    "default": "off",
+    "medium": "low",
     "high": "ultra",
     "ultra": "ultra",
     "none": ""
@@ -253,7 +267,7 @@
   },
   "sound": {
     "default": "low",
-    "medium": "medium",
+    "medium": "high",
     "high": "very_high",
     "ultra": "ultra",
     "none": ""

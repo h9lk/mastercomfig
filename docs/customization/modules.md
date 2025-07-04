@@ -153,10 +153,11 @@ Controls how detailed models are.
 
 Default setting: based on which preset you are currently using.
 
+- **`lod=very_low`**: Low model detail. Very low quality prop models and invisible railings.
 - **`lod=low`**: Low model detail.
 - **`lod=medium`**: Medium model detail.
 - **`lod=high`**: High model detail.
-- **`lod=ultra`**: Forces high model detail regardless of distance.
+- **`lod=ultra`**: Forces max model detail regardless of distance.
 
 ### Lighting
 
@@ -167,46 +168,42 @@ Controls lighting fidelity: dynamic lights, detailed lighting, rimlights, light 
 
 Default setting: based on which preset you are currently using.
 
-- **`lighting=very_low`**: No dynamic lights. Skips all non-static lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-- **`lighting=low`**: No dynamic lights. Skips dim non-static lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-- **`lighting=medium`**: No dynamic lights. Detailed non-static lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-- **`lighting=medium_high`**: No dynamic lights. Detailed non-static lighting.
-- **`lighting=high`**: 1 dynamic light. Detailed non-static lighting.
-- **`lighting=very_high`**: 4 dynamic lights. Detailed non-static lighting.
-- **`lighting=ultra`**: 32 dynamic lights. Extremely detailed non-static lighting.
+- **`lighting=very_low`**: No dynamic lightmaps and skips all movable lighting. No lightwarps or rimlights.
+- **`lighting=low`**: No dynamic lightmaps and only applies ambient movable lighting. No lightwarps or rimlights.
+- **`lighting=medium`**: No dynamic lightmaps and applies only the most relevant movable lighting.
+- **`lighting=high`**: 1 dynamic lightmap and applies detailed movable lighting.
+- **`lighting=ultra`**: Maximum dynamic lightmaps and applies extremely detailed movable lighting.
 
-### Shaders
+### Shading
 
-Controls extended lighting commands which cause a material system reload.
+Controls advanced shading commands which cause a materail system reload.
 
 !!! warning
-    Using any other level than **`shaders=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons.
+    Using any other level than **`shading=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons.
 
 - **CPU usage:** low
 - **GPU usage:** high
 
 Default setting: based on which preset you are currently using.
 
-- **`shaders=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs due to rendering reloads.
-- **`shaders=medium`**: Disables phong, but keeps material paths for specular and bumpmaps, as disabling these can cause glitches on DirectX 9. May reduce performance on modern PCs due to rendering reloads.
-- **`shaders=high`**: Uses whatever the material's lighting needs (enables bumpmaps, specular and phong).
+- **`shading=low`**: Disables bumpmaps, specular and phong, which allows for a shader fast path in certain cases. May reduce performance on modern PCs due to rendering reloads.
+- **`shading=medium`**: Disables phong, but keeps bumpmaps and specular, as disabling these can cause glitches. May reduce performance on modern PCs due to rendering reloads.
+- **`shading=high`**: Uses whatever the material's shader needs (enables bumpmaps, specular and phong).
 
 ### Shadows
 
-Controls shadow quality. Shadow limits affect rendered shadows. Shadows above the limit will be blobby.
+Controls dynamic shadow quality. Shadow limits affect rendered shadows. Shadows above the limit will be blobby.
 
 - **CPU usage:** high
 - **GPU usage:** medium
 
 Default setting: based on which preset you are currently using.
 
-- **`shadows=off`**: No shadows.
-- **`shadows=very_low`**: Blobby shadows.
-- **`shadows=low`**: Up to 3 low quality shadows.
-- **`shadows=medium`**: Up to 23 high quality shadows, and low robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
-- **`shadows=high`**: Up to 23 high quality shadows, and medium robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
-- **`shadows=very_high`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
-- **`shadows=ultra`**: Up to 160 high quality shadows, and unlimited robot/Halloween boss shadow distance. Uses highest quality model (at root LOD) to render shadows.
+- **`shadows=off`**: No dynamic shadows.
+- **`shadows=low`**: Blobby shadows.
+- **`shadows=medium`**: Up to 3 low quality shadows.
+- **`shadows=high`**: Up to 23 high quality shadows and limited NPC shadow distance
+- **`shadows=ultra`**: Up to 160 ultra quality movable shadows and unlimited NPC shadow distance
 
 ### Flashlight
 
@@ -250,13 +247,11 @@ Controls water reflections.
 
 Default setting: based on which preset you are currently using.
 
-- **`water=very_low`**: Makes water black. 32x water render resolution.
-- **`water=low`**: Makes water solid. 128x water render resolution. Fades out to low quality solid/black water at short ranges.
-- **`water=medium`**: Uses standard water with no reflections. Fades out to low quality solid/black water at reasonable ranges. 256x water render resolution.
-- **`water=medium_high`**: Uses standard water with basic reflections. Fades out to low quality solid/black water at reasonable ranges. 512x water render resolution.
-- **`water=high`**: Uses standard water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
-- **`water=very_high`**: Uses high quality water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
-- **`water=ultra`**: Uses high quality water with all reflections. Never fades out to low quality water. 2K water render resolution.
+- **`water=very_low`**: Makes water solid. 32x water render resolution.
+- **`water=low`**: Uses basic water with no reflections. 128x water render resolution. Fades out to low quality solid water at short ranges.
+- **`water=medium`**: Uses standard water with basic reflections. 256x water render resolution. Fades out to low quality solid water at long ranges.
+- **`water=high`**: Uses standard water with all reflections. 1K water render resolution. Fades out to low quality solid water at long ranges.
+- **`water=ultra`**: Uses high quality water with all reflections. 2K water render resolution. Never fades out to low quality water.
 
 ### General Post-Processing
 
@@ -268,9 +263,26 @@ Controls standard post-processing effects.
 Default setting: based on which preset you are currently using.
 
 - **`post_processing=off`**: No post-processing.
-- **`post_processing=low`**: Enables basic color correction.
-- **`post_processing=medium`**: Enables LDR bloom.
-- **`post_processing=high`**: Enables standard HDR and bloom.
+- **`post_processing=default`**: Enables HDR and bloom in Valve's default style.
+- **`post_processing=calm`**: Enables HDR and bloom with reduced "blow out" of bright lighting (recommended).
+- **`post_processing=vivid`**: Enables HDR and bloom with glowing highlights.
+- **`post_processing=washed`**: Enables HDR and bloom with an overall bright look.
+- **`post_processing=dreamy`**: Enables HDR and bloom with surreal dreamy look.
+
+### Color Filter
+
+Controls post-processing color filters.
+
+- **CPU usage:** none
+- **GPU usage:** low
+
+Default setting: **`color_filter=off`** (all presets).
+
+- **`color_filter=off`**: No color filter
+- **`color_filter=grayscale`**: Grayscale, no color
+- **`color_filter=desaturated`**: Reduced saturation
+- **`color_filter=warm`**: Warmer feeling colors
+- **`color_filter=cool`**: Cooler feeling colors
 
 ### Pyrovision
 
@@ -347,17 +359,12 @@ Default setting: based on which preset you are currently using.
 
 - **`characters=very_low`**: Disables facial animations, no eyes or teeth.
 - **`characters=low`**: Disables facial animations, enables eyes, disables teeth, disables eye movement and blinking.
-- **`characters=medium`**: Enables facial animations, enables eyes and teeth, disables eye movement and blinking, disables enhanced lip sync.
-- **`characters=medium_high`**: Enables facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at short range.
-- **`characters=high`**: Enables smooth facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at a slightly increased range.
-- **`characters=ultra`**: Enables extra smooth facial animations, high quality models, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at all ranges.
+- **`characters=medium`**: Enables smooth facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at medium range.
+- **`characters=high`**: Enables extra smooth facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at any distance.
 
 ### General Decals
 
 Controls bullet holes and overall decal support.
-
-!!! note
-    In the Destitute preset, decals are forced invisible.
 
 - **CPU usage:** medium
 - **GPU usage:** medium
@@ -394,7 +401,7 @@ Controls decals placed by the map author.
 Default setting: based on which preset you are currently using.
 
 - **`decals_art=off`**: Disables map decals.
-- **`decals_art=on`**: Enables map decals, and blocks full decal clearing done by mastercomfig periodically.
+- **`decals_art=on`**: Enables map decals, and blocks full decal clearing done periodically.
 
 ### Spray Decals
 
@@ -419,10 +426,8 @@ Controls gibs created by player explosions.
 Default setting: based on which preset you are currently using.
 
 - **`gibs=off`**: Disables gibs.
-- **`gibs=low`**: Max of 2 gib parts.
-- **`gibs=medium_low`**: Max of 4 gib parts.
-- **`gibs=medium`**: Default number of gibs.
-- **`gibs=high`**: Default number of gibs, gibs can burn.
+- **`gibs=low`**: Enables gibs.
+- **`gibs=high`**: Enables gibs, and gibs can burn.
 
 ### Silly Gibs
 
@@ -446,9 +451,9 @@ Controls the rendering of various small objects.
 
 Default setting: based on which preset you are currently using.
 
-- **`props=low`**: Disables client-side props, disables foliage, default quality prop models.
-- **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client-side props, enables foliage at a reasonable distance with instant pop in, default quality prop models.
-- **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client-side props, enables foliage at practically any distance, max quality prop models regardless of distance.
+- **`props=low`**: Disables client-side props, disables foliage.
+- **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client-side props, enables foliage at a reasonable distance with instant pop in.
+- **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client-side props, enables foliage at practically any distance.
 
 ### Ragdolls
 
@@ -459,7 +464,6 @@ Controls physics simulation and fading for bodies that spawn on death.
 
 Default setting: based on which preset you are currently using.
 
-- **`ragdolls=hidden`** and **`ragdolls=low`**: Deprecated settings. They are the same as `ragdolls=off`.
 - **`ragdolls=off`**: Disables ragdolls by fading them out quickly.
 - **`ragdolls=medium`**: Enables standard physics ragdolls.
 - **`ragdolls=high`**: Enables ragdolls with collisions with a high fade out time, as well as special animations like decapitation.
@@ -539,9 +543,8 @@ Controls texture quality.
 Default setting: based on which preset you are currently using.
 
 - **`texture_quality=low`**: Low texture quality, disables texture blending.
-- **`texture_quality=medium`**: Medium texture quality.
+- **`texture_quality=medium`**: High texture quality, disables texture blending.
 - **`texture_quality=high`**: High texture quality.
-- **`texture_quality=very_high`**: Very High texture quality.
 - **`texture_quality=ultra`**: Maximum texture quality.
 
 ### Texture Filtering
@@ -652,6 +655,18 @@ Default setting: based on which preset you are currently using.
 - **`hud_player_model=off`**: Disables the player model.
 - **`hud_player_model=on`**: Enables the player model.
 
+### Server Text
+
+Controls server / game mode text messages at the center of the screen.
+
+- **CPU usage:** none
+- **GPU usage:** none
+
+Default setting: **`hud_server_text=on`** (all presets, except Destitute).
+
+- **`hud_server_text=off`**: Disables server center text.
+- **`hud_server_text=on`**: Enables server center text.
+
 ### Contracts
 
 Controls the Contracts HUD seen at the top right corner of the screen during gameplay.
@@ -752,7 +767,7 @@ Controls the HUD achievements tracker.
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`hud_achievement=on`** (all presets).
+Default setting: **`hud_achievement=on`** (all presets, except Destitute).
 
 - **`hud_achievement=off`**: Disables achievement tracker panel completely.
 - **`hud_achievement=on`**: Enables support for achievement tracker panel.
@@ -818,9 +833,6 @@ Default setting: **`dynamic_background=off`** (all presets).
 ### Sound
 
 Controls a variety of sound effects, including spatialization and positional effects.
-
-!!! note
-    In the Low and Destitute preset VPKs, spatialization and positional effects (called [DSP](https://developer.valvesoftware.com/wiki/DSP) in the Source Engine) are completely disabled.
 
 - **CPU usage:** high
 - **GPU usage:** none

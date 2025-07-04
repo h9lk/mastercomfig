@@ -46,8 +46,8 @@ If you want to override this part of the module, you must use their game overrid
 - `water`: Uses `cheap_water_override` to control the low quality water fade distance
 
   - `cheap_water_full`: Always uses fully cheap water
-  - `cheap_water_partial`: Always uses partially cheap water, uses fully cheap water at a short distance
-  - `cheap_water_minimal`: Uses partially cheap water at a short distance, uses fully cheap water at a further distance
+  - `cheap_water_partial`: Uses partially cheap water at a short distance and uses fully cheap water at a medium distance
+  - `cheap_water_light`: Uses partially cheap water at a long distance, and uses fully cheap water at a further distance
   - `cheap_water_never`: Never uses any kind of cheap water
 
 - `props`: Uses `detail_props_override` to control grass/detail prop rendering and its render distance
