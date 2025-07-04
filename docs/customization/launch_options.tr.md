@@ -72,7 +72,7 @@ seçeneklerini kutuya yapıştırın.
     * **-nostartupsound** : Ana menüde oyun müziğini kapatır.
     * **-no_texture_stream** : Doku akışını devre dışı bırakır. Hızlı doku erişimi olan ve görüntü belleği baskısında olmayan güçlü bir sisteminiz varsa kullanışlıdır.
     * **-autoconfig** : Grafik kalitesini donanımınız için önerilene sıfırlar. None Ön Ayarı ile kullanışlı olarak çalışır. İlk başlatmadan sonra kaldırın.
-     * **-audiolanguage english** : Oyun seslendirmesini İngilizce yapar. Bu seçenek, farklı bir oyun dili kullandığınız ancak İngilizce seslendirme istediğiniz zaman işe yarayabilir.
+    * **-audiolanguage english** : Oyun seslendirmesini İngilizce yapar. Bu seçenek, farklı bir oyun dili kullandığınız ancak İngilizce seslendirme istediğiniz zaman işe yarayabilir.
     * **-displayindex x** : Monitörü belirlenen ekran dizininde kullanır. `1` ile başlar. `0` ana (ve varsayılan) ekrandır.
 
 ## Az Kullanılan Başlatma Seçenekleri
