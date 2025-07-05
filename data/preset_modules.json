@@ -32,15 +32,20 @@
     "none": ""
   },
   "shading": {
-    "default": "low",
-    "medium": "medium",
-    "high": "high",
-    "ultra": "high",
+    "default": "high",
+    "destitute": "low",
+    "low": "low",
     "none": ""
   },
+  "phong": {
+    "default": "rim",
+    "destitute": "off",
+    "low": "off"
+  },
   "shadows": {
-    "default": "off",
-    "medium": "low",
+    "destitute": "off",
+    "low": "low",
+    "medium": "medium",
     "high": "high",
     "ultra": "ultra",
     "none": ""
@@ -67,6 +72,7 @@
   },
   "post_processing": {
     "default": "off",
+    "medium": "low",
     "high": "calm",
     "ultra": "calm",
     "none": ""
@@ -175,7 +181,6 @@
   },
   "texture_quality": {
     "default": "high",
-    "low": "medium",
     "high": "ultra",
     "ultra": "ultra",
     "none": ""

@@ -9,6 +9,10 @@
         "gpu": 2,
         "values": [
           {
+            "value": "very_low",
+            "description": "Low model detail. Very low quality prop models and invisible railings."
+          },
+          {
             "value": "low",
             "description": "Low model detail"
           },
@@ -42,7 +46,7 @@
           },
           {
             "value": "medium",
-            "description": "No dynamic lightmaps and applies only the most relevant movable lighting."
+            "description": "No dynamic lightmaps and applies detailed movable lighting"
           },
           {
             "value": "high",
@@ -63,15 +67,37 @@
         "values": [
           {
             "value": "low",
-            "description": "Disables bumpmaps, specular and phong, which allows for a shader fast path in certain cases. May reduce performance on modern PCs due to rendering reloads."
+            "description": "Disables bumpmaps and specular, and uses low quality shader fallbacks in some cases."
           },
           {
             "value": "medium",
-            "description": "Disables phong, but keeps bumpmaps and specular, as disabling these can cause glitches. May reduce performance on modern PCs due to rendering reloads."
+            "description": "Disables bumpmaps and specular, and uses low quality shader fallbacks in some cases."
           },
           {
             "value": "high",
-            "description": "Uses whatever the material's shader needs (enables bumpmaps, specular and phong)."
+            "description": "Enables bumpmaps and specular."
+          }
+        ]
+      },
+      {
+        "name": "phong",
+        "display": "Phong Shading",
+        "description": "Controls phong highlights for shading.",
+        "cpu": 1,
+        "gpu": 3,
+        "values": [
+          {
+            "value": "off",
+            "description": "Uses diffuse shading."
+          },
+          {
+            "value": "on",
+            "description": "Uses phong shading."
+          },
+          {
+            "value": "rim",
+            "display": "On + Rimlighting",
+            "description": "Uses phong shading, with rimlighting."
           }
         ]
       },
@@ -147,6 +173,21 @@
         ]
       },
       {
+        "name": "tracers",
+        "display": "Tracer Effects",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
         "name": "water",
         "values": [
           {
@@ -172,6 +213,10 @@
         "values": [
           {
             "value": "off"
+          },
+          {
+            "value": "low",
+            "display": "Bloom only"
           },
           {
             "value": "default"

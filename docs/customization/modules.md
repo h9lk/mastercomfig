@@ -161,34 +161,50 @@ Default setting: based on which preset you are currently using.
 
 ### Lighting
 
-Controls lighting fidelity: dynamic lights, detailed lighting, rimlights, light averaging, lightwarps, and ambient boost.
+Controls lighting fidelity: dynamic lights, detailed lighting, light averaging, lightwarps, and ambient boost.
 
 - **CPU usage:** medium
 - **GPU usage:** high
 
 Default setting: based on which preset you are currently using.
 
-- **`lighting=very_low`**: No dynamic lightmaps and skips all movable lighting. No lightwarps or rimlights.
-- **`lighting=low`**: No dynamic lightmaps and only applies ambient movable lighting. No lightwarps or rimlights.
-- **`lighting=medium`**: No dynamic lightmaps and applies only the most relevant movable lighting.
-- **`lighting=high`**: 1 dynamic lightmap and applies detailed movable lighting.
-- **`lighting=ultra`**: Maximum dynamic lightmaps and applies extremely detailed movable lighting.
+- **`lighting=very_low`**: No dynamic lightmaps or lightmap smoothing, and skips all movable lighting. No lightwarps.
+- **`lighting=low`**: No dynamic lightmaps, and only applies ambient movable lighting. No lightwarps.
+- **`lighting=medium`**: No dynamic lightmaps, and applies detailed movable lighting.
+- **`lighting=high`**: 4 dynamic lightmaps, and applies detailed movable lighting.
+- **`lighting=ultra`**: Maximum (32) dynamic lightmaps, and applies extremely detailed movable lighting.
 
 ### Shading
 
-Controls advanced shading commands which cause a materail system reload.
+Controls advanced shading commands which cause a material system reload.
 
 !!! warning
-    Using any other option than **`shading=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons.
+    Using any other option than **`shading=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons, but can also cause maps to render incorrectly.
 
 - **CPU usage:** low
 - **GPU usage:** high
 
 Default setting: based on which preset you are currently using.
 
-- **`shading=low`**: Disables bumpmaps, specular and phong, which allows for a shader fast path in certain cases. May reduce performance on modern PCs due to rendering reloads.
-- **`shading=medium`**: Disables phong, but keeps bumpmaps and specular, as disabling these can cause glitches. May reduce performance on modern PCs due to rendering reloads.
-- **`shading=high`**: Uses whatever the material's shader needs (enables bumpmaps, specular and phong).
+- **`shading=low`**: Disables bumpmaps and specular, and uses low quality shader fallbacks in some cases. Disables texture blending.
+- **`shading=medium`**: Disables bumpmaps and specular, and uses low quality shader fallbacks in some cases.
+- **`shading=high`**: Enables bumpmaps and specular.
+
+### Phong Shading
+
+Controls phong highlights for shading.
+
+!!! warning
+    Using **`phong=off`** can cause visual glitches or crashes in props on some maps.
+
+- **CPU usage:** low
+- **GPU usage:** high
+
+Default setting: based on which preset you are currently using.
+
+- **`phong=off`**: Uses diffuse shading.
+- **`phong=on`**: Uses phong shading.
+- **`phong=rim`**: Uses phong shading, with rimlighting.
 
 ### Shadows
 
@@ -201,7 +217,7 @@ Default setting: based on which preset you are currently using.
 
 - **`shadows=off`**: No dynamic shadows.
 - **`shadows=low`**: Blobby shadows.
-- **`shadows=medium`**: Up to 3 low quality shadows.
+- **`shadows=medium`**: Up to 11 high quality shadows.
 - **`shadows=high`**: Up to 23 high quality shadows and limited NPC shadow distance
 - **`shadows=ultra`**: Up to 160 ultra quality movable shadows and unlimited NPC shadow distance
 
@@ -232,11 +248,24 @@ Controls weapon effects, particles, and other miscellaneous effects
 
 Default setting: based on which preset you are currently using.
 
-- **`effects=very_low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision. Disables monitors. Collapses spawning particles into existing particles (including bullet tracers and flames) together, disables weather particles, reduces particle density/quality.
-- **`effects=low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision. Disables weather particles, reduces particle density/quality.
-- **`effects=medium`**: Disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, disables temp ent (syringe) collision. 512x render resolution for monitors. Disables weather particles, reduces particle density/quality.
-- **`effects=high`**: Disables shell casing ejection, disables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 1K render resolution for monitors. Enables weather particles, uses full particle density/quality.
-- **`effects=ultra`**: Enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 2K render resolution for monitors. Enables weather particles, uses full particle density/quality, and forces full simulation for all particles.
+- **`effects=very_low`**: Disables impact effects, water splash effects, weather particles, muzzle flashes, shell casing ejection, and temp ent collision. Collapses spawning particles into existing particles (including bullet tracers and flames) together, reduces particle density/quality. Disables monitors.
+- **`effects=low`**: Disables impact effects, water splash effects, weather particles, muzzle flashes, shell casing ejection, and temp ent collision. Collapses spawning particles into existing particles (including bullet tracers and flames) together, reduces particle density/quality. Disables monitors.
+- **`effects=medium`**: Disables weather particles, muzzle flashes, and shell casing ejection. Reduces particle density/quality. Disables monitors.
+- **`effects=high`**: Uses full particle density/quality. 1K render resolution for monitors.
+- **`effects=ultra`**: Uses full particle density/quality, and forces full simulation for all particles. 1K render resolution for monitors.
+
+### Tracer Effects
+
+Controls bullet tracer effects
+
+- **CPU usage:** low
+- **GPU usage:** low
+
+Default setting: based on which preset you are currently using.
+
+- **`tracers=low`**: Disables first person tracers.
+- **`tracers=medium`**: Enables first person tracers.
+- **`tracers=high`**: Enables first person tracers and makes tracers thicker.
 
 ### Water
 
@@ -263,6 +292,7 @@ Controls standard post-processing effects.
 Default setting: based on which preset you are currently using.
 
 - **`post_processing=off`**: No post-processing.
+- **`post_processing=low`**: Enables bloom in Valve's default style.
 - **`post_processing=default`**: Enables HDR and bloom in Valve's default style.
 - **`post_processing=calm`**: Enables HDR and bloom with reduced "blow out" of bright lighting (recommended).
 - **`post_processing=vivid`**: Enables HDR and bloom with glowing highlights.
@@ -375,7 +405,7 @@ Default setting: based on which preset you are currently using.
 - **`decals=low`**: 9 max decals.
 - **`decals=medium`** 32 max decals.
 - **`decals=high`**: 80 max decals.
-- **`decals=ultra`**: 512 max decals.
+- **`decals=ultra`**: 2048 max decals.
 
 ### Model Decals
 
@@ -542,9 +572,10 @@ Controls texture quality.
 
 Default setting: based on which preset you are currently using.
 
-- **`texture_quality=low`**: Low texture quality, disables texture blending.
-- **`texture_quality=medium`**: High texture quality, disables texture blending.
+- **`texture_quality=low`**: Low texture quality.
+- **`texture_quality=medium`**: Medium texture quality.
 - **`texture_quality=high`**: High texture quality.
+- **`texture_quality=very_high`**: Very High texture quality.
 - **`texture_quality=ultra`**: Maximum texture quality.
 
 ### Texture Filtering
