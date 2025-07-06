@@ -153,7 +153,7 @@ Controls how detailed models are.
 
 Default setting: based on which preset you are currently using.
 
-- **`lod=very_low`**: Low model detail. Very low quality prop models and invisible railings.
+- **`lod=very_low`**: Low model detail. Additionally, use very low quality prop models and make railings invisible.
 - **`lod=low`**: Low model detail.
 - **`lod=medium`**: Medium model detail.
 - **`lod=high`**: High model detail.
@@ -588,8 +588,7 @@ Controls texture smoothing/filtering.
 Default setting: based on which preset you are currently using.
 
 - **`texture_filter=blocky`**: Blocky textures and world lighting
-- **`texture_filter=trilinear`**: Trilinear filtering without bicubic lightmaps
-- **`texture_filter=trilinear_plus`**: Trilinear filtering
+- **`texture_filter=trilinear`**: Trilinear filtering
 - **`texture_filter=aniso2x`**: Anisotropic filtering 2x
 - **`texture_filter=aniso4x`**: Anisotropic filtering 4x
 - **`texture_filter=aniso8x`**: Anisotropic filtering 8x
