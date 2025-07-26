@@ -25,7 +25,7 @@ Read below about optional launch options and choosing your own DXLevel.
 
      * **-dxlevel 90** : DirectX 9, Pixel Shader 2.0b. Lower graphical quality while still using semi-modern rendering methods.
      * **-dxlevel 100** : DirectX 9+, Pixel Shader 3.0. Highest graphical quality. **Note that you must launch with `-dxlevel 95` once before then using this option.**
-     * **-vulkan** : DirectX 9+, Pixel Shader 3.0. Highest graphical quality. Uses Vulkan rendering through DXVK, which improve input latency, and fix some graphics bugs, with a trade-off depending on your system and drivers. **Note that you must launch with `-dxlevel 95` once before then using this option.**
+     * **-vulkan** : DirectX 9+, Pixel Shader 3.0. Highest graphical quality. Uses Vulkan rendering through DXVK, which improves input latency and fixes some graphics bugs, with a trade-off depending on your system and drivers. **Note that you must launch with `-dxlevel 95` once before then using this option.**
 
 === "macOS"
 
