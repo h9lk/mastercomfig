@@ -19,7 +19,7 @@ description: Common misconceptions with TF2 that mastercomfig corrects.
 * **-nowatchdog** : only used on dedicated servers and even then, there's no point in turning it off
 * **-disable_d3d9_hacks** : these "hacks" are basically extra stuff allowed within DX9 with no current standard function, so instead they are used to communicate directly with drivers to let them know of certain features to adjust. It's only useful to use for compatibility testing or development, and there's nothing to suggest that this would ever be helpful.
 * **-limitvsconst** : limits the hardware vertex shader constants to 256, possibly below hardware capabilities, which does save a bit of resources. But, with more constants available, faster shader modes can be used
-* **+map_background** : Team Fortress 2 has a much more advanced preload system now, so map backgrounds are not needed. If you are using them to preload mods, or just for looks, that's fine
+* **+map_background** : Team Fortress 2 has a much more advanced preload system now, so map backgrounds are not needed.
 
 ## Unused launch options
 
@@ -44,7 +44,6 @@ These launch options may be creating an improper video mode, which is not prefer
 - `cl_rumblescale 0` : `-nojoy` already disables this, and setting it to 0 has no benefit.
 - `in_usekeyboardsampletime ` : Not used unless you use keylook, and you probably would not want this off if you did.
 - `rate 60000` : This is lower than the TF2 default rate of `80000`. TF2 default network settings are already on the low end. Why would you set rate lower, especially when you're increasing packet rates? (`cl_updaterate 66`, `cl_cmdrate 66`)?
-- `net_queued_packet_thread 581304` : Will forcefully add lag to client packets.
 - `cl_interp 0.033` : This is a typo that was made somewhere along the way. The correct client interp is `cl_interp_ratio 2;cl_interp 0.0303`. This is equal to 2 / 66.
 - `cl_interp 0.0152` : Although valid in some cases and not a misconception, it's worth noting that this setting means you will be subject to inaccurate extrapolation which is not in line with the server's history, all for getting lower visual latency on entity positions within a few milliseconds, which doesn't matter when positions cannot be substantially different within that time. Instead, you will want to make sure your entity positions are at least in line with the server's history as that is substantially more important for lag compensation and your own perception when predicting position based on velocity/trajectory. Thus, it's recommended only for use with projectiles and not hitscan, and only if you have a stable enough connection to support it. Also, it's best to set cl_interp 0.015, since this will result in the most accurate minimal interp window.
 - `mat_max_worldmesh_vertices 512` : The minimum value for this is 1024, not 512. This also increases the number of meshes used for the world, while reducing mesh complexity. This trade-off is only worth it for very, very bad GPUs like integrated graphics cards with no or poor hardware accelerated transform and vertex shader support.
@@ -57,6 +56,7 @@ These launch options may be creating an improper video mode, which is not prefer
 - `r_lod 2` : This forces everything to LOD 2, when the lowest quality is LOD 7. Set this to `r_lod -1` and let `r_rootlod` handle base quality while still allowing for lower qualities to be used at a distance.
 - `voice_fadeouttime 0` : makes audio crackle in some cases
 - `mat_use_compressed_hdr_textures 0` : just enables using non-compressed HDR textures, [reducing performance](https://github.com/ValveSoftware/Source-1-Games/issues/2783#issuecomment-526368186).
+- `toggle mat_antialias` : Used in some HUDs to reload elements, but can cause a material system reload. It's recommended to use `mat_aaquality` instead, which does not have this problem.
 
 ## Unused CVars
 

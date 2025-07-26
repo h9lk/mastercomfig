@@ -9,7 +9,7 @@ In the window that appears, under **Launch Options**, remove anything that's in
 there and paste
 
 ```c
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars
+-novid -nojoy -nosteamcontroller -nohltv -particles 1
 ```
 
 into the box and click ok.
@@ -24,7 +24,8 @@ Read below about optional launch options and choosing your own DXLevel.
         Add these launch options to your first launch, and then **remove them**. Keeping the -dxlevel launch option causes many issues, like graphics settings not applying properly, slow loading times, freezes, TF2 not using your hardware properly, and more.
 
      * **-dxlevel 90** : DirectX 9, Pixel Shader 2.0b. Lower graphical quality while still using semi-modern rendering methods.
-     * **-dxlevel 100** : DirectX 9+, Pixel Shader 3.0. Highest graphical quality.
+     * **-dxlevel 100** : DirectX 9+, Pixel Shader 3.0. Highest graphical quality. **Note that you must launch with `-dxlevel 95` once before then using this option.**
+     * **-vulkan** : DirectX 9+, Pixel Shader 3.0. Highest graphical quality. Uses Vulkan rendering through DXVK, which improves input latency and fixes some graphics bugs, with a trade-off depending on your system and drivers. **Note that you must launch with `-dxlevel 95` once before then using this option.**
 
 === "macOS"
 
@@ -36,14 +37,13 @@ Read below about optional launch options and choosing your own DXLevel.
 
 ## Recommended Launch Options
 
-`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1`
 
 - **-novid** : disables Valve startup logo, saves time
 - **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
 - **-nosteamcontroller** : disables Steam controller system, faster startup, less memory usage and less input conflicts
 - **-nohltv** : disables SourceTV hosting, less resource usage
 - **-particles 1** : limits beam count to the minimum of 512
-- **-precachefontchars** : precaches font rendering for common characters
 
 ## Extra Launch Options
 
@@ -51,7 +51,6 @@ Read below about optional launch options and choosing your own DXLevel.
 
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
-    * **-enablefakeip** : for security. Prevents your local server from registering its public IP with Steam, by using Steam Datagram instead. It may require a few map loads to connect to item servers.
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after the first launch.
     * **-audiolanguage english** : Forces the game voiceline audio to English. This can be useful for when you use a different game language but would like the English audio.
@@ -61,7 +60,6 @@ Read below about optional launch options and choosing your own DXLevel.
 
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
-    * **-enablefakeip** : for security. Prevents your local server from registering its public IP with Steam, by using Steam Datagram instead. May require a few map loads to connect to item servers.
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
     * **-audiolanguage english** : Forces the game voiceline audio to English. This can be useful for when you use a different game language but would like the English audio.
@@ -74,7 +72,6 @@ Read below about optional launch options and choosing your own DXLevel.
 
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
-    * **-enablefakeip** : for security. Prevents your local server from registering its public IP with Steam, by using Steam Datagram instead. May require a few map loads to connect to item servers.
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
     * **-audiolanguage english** : Forces the game voiceline audio to English. This can be useful for when you use a different game language but would like the English audio.

@@ -66,7 +66,7 @@ You can also re-alias them to use entirely custom network settings.
 
 * `net_projectiles`: Alias for network settings on projectile classes (Soldier, Pyro, Demoman, Medic) (`snapshot_buffer_low`).
 * `net_hitscan`: Alias for network settings on hitscan classes (Scout, Heavy, Engineer, Sniper) (`snapshot_buffer_safe`).
-* `net_spy`: Alias for network settings on Spy (`snapshot_buffer_safe`).
+* `net_spy`: Alias for network settings on Spy (`snapshot_buffer_low`).
 
 ## Changing your preset
 

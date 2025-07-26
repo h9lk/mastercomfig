@@ -21,14 +21,14 @@ jobs:
           fetch-depth: 0
       - name: Track Docs Branch
         run: git branch docs -t origin/docs
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           key: ${{ github.ref }}
           path: .cache
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
         with:
           version: 8
       - name: Lint Docs

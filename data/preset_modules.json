@@ -1,7 +1,4 @@
 {
-  "sourcetv": {
-    "default": "on"
-  },
   "packet_rate": {
     "default": "standard",
     "very-low": "congestion"
@@ -13,7 +10,7 @@
     "default": "large"
   },
   "bandwidth": {
-    "default": "1.0Mbps"
+    "default": "2.0Mbps"
   },
   "download": {
     "default": "auto"
@@ -201,10 +198,7 @@
     "none": ""
   },
   "textures": {
-    "default": "low",
-    "very-low": "very_low",
-    "medium": "medium",
-    "medium-high": "high",
+    "default": "high",
     "high": "very_high",
     "ultra": "ultra",
     "none": ""
@@ -265,7 +259,8 @@
     "low": "low"
   },
   "hud_achievement": {
-    "default": "off"
+    "default": "on",
+    "very-low": "off"
   },
   "console": {
     "default": "on",
@@ -297,11 +292,8 @@
     "default": "on",
     "very-low": "off"
   },
-  "mod_support": {
-    "default": "on"
-  },
   "party_mode": {
-    "default": "request"
+    "default": "invite"
   },
   "logo": {
     "default": "on",

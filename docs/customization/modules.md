@@ -61,18 +61,6 @@ This means that you can change this alias in the game and have multiple versions
 
 ## Networking modules
 
-### SourceTV Compatibility
-
-Optimizes spectator view or ensures compatibility with SourceTV.
-
-- **CPU usage:** none
-- **GPU usage:** none
-
-Default setting: **`sourcetv=on`** (all presets).
-
-- **`sourcetv=off`**: Reduces the latency of changing spectator targets, but breaks compatibility with SourceTV. Cannot be switched off until a game restart.
-- **`sourcetv=on`**: Keeps compatibility with SourceTV.
-
 ### Packet Rate
 
 Controls how fast you send to and receive from the server.
@@ -94,7 +82,7 @@ Controls how reliable to consider the snapshots you receive from the server to a
 
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
-- **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer_safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer_low`. For Spy this sets `snapshot_buffer_safe`.
+- **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer_safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer_low`. For Spy this sets `snapshot_buffer_safe`.**This is the recommended setting.**
 - **`alias snapshot_buffer snapshot_buffer_low`**: A dangerously minimal buffering time which does not have room for any networking or server delays or drops (**15ms lerp** when using `packet_rate=standard`, or **30ms lerp** when using `packet_rate=congestion`). There is almost no reason to use this option, except in LAN scenarios, as `snapshot_buffer=auto` will optimize lag compensation for each class.
 - **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30ms lerp** when using `packet_rate=standard`, or **60ms lerp** when using `packet_rate=congestion`).
 - **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45ms lerp** when using `packet_rate=standard`, or **90ms lerp** when using `packet_rate=congestion`).
@@ -124,7 +112,7 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`bandwidth=1.0Mbps`** (all presets).
+Default setting: **`bandwidth=2.0Mbps`** (all presets).
 
 - **`bandwidth=128Kbps`**: 128Kbps game traffic bandwidth.
 - **`bandwidth=192Kbps`**: 192Kbps game traffic bandwidth.
@@ -168,7 +156,7 @@ Default setting: based on which preset you are currently using.
 - **`lod=low`**: Low model detail.
 - **`lod=medium`**: Medium model detail.
 - **`lod=high`**: High model detail.
-- **`lod=ultra`**: Forces high model detail regardless of distance.
+- **`lod=ultra`**: Forces max model detail regardless of distance.
 
 ### Lighting
 
@@ -191,6 +179,9 @@ Default setting: based on which preset you are currently using.
 
 Controls extended lighting commands which cause a material system reload.
 
+!!! warning
+    Using any other option than **`lighting_ex=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons, but can also cause maps to render incorrectly.
+
 - **CPU usage:** low
 - **GPU usage:** high
 
@@ -210,7 +201,7 @@ Default setting: based on which preset you are currently using.
 
 - **`shadows=off`**: No shadows.
 - **`shadows=very_low`**: Blobby shadows.
-- **`shadows=low`**: Up to 3 low quality shadows.
+- **`shadows=low`**: Up to 3 high quality shadows.
 - **`shadows=medium`**: Up to 23 high quality shadows, and low robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
 - **`shadows=high`**: Up to 23 high quality shadows, and medium robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
 - **`shadows=very_high`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
@@ -221,7 +212,7 @@ Default setting: based on which preset you are currently using.
 Controls flashlight support. Flashlights are not used in TF2, so you should keep it disabled unless you need it for a certain community server mod, like Slender, or some Deathrun servers.
 
 !!! warning
-    Turning this module on while using Pyrovision causes rendering issues.
+    Turning on flashlight support will cause rendering artifacts on some maps, especially when Pyroland is enabled!
 
 - **CPU usage:** low
 - **GPU usage:** medium
@@ -246,7 +237,7 @@ Default setting: based on which preset you are currently using.
 - **`effects=low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision. Disables monitors.
 - **`effects=medium`**: Disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, disables temp ent (syringe) collision. 512x render resolution for monitors.
 - **`effects=high`**: Disables shell casing ejection, disables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 1K render resolution for monitors.
-- **`effects=ultra`**: Enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 2K render resolution for monitors.
+- **`effects=ultra`**: Enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 1K render resolution for monitors.
 
 ### Water
 
@@ -409,7 +400,7 @@ Default setting: based on which preset you are currently using.
 - **`decals=low`**: 9 max decals.
 - **`decals=medium`** 32 max decals.
 - **`decals=high`**: 80 max decals.
-- **`decals=ultra`**: 512 max decals.
+- **`decals=ultra`**: 2048 max decals.
 
 ### Model Decals
 
@@ -434,7 +425,7 @@ Controls decals placed by the map author.
 Default setting: based on which preset you are currently using.
 
 - **`decals_art=off`**: Disables map decals.
-- **`decals_art=on`**: Enables map decals, and blocks full decal clearing done by mastercomfig periodically.
+- **`decals_art=on`**: Enables map decals, and blocks full decal clearing done periodically.
 
 ### Spray Decals
 
@@ -508,6 +499,9 @@ Default setting: based on which preset you are currently using.
 ### 3D Sky
 
 Controls the enhanced 3D skybox that is present in most maps.
+
+!!! warning
+    Disabling 3D sky on some AMD graphics cards in DirectX can cause flickering when going underwater. Either use the `-vulkan` launch option, or turn on 3D sky.
 
 - **CPU usage:** medium
 - **GPU usage:** medium
@@ -617,7 +611,7 @@ Setting it higher can reduce input delay.
     This module is only provided for general convenience and accessibility. The built-in FPS cap
     in Team Fortress 2 has precision problems depending on your CPU (such as Intel Skylake platform and above)
     as well as accuracy problems on Windows due to usage of millisecond timers. It is recommended you use
-    a more reliable FPS cap tool, like [Rivatuner](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html)
+    a more reliable FPS cap tool, like [Rivatuner for Windows](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html) or [MangoHud for Linux](https://github.com/flightlessmango/MangoHud)
     and set `fpscap=unlimited` to disable the in-game FPS cap.
 
 - **CPU usage:** low
@@ -640,7 +634,7 @@ Default setting: **`fpscap=400`** (all presets).
 - **`fpscap=360`**: Sets FPS cap to 360 FPS.
 - **`fpscap=400`**: Sets FPS cap to 400 FPS.
 - **`fpscap=1000`**: Sets FPS cap to 1000 FPS (maximum safe value).
-- **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000FPS in meaningful game scenarios.
+- **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000 FPS in meaningful game scenarios.
 
 ### VSync
 
@@ -774,7 +768,7 @@ Controls the HUD achievements tracker.
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`hud_achievement=off`** (all presets).
+Default setting: **`hud_achievement=on`** (all presets, except Very Low).
 
 - **`hud_achievement=off`**: Disables achievement tracker panel completely.
 - **`hud_achievement=on`**: Enables support for achievement tracker panel.
@@ -824,7 +818,7 @@ Default setting: based on which preset you are currently using.
 
 ### Map Background
 
-Controls the live map that appears in the background of the main menu. Some options automatically exit immediately, for the sake of preloading assets.
+Controls the live map that appears in the background of the main menu.
 
 - **CPU usage:** none
 - **GPU usage:** none
@@ -832,8 +826,6 @@ Controls the live map that appears in the background of the main menu. Some opti
 Default setting: **`dynamic_background=off`** (all presets).
 
 - **`dynamic_background=off`**: No main menu map background on startup.
-- **`dynamic_background=preload`**: `preload_room` map background for yttrium's preloading (auto disconnects). **You have to install [the map](https://github.com/Yttrium-tYcLief/CompVMInstaller/blob/master/Project/CompVMInstaller/Resources/preload_room.bsp?raw=true) to `tf/maps`, or else this will not function.**
-- **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
 - **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
 
 ## Sound modules
@@ -871,21 +863,6 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 
 ## Misc modules
 
-### Mod Support
-
-Ensures compatibility with animation and model mods.
-
-!!! info
-    You may want to also enable preloading using the [Map Background module](#map-background).
-
-- **CPU usage:** none
-- **GPU usage:** none
-
-Default setting: **`mod_support=on`** (all presets).
-
-- **`mod_support=off`**: Does not block settings that may cause crashes with animation and model mods.
-- **`mod_support=on`**: Blocks settings that may cause crashes with animation and model mods.
-
 ### Party Join Mode
 
 Controls the privacy of your Casual/Competitive matchmaking party.
@@ -896,7 +873,7 @@ Controls the privacy of your Casual/Competitive matchmaking party.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`party_mode=request`** (all presets).
+Default setting: **`party_mode=invite`** (all presets).
 
 - **`party_mode=open`**: Open party (people can join anytime).
 - **`party_mode=request`**: Request-only party (people can only join if you accept their request or if you invite them).

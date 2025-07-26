@@ -4,9 +4,9 @@ description: Help me work on and improve mastercomfig!
 
 # Support me
 
-## Money
+## Monetarily
 
-You can support mastercoms with direct money contributions through the following services:
+You can support mastercoms with direct financial contributions through the following services:
 
 * [Ko-fi](https://ko-fi.com/mastercoms)
 * [Liberapay](https://liberapay.com/mastercoms/)

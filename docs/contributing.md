@@ -182,7 +182,7 @@ The first part of adding modules is a multi-step process in `config/mastercomfig
 - Add the set module level alias(es) (`alias module=level"alias module module_level"`).
 - Possibly adjust presets in `config/cfg/presets` to use the new module or levels to an existing module.
 
-If you are adding a new module, you will also need to add a new `module` entry in `config/mastercomfig/cfg/comfig/modules_run.cfg`
+If you are adding a new module, you will also need to add a new `module` entry in `config/mastercomfig/cfg/comfig/modules_run.cfg` and `config/mastercomfig/cfg/comfig/modules_levels.cfg`.
 
 You also have to add your new module or levels to `data/modules.json` for app support.
 

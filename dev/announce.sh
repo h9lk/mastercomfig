@@ -25,8 +25,3 @@ printf "\n"
 plain_text="$1 released with $2.\n\nDownload: https://comfig.app/app\n\nChangelog: https://github.com/mastercomfig/mastercomfig/releases/tag/$1\nSupport me: https://docs.comfig.app/latest/support_me/\n\nThis release took $3 hours to produce. If you like the work I do, consider supporting me!"
 
 printf "\n"
-
-echo "Plain text (for Steam Chat):"
-printf "${plain_text}"
-
-printf "\n"

@@ -1,4 +1,4 @@
-9.10.3
-optimizations for 64-bit and bug fixes
+9.10.4
+small fixes and improvements
 50
 
