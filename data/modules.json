@@ -9,10 +9,6 @@
         "gpu": 2,
         "values": [
           {
-            "value": "very_low",
-            "description": "Low model detail. Very low quality prop models and invisible railings."
-          },
-          {
             "value": "low",
             "description": "Low model detail"
           },

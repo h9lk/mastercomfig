@@ -153,7 +153,6 @@ Controls how detailed models are.
 
 Default setting: based on which preset you are currently using.
 
-- **`lod=very_low`**: Low model detail. Additionally, use very low quality prop models and make railings invisible.
 - **`lod=low`**: Low model detail.
 - **`lod=medium`**: Medium model detail.
 - **`lod=high`**: High model detail.
