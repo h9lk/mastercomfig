@@ -62,6 +62,12 @@
     "ultra": "ultra",
     "none": ""
   },
+  "tracers": {
+    "default": "low",
+    "medium": "medium",
+    "high": "high",
+    "ultra": "ultra"
+  },
   "water": {
     "destitute": "very_low",
     "low": "low",
