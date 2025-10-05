@@ -6,35 +6,35 @@ This folder contains the original files for the config, used for creating the `.
 
 These are folders with addon files.
 
-### mastercomfig-disable-pyroland-addon
-
-This is an addon which removes Pyroland map textures. It is used in the `low` and `very-low` presets by default.
-
-### mastercomfig-flat-mouse-addon
+### mastercomfig-addon-flat-mouse
 
 This is an addon which tweaks mouse settings for stabler and consistent mouse input.
 
-### mastercomfig-lowmem-addon
+### mastercomfig-addon-lowmem
 
 This is an addon which aggressively reduces memory usage for low memory systems (2GB and lower).
 
-### mastercomfig-no-footsteps-addon
+### mastercomfig-addon-no-footsteps
 
-This is an addon which removes footstep sounds. It is used only in the `very-low` preset by default.
+This is an addon which removes footstep sounds. It is used only in the `destitute` preset by default.
 
-### mastercomfig-no-soundscapes-addon
+### mastercomfig-addon-no-pyroland
 
-This is an addon which removes soundscapes (ambient map noise). It is used in the `low` and `very-low` presets by default.
+This is an addon which removes Pyroland map textures. It is used in the `low` and `destitute` presets by default.
 
-### mastercomfig-no-tutorial-addon
+### mastercomfig-addon-no-soundscapes
 
-This is an addon which skips tutorial messages and map introduction videos. It is used only in the `very-low` preset by default.
+This is an addon which removes soundscapes (ambient map noise). It is used in the `low` and `destitute` presets by default.
 
-### mastercomfig-null-canceling-movement-addon
+### mastercomfig-addon-no-tutorial
+
+This is an addon which skips tutorial messages and map introduction videos. It is used only in the `destitute` preset by default.
+
+### mastercomfig-addon-null-canceling-movement
 
 This is an addon which makes movement commands instantly respond on keypress, rather than using axis based values.
 
-### mastercomfig-transparent-viewmodels-addon
+### mastercomfig-addon-transparent-viewmodels
 
 This is an addon which sets settings for compatibility with transparent viewmodels.
 

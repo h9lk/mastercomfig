@@ -50,7 +50,7 @@ seçeneklerini kutuya yapıştırın.
     * **-console** : Başlangıçta konsolu gösterir.
     * **-nostartupsound** : Ana menüde oyun müziğini kapatır.
     * **-no_texture_stream** : Doku akışını devre dışı bırakır. Hızlı doku erişimi olan ve görüntü belleğinin baskısında olmayan güçlü bir sisteminiz varsa kullanışlıdır.
-    * **-autoconfig** : Grafik kalitesini donanımınız için önerilene sıfırlar. None Ön Ayarı ile kullanışlı olarak çalışır. İlk başlatmadan sonra kaldırın.
+    * **-autoconfig** : Grafik kalitesini donanımınız için önerilene sıfırlar. Custom Ön Ayarı ile kullanışlı olarak çalışır. İlk başlatmadan sonra kaldırın.
     * **-audiolanguage english** : Oyun seslendirmesini İngilizce yapar. Bu seçenek, farklı bir oyun dili kullandığınız ancak İngilizce seslendirme istediğiniz zaman işe yarayabilir.
     * **-freq x** : Yenileme hızını, TF2 otomatik olarak algılamadığında belirlenen değer için zorlar. Örneğin, 144hz bir monitörünüz varsa `-freq 144` için x 144 olmalıdır.
 
@@ -59,7 +59,7 @@ seçeneklerini kutuya yapıştırın.
     * **-console** : Başlangıçta konsolu gösterir.
     * **-nostartupsound** : Ana menüde oyun müziğini kapatır.
     * **-no_texture_stream** : Doku akışını devre dışı bırakır. Hızlı doku erişimi olan ve görüntü belleği baskısında olmayan güçlü bir sisteminiz varsa kullanışlıdır.
-    * **-autoconfig** : Grafik kalitesini donanımınız için önerilene sıfırlar. None Ön Ayarı ile kullanışlı olarak çalışır. İlk başlatmadan sonra kaldırın.
+    * **-autoconfig** : Grafik kalitesini donanımınız için önerilene sıfırlar. Custom Ön Ayarı ile kullanışlı olarak çalışır. İlk başlatmadan sonra kaldırın.
     * **-audiolanguage english** : Oyun seslendirmesini İngilizce yapar. Bu seçenek, farklı bir oyun dili kullandığınız ancak İngilizce seslendirme istediğiniz zaman işe yarayabilir.
     * **-displayindex x** : Monitörü belirlenen ekran dizininde kullanır. `1` ile başlar. `0` ana (ve varsayılan) ekrandır.
     * **-snd_openal** : Mac Audio Queue yerine gecikmeyi azaltabilen ve gelişmiş ses efektleri sağlayan OpenAL arabirimini kullanır. :warning: Valve tarafından desteklenmediği için **deneyseldir**.
@@ -71,7 +71,7 @@ seçeneklerini kutuya yapıştırın.
     * **-console** : Başlangıçta konsolu gösterir.
     * **-nostartupsound** : Ana menüde oyun müziğini kapatır.
     * **-no_texture_stream** : Doku akışını devre dışı bırakır. Hızlı doku erişimi olan ve görüntü belleği baskısında olmayan güçlü bir sisteminiz varsa kullanışlıdır.
-    * **-autoconfig** : Grafik kalitesini donanımınız için önerilene sıfırlar. None Ön Ayarı ile kullanışlı olarak çalışır. İlk başlatmadan sonra kaldırın.
+    * **-autoconfig** : Grafik kalitesini donanımınız için önerilene sıfırlar. Custom Ön Ayarı ile kullanışlı olarak çalışır. İlk başlatmadan sonra kaldırın.
     * **-audiolanguage english** : Oyun seslendirmesini İngilizce yapar. Bu seçenek, farklı bir oyun dili kullandığınız ancak İngilizce seslendirme istediğiniz zaman işe yarayabilir.
     * **-displayindex x** : Monitörü belirlenen ekran dizininde kullanır. `1` ile başlar. `0` ana (ve varsayılan) ekrandır.
 

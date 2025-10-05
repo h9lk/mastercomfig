@@ -45,11 +45,11 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 OpenGL was replaced with Vulkan by default in the April 18, 2024 update. It's highly recommended that you use Vulkan. However, if you are not able to find a supported driver for your system and must use the legacy ToGL renderer, you can use the `apply_opengl_opts` command in your `cfg/overrides/setup_hook.cfg` file to apply the OpenGL optimizations like the addon used to.
 
-Note that the OpenGL optimizations will set `lighting_ex=high` to avoid lighting issues exclusive to the ToGL renderer. This overrides your preset's setting, but respects any user-defined override for the module.
+Note that the OpenGL optimizations will set `shading=high` to avoid lighting issues exclusive to the ToGL renderer. This overrides your preset's setting, but respects any user-defined override for the module.
 
 ## Black artifacts all over the screen on Linux
 
-This is a bug with TF2's legacy ToGL renderer and an interaction with the Mesa drivers. You can fix it by adding `lighting_ex=high` to your `modules.cfg`, or by using the Vulkan version of the game. If you apply OpenGL optimizations (see previous section), they will automatically set `lighting_ex=high`.
+This is a bug with TF2's legacy ToGL renderer and an interaction with the Mesa drivers. You can fix it by adding `shading=high` to your `modules.cfg`, or by using the Vulkan version of the game. If you apply OpenGL optimizations (see previous section), they will automatically set `shading=high`.
 
 You can also configure the ~/.drirc file to set `disable_uniform_array_resize` to `true` for Team Fortress 2 (or any program), such as:
 ```c
@@ -67,7 +67,7 @@ Or optionally using the adriconf GUI under `debugging` -> `disable the glsl opti
 
 ## My chat is disabled
 
-[A TF2 update](https://www.teamfortress.com/post.php?id=62459) introduced the ability to completely disable text chat. mastercomfig was updated shortly after to accommodate this change, with the Very Low preset disabling chat completely. If you are using Very Low preset or the `messages=off` module, you can re-enable chat by adding `messages=on` to your `modules.cfg` file. To disable chat the old way you can use the `messages=hide` module.
+[A TF2 update](https://www.teamfortress.com/post.php?id=62459) introduced the ability to completely disable text chat. mastercomfig was updated shortly after to accommodate this change, with the Destitute preset disabling chat completely. If you are using Destitute preset or the `messages=off` module, you can re-enable chat by adding `messages=on` to your `modules.cfg` file. To disable chat the old way you can use the `messages=hide` module.
 
 ## TF2 crashes when entering a Competitive Mode match
 
@@ -83,7 +83,7 @@ Make sure you don't have any infinite loops caused by an `exec autoexec` in your
 
 ## TF2 crashing on a custom map
 
-If TF2 crashes to desktop after a custom map loading or after picking a class on a custom map, add `lighting_ex=high` to your `modules.cfg`.
+If TF2 crashes to desktop after a custom map loading or after picking a class on a custom map, add `shading=high` to your `modules.cfg`.
 
 The crashes are caused by lightmapped props and phong must be enabled to allow the map to load properly. No Valve map uses lightmapped props, excluding `rd_asteroid`.  
 More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.24682/).
@@ -94,7 +94,7 @@ Add `tf_time_loading_item_panels .0005` to your `autoexec.cfg`.
 
 ## Why don't my killstreak sheens show?
 
-On the Very Low preset, killstreak sheens are disabled by default. To enable killstreak sheens, use the module `sheens_speed=slow`.
+On the Destitute preset, killstreak sheens are disabled by default. To enable killstreak sheens, use the module `sheens_speed=slow`.
 
 ## Grappling hook is invisible (in Mannpower and custom servers)
 
@@ -140,9 +140,9 @@ On some mastercomfig presets, outlines are disabled. The outline settings includ
 
 This is caused by a bug in TF2, where wood props do not look up the correct decal texture when prop decals are disabled and instead display the red ERROR texture. Put `r_decalstaticprops 1` in your `autoexec.cfg` to enable prop decals and avoid this bug at the cost of some performance.
 
-## I switched from Very Low to another preset but some settings persist
+## I switched from Destitute to another preset but some settings persist
 
-Enter `very_low_reset` into the console. It will reset the remaining settings that were left saved in your game.
+Enter `destitute_reset` into the console. It will reset the remaining settings that were left saved in your game.
 
 Please note that running this may reset some personal preferences back to default.
 

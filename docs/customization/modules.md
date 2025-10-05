@@ -13,7 +13,7 @@ Modules are groups of related commands with specific values for a certain use ca
 Modules are used in presets to set quality levels and can also be used in your very own `tf/cfg/overrides/modules.cfg` file to customize your config easily without searching for individual console variable values. You can find out what module levels your preset uses by [viewing their respective cfg file](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets). To set a custom module level, put it in `overrides/modules.cfg`. For example:
 
 ```c
-textures=high
+texture_quality=high
 ```
 
 will set the texture quality to `high`.
@@ -33,7 +33,7 @@ These usage levels are merely a relative estimate, not a precise indicator of th
 You can check what module level you have selected for a module by entering `module_level` into the console. For example, `textures_level` will output:
 
 ```c
-textures=high
+texture_quality=high
 ```
 
 or similar.
@@ -49,7 +49,7 @@ You can also view selected levels for all modules by entering `module_levels` in
 
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
-If you want to disable running a module entirely, you can put (for example) `alias textures` in `overrides/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception to this rule is the Snapshot Buffer module. To fully disabled it, you must use `snapshot_buffer=custom`.
+If you want to disable running a module entirely, you can put (for example) `alias texture_quality` in `overrides/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception to this rule is the Snapshot Buffer module. To fully disabled it, you must use `snapshot_buffer=custom`.
 
 Since module aliases act like normal commands, you can use them in the console to change game settings easily. For example, enter `textures_high` into the console to temporarily set your texture quality to high for that game session. You can reset your modules to what they were on startup by entering `run_modules` into the console.
 
@@ -68,7 +68,7 @@ Controls how fast you send to and receive from the server.
 - **CPU usage:** medium
 - **GPU usage:** none
 
-Default setting: **`packet_rate=standard`** (all presets, except Very Low).
+Default setting: **`packet_rate=standard`** (all presets, except Destitute).
 
 - **`packet_rate=congestion`**: A halved (33) packet rate for congested networks, usually bad Wi-Fi, or very slow CPUs.
 - **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all normal servers.
@@ -82,10 +82,10 @@ Controls how reliable to consider the snapshots you receive from the server to a
 
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
-- **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer_safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer_low`. For Spy this sets `snapshot_buffer_safe`.**This is the recommended setting.**
-- **`alias snapshot_buffer snapshot_buffer_low`**: A dangerously minimal buffering time which does not have room for any networking or server delays or drops (**15ms lerp** when using `packet_rate=standard`, or **30ms lerp** when using `packet_rate=congestion`). There is almost no reason to use this option, except in LAN scenarios, as `snapshot_buffer=auto` will optimize lag compensation for each class.
-- **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30ms lerp** when using `packet_rate=standard`, or **60ms lerp** when using `packet_rate=congestion`).
-- **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45ms lerp** when using `packet_rate=standard`, or **90ms lerp** when using `packet_rate=congestion`).
+- **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer_x1`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer_off`. For Spy this sets `snapshot_buffer_x1`. **This is the recommended setting.**
+- **`snapshot_bufffer=off`**: A dangerously minimal buffering time which does not have room for any networking or server delays or drops (**15ms lerp** when using `packet_rate=standard`, or **30ms lerp** when using `packet_rate=congestion`). There is almost no reason to use this option, except in LAN scenarios, as `snapshot_buffer=auto` will optimize buffering for each class.
+- **`snapshot_buffer=x1`**: Safest option with minimal snapshot delay by buffering by an extra snapshot (**30ms lerp** when using `packet_rate=standard`, or **60ms lerp** when using `packet_rate=congestion`).
+- **`snapshot_buffer=x2`**: Heavily protects against packet loss by buffering by 2 extra snapshots (**45ms lerp** when using `packet_rate=standard`, or **90ms lerp** when using `packet_rate=congestion`).
 - **`snapshot_buffer=custom`**: Prevents mastercomfig from messing with interp.
 - **`snapshot_buffer=anim`**: Adjusts the smoothing to be ideal for animations and NPCs rather than gameplay. You can use this for smoother offline recordings, single-player, etc.
 
@@ -134,9 +134,9 @@ Filters what custom content is allowed to be downloaded from the server.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`download=auto`** (all presets).
+Default setting: **`download=custom`** (all presets).
 
-- **`download=auto`**: Whatever the user sets in the game settings.
+- **`download=custom`**: Whatever the user sets in the game settings.
 - **`download=all`**: Download all custom files from servers.
 - **`download=nosounds`**: Download everything but sounds from servers.
 - **`download=mapsonly`**: Download only maps from servers.
@@ -160,24 +160,25 @@ Default setting: based on which preset you are currently using.
 
 ### Lighting
 
-Controls lighting fidelity: dynamic lights, detailed lighting, rimlights, light averaging, lightwarps, and ambient boost.
+Controls lighting fidelity: dynamic lights, detailed lighting, light averaging, lightwarps, and ambient boost.
 
 - **CPU usage:** medium
 - **GPU usage:** high
 
 Default setting: based on which preset you are currently using.
 
-- **`lighting=very_low`**: No dynamic lights. Skips all non-static lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Blocky world lighting.
-- **`lighting=low`**: No dynamic lights. Skips dim non-static lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Blocky world lighting.
-- **`lighting=medium`**: No dynamic lights. Detailed non-static lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-- **`lighting=medium_high`**: No dynamic lights. Detailed non-static lighting.
-- **`lighting=high`**: 1 dynamic light. Detailed non-static lighting.
-- **`lighting=very_high`**: 4 dynamic lights. Detailed non-static lighting.
-- **`lighting=ultra`**: 32 dynamic lights. Extremely detailed non-static lighting.
+- **`lighting=very_low`**: No dynamic lightmaps or lightmap smoothing, and skips all movable lighting. No lightwarps.
+- **`lighting=low`**: No dynamic lightmaps, and only applies ambient movable lighting. No lightwarps.
+- **`lighting=medium`**: No dynamic lightmaps, and applies detailed movable lighting.
+- **`lighting=high`**: 4 dynamic lightmaps, and applies detailed movable lighting.
+- **`lighting=ultra`**: Maximum (32) dynamic lightmaps, and applies extremely detailed movable lighting.
 
-### Lighting Ex
+### Shading
 
-Controls extended lighting commands which cause a material system reload.
+Controls advanced shading commands which cause a material system reload.
+
+!!! warning
+    Using any other option than **`shading=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons, but can also cause maps to render incorrectly.
 
 !!! warning
     Using any other option than **`lighting_ex=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons, but can also cause maps to render incorrectly.
@@ -187,25 +188,40 @@ Controls extended lighting commands which cause a material system reload.
 
 Default setting: based on which preset you are currently using.
 
-- **`lighting_ex=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs, due to rendering reloads.
-- **`lighting_ex=high`**: Uses whatever the material's lighting needs (enables bumpmaps, specular and phong).
+- **`shading=low`**: Disables bumpmaps and specular, and uses low quality shader fallbacks in some cases. Disables texture blending.
+- **`shading=medium`**: Disables bumpmaps and specular, and uses low quality shader fallbacks in some cases.
+- **`shading=high`**: Enables bumpmaps and specular.
+
+### Phong Shading
+
+Controls phong highlights for shading.
+
+!!! warning
+    Using **`phong=off`** can cause visual glitches or crashes in props on some maps.
+
+- **CPU usage:** low
+- **GPU usage:** high
+
+Default setting: based on which preset you are currently using.
+
+- **`phong=off`**: Uses diffuse shading.
+- **`phong=on`**: Uses phong shading.
+- **`phong=rim`**: Uses phong shading, with rimlighting.
 
 ### Shadows
 
-Controls shadow quality. Shadow limits affect rendered shadows. Shadows above the limit will be blobby.
+Controls dynamic shadow quality. Shadow limits affect rendered shadows. Shadows above the limit will be blobby.
 
 - **CPU usage:** high
 - **GPU usage:** medium
 
 Default setting: based on which preset you are currently using.
 
-- **`shadows=off`**: No shadows.
-- **`shadows=very_low`**: Blobby shadows.
-- **`shadows=low`**: Up to 3 high quality shadows.
-- **`shadows=medium`**: Up to 23 high quality shadows, and low robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
-- **`shadows=high`**: Up to 23 high quality shadows, and medium robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
-- **`shadows=very_high`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
-- **`shadows=ultra`**: Up to 160 high quality shadows, and unlimited robot/Halloween boss shadow distance. Uses highest quality model (at root LOD) to render shadows.
+- **`shadows=off`**: No dynamic shadows.
+- **`shadows=low`**: Blobby shadows.
+- **`shadows=medium`**: Up to 11 high quality shadows.
+- **`shadows=high`**: Up to 23 high quality shadows and limited NPC shadow distance
+- **`shadows=ultra`**: Up to 160 ultra quality movable shadows and unlimited NPC shadow distance
 
 ### Flashlight
 
@@ -220,11 +236,11 @@ Controls flashlight support. Flashlights are not used in TF2, so you should keep
 Default setting: **`flashlight=off`** (all presets).
 
 - **`flashlight=off`**: Disables flashlight support.
-- **`flashlight=on`**: Enables flashlight support. If the `shadows` module is `off`, this will set it to the `very_low` level.
+- **`flashlight=on`**: Enables flashlight support. If the `shadows` module is `off`, this will set it to the `low` option.
 
 ### Effects
 
-Controls weapon and other miscellaneous effects.
+Controls weapon effects, particles, and other miscellaneous effects
 
 !!! note
     The way TF2 uses these settings is inconsistent and may not apply in all cases.
@@ -234,10 +250,24 @@ Controls weapon and other miscellaneous effects.
 
 Default setting: based on which preset you are currently using.
 
-- **`effects=low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision. Disables monitors.
-- **`effects=medium`**: Disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, disables temp ent (syringe) collision. 512x render resolution for monitors.
-- **`effects=high`**: Disables shell casing ejection, disables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 1K render resolution for monitors.
-- **`effects=ultra`**: Enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 1K render resolution for monitors.
+- **`effects=very_low`**: Disables impact effects, water splash effects, weather particles, muzzle flashes, shell casing ejection, and temp ent collision. Collapses spawning particles into existing particles (including bullet tracers and flames) together, reduces particle density/quality. Disables monitors.
+- **`effects=low`**: Disables impact effects, water splash effects, weather particles, muzzle flashes, shell casing ejection, and temp ent collision. Collapses spawning particles into existing particles (including bullet tracers and flames) together, reduces particle density/quality. Disables monitors.
+- **`effects=medium`**: Disables weather particles, muzzle flashes, and shell casing ejection. Reduces particle density/quality. Disables monitors.
+- **`effects=high`**: Uses full particle density/quality. 1K render resolution for monitors.
+- **`effects=ultra`**: Uses full particle density/quality, and forces full simulation for all particles. 1K render resolution for monitors.
+
+### Tracer Effects
+
+Controls bullet tracer effects
+
+- **CPU usage:** low
+- **GPU usage:** low
+
+Default setting: based on which preset you are currently using.
+
+- **`tracers=low`**: Disables first person tracers.
+- **`tracers=medium`**: Enables first person tracers.
+- **`tracers=high`**: Enables first person tracers and makes tracers thicker.
 
 ### Water
 
@@ -248,28 +278,11 @@ Controls water reflections.
 
 Default setting: based on which preset you are currently using.
 
-- **`water=very_low`**: Makes water black. 32x water render resolution.
-- **`water=low`**: Makes water solid. 128x water render resolution. Fades out to low quality solid/black water at short ranges.
-- **`water=medium`**: Uses standard water with no reflections. Fades out to low quality solid/black water at reasonable ranges. 256x water render resolution.
-- **`water=medium_high`**: Uses standard water with basic reflections. Fades out to low quality solid/black water at reasonable ranges. 512x water render resolution.
-- **`water=high`**: Uses standard water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
-- **`water=very_high`**: Uses high quality water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
-- **`water=ultra`**: Uses high quality water with all reflections. Never fades out to low quality water. 2K water render resolution.
-
-### Particles
-
-Controls particle effects.
-
-- **CPU usage:** medium
-- **GPU usage:** medium
-
-Default setting: based on which preset you are currently using.
-
-- **`particles=very_low`**: Collapses spawning particles into existing particles (including bullet tracers and flames) together, disables weather particles, reduces particle density/quality.
-- **`particles=low`**: Disables weather particles, reduces particle density/quality.
-- **`particles=medium`**: Disables weather particles, reduces particle density/quality.
-- **`particles=high`**: Enables weather particles, uses full particle density/quality.
-- **`particles=ultra`**: Enables weather particles, uses full particle density/quality, and forces full simulation for all particles.
+- **`water=very_low`**: Makes water solid. 32x water render resolution.
+- **`water=low`**: Uses basic water with no reflections. 128x water render resolution. Fades out to low quality solid water at short ranges.
+- **`water=medium`**: Uses standard water with basic reflections. 256x water render resolution. Fades out to low quality solid water at long ranges.
+- **`water=high`**: Uses standard water with all reflections. 1K water render resolution. Fades out to low quality solid water at long ranges.
+- **`water=ultra`**: Uses high quality water with all reflections. 2K water render resolution. Never fades out to low quality water.
 
 ### General Post-Processing
 
@@ -281,9 +294,27 @@ Controls standard post-processing effects.
 Default setting: based on which preset you are currently using.
 
 - **`post_processing=off`**: No post-processing.
-- **`post_processing=low`**: Enables basic color correction.
-- **`post_processing=medium`**: Enables LDR bloom.
-- **`post_processing=high`**: Enables standard HDR and bloom.
+- **`post_processing=low`**: Enables bloom in Valve's default style.
+- **`post_processing=default`**: Enables HDR and bloom in Valve's default style.
+- **`post_processing=calm`**: Enables HDR and bloom with reduced "blow out" of bright lighting (recommended).
+- **`post_processing=vivid`**: Enables HDR and bloom with glowing highlights.
+- **`post_processing=washed`**: Enables HDR and bloom with an overall bright look.
+- **`post_processing=dreamy`**: Enables HDR and bloom with surreal dreamy look.
+
+### Color Filter
+
+Controls post-processing color filters.
+
+- **CPU usage:** none
+- **GPU usage:** low
+
+Default setting: **`color_filter=off`** (all presets).
+
+- **`color_filter=off`**: No color filter
+- **`color_filter=grayscale`**: Grayscale, no color
+- **`color_filter=desaturated`**: Reduced saturation
+- **`color_filter=warm`**: Warmer feeling colors
+- **`color_filter=cool`**: Cooler feeling colors
 
 ### Pyrovision
 
@@ -346,25 +377,6 @@ Default setting: based on which preset you are currently using.
 - **`anti_aliasing=msaa_4x`**: Enables MSAA 4x.
 - **`anti_aliasing=msaa_8x`**: Enables MSAA 8x.
 
-### Texture Filtering
-
-Controls texture smoothing/filtering.
-
-!!! warning
-    Texture filtering will only work on `textures=low` and higher.
-
-- **CPU usage:** none
-- **GPU usage:** low
-
-Default setting: based on which preset you are currently using.
-
-- **`texture_filter=bilinear`**: Bilinear filtering
-- **`texture_filter=trilinear`**: Trilinear filtering
-- **`texture_filter=aniso2x`**: Anisotropic filtering 2x
-- **`texture_filter=aniso4x`**: Anisotropic filtering 4x
-- **`texture_filter=aniso8x`**: Anisotropic filtering 8x
-- **`texture_filter=aniso16x`**: Anisotropic filtering 16x
-
 ### Characters
 
 Adjusts characters details.
@@ -379,17 +391,12 @@ Default setting: based on which preset you are currently using.
 
 - **`characters=very_low`**: Disables facial animations, no eyes or teeth.
 - **`characters=low`**: Disables facial animations, enables eyes, disables teeth, disables eye movement and blinking.
-- **`characters=medium`**: Enables facial animations, enables eyes and teeth, disables eye movement and blinking, disables enhanced lip sync.
-- **`characters=medium_high`**: Enables facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at short range.
-- **`characters=high`**: Enables smooth facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at a slightly increased range.
-- **`characters=ultra`**: Enables extra smooth facial animations, high quality models, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at all ranges.
+- **`characters=medium`**: Enables smooth facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at medium range.
+- **`characters=high`**: Enables extra smooth facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at any distance.
 
 ### General Decals
 
 Controls bullet holes and overall decal support.
-
-!!! note
-    In the Very Low preset, decals are forced invisible.
 
 - **CPU usage:** medium
 - **GPU usage:** medium
@@ -412,8 +419,9 @@ Controls blood on hurt players and some bullet decals on props.
 Default setting: based on which preset you are currently using.
 
 - **`decals_models=off`**: Disables model decals.
-- **`decals_models=low`**: Allow up to 9 model decals.
-- **`decals_models=high`**: Allow up to 50 model decals.
+- **`decals_models=low`**: Allows up to 1 model decal.
+- **`decals_models=medium`**: Allows up to 9 model decals.
+- **`decals_models=high`**: Allows up to 50 model decals.
 
 ### Map Decals
 
@@ -437,8 +445,8 @@ Controls decals sprayed by players.
 Default setting: **`sprays=off`** (all presets).
 
 - **`sprays=off`**: Completely disables downloading, uploading and displaying sprays. Deletes temporary spray files on shutdown.
-- **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. Deletes temporary spray files on shutdown. If the `decals` module is `off`, this will set it to the `low` level.
-- **`sprays=keep`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. Keeps temporary spray files on shutdown. If the `decals` module is `off`, this will set it to the `low` level.
+- **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. Deletes temporary spray files on shutdown. If the `decals` module is `off`, this will set it to the `low` option.
+- **`sprays=keep`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. Keeps temporary spray files on shutdown. If the `decals` module is `off`, this will set it to the `low` option.
 
 ### Gibs
 
@@ -450,10 +458,8 @@ Controls gibs created by player explosions.
 Default setting: based on which preset you are currently using.
 
 - **`gibs=off`**: Disables gibs.
-- **`gibs=low`**: Max of 2 gib parts.
-- **`gibs=medium_low`**: Max of 4 gib parts.
-- **`gibs=medium`**: Default number of gibs.
-- **`gibs=high`**: Default number of gibs, gibs can burn.
+- **`gibs=low`**: Enables gibs.
+- **`gibs=high`**: Enables gibs, and gibs can burn.
 
 ### Silly Gibs
 
@@ -477,10 +483,9 @@ Controls the rendering of various small objects.
 
 Default setting: based on which preset you are currently using.
 
-- **`props=low`**: Disables client side props like bottles, disables foliage, low quality prop models and invisible railings.
-- **`props=medium`**: Disables client side props, disables foliage, default quality prop models.
-- **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client side props, enables foliage at a reasonable distance with instant pop in, default quality prop models.
-- **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client side props, enables foliage at practically any distance, max quality prop models regardless of distance.
+- **`props=low`**: Disables client-side props, disables foliage.
+- **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client-side props, enables foliage at a reasonable distance with instant pop in.
+- **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client-side props, enables foliage at practically any distance.
 
 ### Ragdolls
 
@@ -491,7 +496,6 @@ Controls physics simulation and fading for bodies that spawn on death.
 
 Default setting: based on which preset you are currently using.
 
-- **`ragdolls=hidden`**: Makes ragdolls invisible, but keeps them in the map, decreasing performance over time.
 - **`ragdolls=off`**: Disables ragdolls by fading them out quickly.
 - **`ragdolls=medium`**: Enables standard physics ragdolls.
 - **`ragdolls=high`**: Enables ragdolls with collisions with a high fade out time, as well as special animations like decapitation.
@@ -510,6 +514,9 @@ Default setting: based on which preset you are currently using.
 
 - **`3dsky=off`**: Disables 3D sky.
 - **`3dsky=on`**: Enables 3D sky.
+
+!!! warning
+    Disabling 3D sky on some AMD graphics cards in DirectX can cause flickering when going underwater. Either use the `-vulkan` launch option, or turn on 3D sky.
 
 ### Jigglebones
 
@@ -534,7 +541,7 @@ Controls how fast the animation is on the killstreak sheen glow for weapons.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
+Default setting: **`sheens_speed=slow`** (all presets, except Destitute).
 
 - **`sheens_speed=off`**: Skips updating sheen glow animation.
 - **`sheens_speed=slow`**: Slow speed.
@@ -543,7 +550,7 @@ Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
 
 ### Killstreak Sheens Tint Intensity
 
-Controls how intense the color tint is on the killstreak sheen glow for weapons.
+Controls how intense the color tint is on light reflections for the killstreak sheen glow for weapons.
 
 !!! note
     This module will have no effect if `sheens_speed` is set to `off`.
@@ -570,12 +577,27 @@ Controls texture quality.
 
 Default setting: based on which preset you are currently using.
 
-- **`textures=very_low`**: Low texture quality, blocky textures, disables texture blending.
-- **`textures=low`**: Low texture quality, disables texture blending.
-- **`textures=medium`**: Medium texture quality.
-- **`textures=high`**: High texture quality.
-- **`textures=very_high`**: Very High texture quality.
-- **`textures=ultra`**: Maximum texture quality.
+- **`texture_quality=low`**: Low texture quality.
+- **`texture_quality=medium`**: Medium texture quality.
+- **`texture_quality=high`**: High texture quality.
+- **`texture_quality=very_high`**: Very High texture quality.
+- **`texture_quality=ultra`**: Maximum texture quality.
+
+### Texture Filtering
+
+Controls texture smoothing/filtering.
+
+- **CPU usage:** none
+- **GPU usage:** low
+
+Default setting: based on which preset you are currently using.
+
+- **`texture_filter=blocky`**: Blocky textures and world lighting
+- **`texture_filter=trilinear`**: Trilinear filtering
+- **`texture_filter=aniso2x`**: Anisotropic filtering 2x
+- **`texture_filter=aniso4x`**: Anisotropic filtering 4x
+- **`texture_filter=aniso8x`**: Anisotropic filtering 8x
+- **`texture_filter=aniso16x`**: Anisotropic filtering 16x
 
 ### Ropes
 
@@ -668,6 +690,18 @@ Default setting: based on which preset you are currently using.
 - **`hud_player_model=off`**: Disables the player model.
 - **`hud_player_model=on`**: Enables the player model.
 
+### Server Messages
+
+Controls server / game mode text messages at the center of the screen.
+
+- **CPU usage:** none
+- **GPU usage:** none
+
+Default setting: **`hud_server_text=on`** (all presets, except Destitute).
+
+- **`hud_server_text=off`**: Disables server center text.
+- **`hud_server_text=on`**: Enables server center text.
+
 ### Contracts
 
 Controls the Contracts HUD seen at the top right corner of the screen during gameplay.
@@ -675,9 +709,9 @@ Controls the Contracts HUD seen at the top right corner of the screen during gam
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`hud_contracts=auto`** (all presets, except Very Low).
+Default setting: **`hud_contracts=custom`** (all presets, except Destitute).
 
-- **`hud_contracts=auto`**: Whatever the user set in the game settings.
+- **`hud_contracts=custom`**: Whatever the user set in the game settings.
 - **`hud_contracts=hide`**: Hides the Contracts HUD.
 - **`hud_contracts=all`**: Shows all Contracts available.
 - **`hud_contracts=active`**: Only shows active Contracts.
@@ -689,7 +723,7 @@ Controls health/player info panels and target ID translucency.
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`hud_panels=high`** (all presets, except Low and Very Low).
+Default setting: **`hud_panels=high`** (all presets, except Low and Destitute).
 
 - **`hud_panels=off`**: Disables health/player info panels that appear when looking at a player, disables target ID box.
 - **`hud_panels=low`**: Enables health/player info panels that appear when looking at a player, enables opaque target ID box.
@@ -718,7 +752,7 @@ Toggles match status HUD at the top of the screen.
 - **CPU usage:** high
 - **GPU usage:** none
 
-Default setting: **`match_hud=on`** (all presets, except Very Low).
+Default setting: **`match_hud=on`** (all presets, except Destitute).
 
 - **`match_hud=off`**: Disables match status HUD.
 - **`match_hud=on`**: Enables match status HUD.
@@ -730,7 +764,7 @@ Controls text chat, which displays player messages and voice messages.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`messages=on`** (all presets, except Very Low).
+Default setting: **`messages=on`** (all presets, except Destitute).
 
 - **`messages=off`**: Disables text chat.
 - **`messages=hide`**: Hides text chat.
@@ -743,7 +777,7 @@ Controls death and objective notifications in the top right corner.
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`killfeed=on`** (all presets, except Very Low).
+Default setting: **`killfeed=on`** (all presets, except Destitute).
 
 - **`killfeed=off`**: Disables killfeed.
 - **`killfeed=on`**: Enables killfeed.
@@ -755,7 +789,7 @@ Controls banners that appear at the top center of the screen, notifying you of a
 - **CPU usage:** medium
 - **GPU usage:** none
 
-Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
+Default setting: **`killstreaks=high`** (all presets, except Low and Destitute).
 
 - **`killstreaks=off`**: Disables killstreak banner.
 - **`killstreaks=low`**: Enables killstreak opaque banner.
@@ -768,7 +802,7 @@ Controls the HUD achievements tracker.
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`hud_achievement=on`** (all presets, except Very Low).
+Default setting: **`hud_achievement=on`** (all presets, except Destitute).
 
 - **`hud_achievement=off`**: Disables achievement tracker panel completely.
 - **`hud_achievement=on`**: Enables support for achievement tracker panel.
@@ -780,7 +814,7 @@ Controls developer console.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`console=on`** (all presets, except Very Low).
+Default setting: **`console=on`** (all presets, except Destitute).
 
 - **`console=off`**: Disables developer console.
 - **`console=on`**: Enables developer console.
@@ -811,10 +845,11 @@ Controls the outlines that appear through walls for players, some objectives (pa
 
 Default setting: based on which preset you are currently using.
 
-- **`outlines=off`**: Disables outlines and nametags.
-- **`outlines=low`**: Enables nametags, disable outlines.
-- **`outlines=medium`**: Disables nametags and player outlines, enable objective outlines.
-- **`outlines=high`**: Enables nametags and outlines.
+- **`outlines=off`**: Disables nametags and all outlines.
+- **`outlines=low`**: Enables nametags, disables all outlines.
+- **`outlines=medium`**: Disables nametags and player outlines, enables all other outlines.
+- **`outlines=high`**: Enables nametags and player outlines for spectating only, enables all other outlines.
+- **`outlines=ultra`**: Enables nametags and all outlines.
 
 ### Map Background
 
@@ -834,9 +869,6 @@ Default setting: **`dynamic_background=off`** (all presets).
 
 Controls a variety of sound effects, including spatialization and positional effects.
 
-!!! note
-    In the Low and Very Low preset VPKs, spatialization and positional effects (called [DSP](https://developer.valvesoftware.com/wiki/DSP) in the Source Engine) are completely disabled.
-
 - **CPU usage:** high
 - **GPU usage:** none
 
@@ -855,7 +887,7 @@ Controls player voice chat.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`voice_chat=on`** (all presets, except Very Low).
+Default setting: **`voice_chat=on`** (all presets, except Destitute).
 
 - **`voice_chat=off`**: Fully disables the in-game voice chat system, does not receive audio and cannot be re-enabled until reconnect.
 - **`voice_chat=hidden`**: Disables the in-game voice chat system by blocking audio from playing.
@@ -868,7 +900,7 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 Controls the privacy of your Casual/Competitive matchmaking party.
 
 !!! warning
-    The Friends Only restriction for parties can be bypassed, which means anyone can join your party if they have your Steam ID. Leaving your party open can result in anyone to join your party and spam party chat, causing lag, sound spam and other disruptions.
+    The Friends-Only restriction for parties can be bypassed, which means anyone can join your party if they have your Steam ID. Leaving your party open can result in anyone to join your party and spam party chat, causing lag, sound spam and other disruptions.
 
 - **CPU usage:** none
 - **GPU usage:** none
@@ -886,7 +918,7 @@ Controls the mastercomfig logo which appears in console on start up.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`logo=on`** (all presets, except Very Low).
+Default setting: **`logo=on`** (all presets, except Destitute).
 
 - **`logo=off`**: Does not print logo in console on startup.
 - **`logo=on`**: Prints logo in console on startup.

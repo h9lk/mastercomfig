@@ -12,25 +12,17 @@ description: mastercomfig screenshots for all presets.
 
 ![sawmill high](https://comfig.app/img/presets/high-hq.webp){ loading=lazy }
 
-## Medium High
-
-![sawmill medium high](https://comfig.app/img/presets/medium-high-hq.webp){ loading=lazy }
-
 ## Medium
 
 ![sawmill medium](https://comfig.app/img/presets/medium-hq.webp){ loading=lazy }
-
-## Medium Low
-
-![sawmill medium low](https://comfig.app/img/presets/medium-low-hq.webp){ loading=lazy }
 
 ## Low
 
 ![sawmill low](https://comfig.app/img/presets/low-hq.webp){ loading=lazy }
 
-## Very Low
+## Destitute
 
-![sawmill very low](https://comfig.app/img/presets/very-low-hq.webp){ loading=lazy }
+![sawmill destitute](https://comfig.app/img/presets/destitute-hq.webp){ loading=lazy }
 
 ## Preset Screenshot Config
 

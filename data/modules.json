@@ -4,93 +4,147 @@
       {
         "name": "lod",
         "display": "Model Quality",
+        "description": "Controls how detailed models are.",
+        "cpu": 1,
+        "gpu": 2,
         "values": [
           {
-            "value": "low"
+            "value": "low",
+            "description": "Low model detail"
           },
           {
-            "value": "medium"
+            "value": "medium",
+            "description": "Medium model detail"
           },
           {
-            "value": "high"
+            "value": "high",
+            "description": "High model detail"
           },
           {
-            "value": "ultra"
+            "value": "ultra",
+            "description": "Forces high model detail regardless of distance"
           }
         ]
       },
       {
         "name": "lighting",
+        "description": "Controls lighting fidelity",
+        "cpu": 2,
+        "gpu": 3,
         "values": [
           {
-            "value": "very_low"
+            "value": "very_low",
+            "description": "No dynamic lightmaps and skips all movable lighting. No lightwarps or rimlights."
           },
           {
-            "value": "low"
+            "value": "low",
+            "description": "No dynamic lightmaps and only applies ambient movable lighting. No lightwarps or rimlights."
           },
           {
-            "value": "medium"
+            "value": "medium",
+            "description": "No dynamic lightmaps and applies detailed movable lighting"
           },
           {
-            "value": "medium_high"
+            "value": "high",
+            "description": "1 dynamic lightmap and applies detailed movable lighting."
           },
           {
-            "value": "high"
-          },
-          {
-            "value": "very_high"
-          },
-          {
-            "value": "ultra"
+            "value": "ultra",
+            "description": "Maximum dynamic lightmaps and applies extremely detailed movable lighting."
           }
         ]
       },
       {
-        "name": "lighting_ex",
+        "name": "shading",
+        "display": "Shading",
+        "description": "Controls advanced shading commands which cause a material system reload.",
+        "cpu": 1,
+        "gpu": 3,
         "values": [
           {
-            "value": "low"
+            "value": "low",
+            "description": "Disables bumpmaps and specular, and uses low quality shader fallbacks in some cases."
           },
           {
-            "value": "high"
+            "value": "medium",
+            "description": "Disables bumpmaps and specular, and uses low quality shader fallbacks in some cases."
+          },
+          {
+            "value": "high",
+            "description": "Enables bumpmaps and specular."
+          }
+        ]
+      },
+      {
+        "name": "phong",
+        "display": "Phong Shading",
+        "description": "Controls phong highlights for shading.",
+        "cpu": 1,
+        "gpu": 3,
+        "values": [
+          {
+            "value": "off",
+            "description": "Uses diffuse shading."
+          },
+          {
+            "value": "on",
+            "description": "Uses phong shading."
+          },
+          {
+            "value": "rim",
+            "display": "On + Rimlighting",
+            "description": "Uses phong shading, with rimlighting."
           }
         ]
       },
       {
         "name": "shadows",
+        "description": "Controls shadow quality. Shadow limits affect rendered shadows. Shadows above the limit will be blobby.",
+        "cpu": 3,
+        "gpu": 2,
         "values": [
           {
-            "value": "off"
+            "value": "off",
+            "description": "No dynamic shadows"
           },
           {
-            "value": "very_low"
+            "value": "low",
+            "description": "Blobby shadows"
           },
           {
-            "value": "low"
+            "value": "medium",
+            "description": "Up to 3 low quality shadows"
           },
           {
-            "value": "medium"
+            "value": "high",
+            "description": "Up to 23 high quality shadows and limited NPC shadow distance"
           },
           {
-            "value": "high"
-          },
-          {
-            "value": "very_high"
-          },
-          {
-            "value": "ultra"
+            "value": "ultra",
+            "description": "Up to 160 ultra quality movable shadows and unlimited NPC shadow distance"
           }
         ]
       },
       {
         "name": "flashlight",
         "type": "switch",
+        "description": "Controls flashlight support. Flashlights are not used in TF2, so you should keep it disabled unless you need it for a certain community server mod, like Slender, or some Deathrun servers.",
+        "notes": [
+          {
+            "level": "warning",
+            "content": "Turning on flashlight support will cause rendering artifacts on some maps, especially when Pyroland is enabled"
+          }
+        ],
+        "cpu": 1,
+        "gpu": 2,
         "values": [
           {
-            "value": "off"
+            "value": "off",
+            "description": "Disables flashlight support."
           },
           {
-            "value": "on"
+            "value": "on",
+            "description": "Enables flashlight support. If the `shadows` module is `off`, this will set it to the `low` level."
           }
         ]
       },
@@ -98,23 +152,6 @@
         "name": "effects",
         "values": [
           {
-            "value": "low"
-          },
-          {
-            "value": "medium"
-          },
-          {
-            "value": "high"
-          },
-          {
-            "value": "ultra"
-          }
-        ]
-      },
-      {
-        "name": "water",
-        "values": [
-          {
             "value": "very_low"
           },
           {
@@ -124,13 +161,7 @@
             "value": "medium"
           },
           {
-            "value": "medium_high"
-          },
-          {
             "value": "high"
-          },
-          {
-            "value": "very_high"
           },
           {
             "value": "ultra"
@@ -138,7 +169,22 @@
         ]
       },
       {
-        "name": "particles",
+        "name": "tracers",
+        "display": "Tracer Effects",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "water",
         "values": [
           {
             "value": "very_low"
@@ -165,13 +211,45 @@
             "value": "off"
           },
           {
-            "value": "low"
+            "value": "low",
+            "display": "Bloom only"
           },
           {
-            "value": "medium"
+            "value": "default"
           },
           {
-            "value": "high"
+            "value": "calm",
+            "display": "Calm (recommended)"
+          },
+          {
+            "value": "vivid"
+          },
+          {
+            "value": "washed"
+          },
+          {
+            "value": "dreamy"
+          }
+        ]
+      },
+      {
+        "name": "color_filter",
+        "display": "Color Filter",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "grayscale"
+          },
+          {
+            "value": "desaturated"
+          },
+          {
+            "value": "warm"
+          },
+          {
+            "value": "cool"
           }
         ]
       },
@@ -238,37 +316,6 @@
         ]
       },
       {
-        "name": "texture_filter",
-        "display": "Texture Filtering",
-        "type": "slider",
-        "values": [
-          {
-            "value": "bilinear",
-            "display": "Bilinear filtering"
-          },
-          {
-            "value": "trilinear",
-            "display": "Trilinear filtering"
-          },
-          {
-            "value": "aniso2x",
-            "display": "Anisotropic filtering 2x"
-          },
-          {
-            "value": "aniso4x",
-            "display": "Anisotropic filtering 4x"
-          },
-          {
-            "value": "aniso8x",
-            "display": "Anisotropic filtering 8x"
-          },
-          {
-            "value": "aniso16x",
-            "display": "Anisotropic filtering 16x"
-          }
-        ]
-      },
-      {
         "name": "characters",
         "values": [
           {
@@ -281,13 +328,7 @@
             "value": "medium"
           },
           {
-            "value": "medium_high"
-          },
-          {
             "value": "high"
-          },
-          {
-            "value": "ultra"
           }
         ]
       },
@@ -321,6 +362,9 @@
           },
           {
             "value": "low"
+          },
+          {
+            "value": "medium"
           },
           {
             "value": "high"
@@ -365,12 +409,6 @@
             "value": "low"
           },
           {
-            "value": "medium_low"
-          },
-          {
-            "value": "medium"
-          },
-          {
             "value": "high"
           }
         ]
@@ -398,9 +436,6 @@
             "value": "low"
           },
           {
-            "value": "medium"
-          },
-          {
             "value": "high"
           },
           {
@@ -411,9 +446,6 @@
       {
         "name": "ragdolls",
         "values": [
-          {
-            "value": "hidden"
-          },
           {
             "value": "off"
           },
@@ -489,12 +521,9 @@
         ]
       },
       {
-        "name": "textures",
+        "name": "texture_quality",
         "display": "Texture Quality",
         "values": [
-          {
-            "value": "very_low"
-          },
           {
             "value": "low"
           },
@@ -509,6 +538,41 @@
           },
           {
             "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "texture_filter",
+        "display": "Texture Filtering",
+        "type": "slider",
+        "values": [
+          {
+            "value": "blocky",
+            "display": "Blocky textures and world lighting"
+          },
+          {
+            "value": "trilinear",
+            "display": "Trilinear filtering without bicubic lightmaps"
+          },
+          {
+            "value": "trilinear_plus",
+            "display": "Trilinear filtering"
+          },
+          {
+            "value": "aniso2x",
+            "display": "Anisotropic filtering 2x"
+          },
+          {
+            "value": "aniso4x",
+            "display": "Anisotropic filtering 4x"
+          },
+          {
+            "value": "aniso8x",
+            "display": "Anisotropic filtering 8x"
+          },
+          {
+            "value": "aniso16x",
+            "display": "Anisotropic filtering 16x"
           }
         ]
       },
@@ -584,11 +648,24 @@
         ]
       },
       {
+        "name": "hud_server_text",
+        "display": "Server Messages",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
         "name": "hud_contracts",
         "display": "Contracts",
         "values": [
           {
-            "value": "auto",
+            "value": "custom",
             "display": "Use game settings"
           },
           {
@@ -740,6 +817,9 @@
           },
           {
             "value": "high"
+          },
+          {
+            "value": "ultra"
           }
         ]
       },
@@ -853,13 +933,17 @@
         "values": [
           {
             "value": "auto",
-            "display": "Automatic"
+            "display": "Automatic (recommended)"
           },
           {
-            "value": "safe"
+            "value": "off",
+            "display": "Off (not recommended)"
           },
           {
-            "value": "high"
+            "value": "1x"
+          },
+          {
+            "value": "2x"
           },
           {
             "value": "custom"
@@ -910,7 +994,7 @@
         "description": "Filters what custom content is allowed to be downloaded from the server.",
         "values": [
           {
-            "value": "auto",
+            "value": "custom",
             "display": "Use game settings"
           },
           {

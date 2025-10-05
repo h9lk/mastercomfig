@@ -148,21 +148,10 @@ ConVars and commands are found using [these instructions](tf2/README.md#making-y
 
 Add your alternatives uncommented in the applicable presets/addons or use modules.
 
-##### Presets
-
-- `none`: Special preset which skips setting quality options
-- `ultra`: Absolute maximum quality, with even the slightest and most performance-intensive quality improvements included
-- `high`: Enables all graphical features without making them extremely high quality
-- `medium-high`: Disables unoptimized features and optimize the game without making it look bad
-- `medium`: The maximum performance you can get while enabling a few effects that may give you a slight edge
-- `medium-low`: The maximum performance you can get without making the game too hard to play because of awful visual quality and glitches
-- `low`: Maximum performance without caring much about visibility or possible bugs
-- `very-low`: Negatively affects playability by a lot and disables very essential features in desperation for performance
-
 ##### Addons
 
 - `no-footsteps`: Removes footstep sounds
-- `disable-pyroland`: Removes Pyroland map textures
+- `no-pyroland`: Removes Pyroland map textures
 - `no-soundscapes`: Removes soundscapes (ambient map noise) and bird noises
 - `no-tutorial`: Disables tutorial messages and other popups
 - `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration, and 1:1 zoom sensitivity
@@ -178,13 +167,13 @@ the existing modules if applicable, then add documentation for it at the
 
 The first part of adding modules is a multi-step process in `config/mastercomfig/cfg/comfig/comfig.cfg`:
 
-- Add the module level alias(es) (`alias module_level "cvar1 1;cvar2 0`). For every command in the module, all levels must set that command unless there is no impact at that level.
-- Add the set module level alias(es) (`alias module=level"alias module module_level"`).
-- Possibly adjust presets in `config/cfg/presets` to use the new module or levels to an existing module.
+- Add the module option alias(es) (`alias module_option "cvar1 1;cvar2 0;alias module_level echo module=option"`). For every command in the module, all options must set that command unless there is no impact at that option.
+- Add the set module option alias(es) (`alias module=option"alias module module_option"`).
+- Possibly adjust presets in `config/cfg/presets` to use the new module or options to an existing module.
 
 If you are adding a new module, you will also need to add a new `module` entry in `config/mastercomfig/cfg/comfig/modules_run.cfg` and `config/mastercomfig/cfg/comfig/modules_levels.cfg`.
 
-You also have to add your new module or levels to `data/modules.json` for app support.
+You also have to add your new module or options to `data/modules.json` for app support.
 
 #### Texture preload list
 

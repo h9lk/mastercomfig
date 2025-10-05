@@ -5,6 +5,11 @@ description: Some awesome TF2 modifications which can be used alongside masterco
 
 Wanting to get more out of TF2? Look no further for a comprehensive list of community projects that you may wanna check out!
 
+## SDK Mods
+
+* [Team Comtress 2](https://teamcomtress.com/)
+ — A new TF2 SDK version of the game by mastercoms, the creator of mastercomfig, that gets major updates with bug fixes, performance improvements, quality of life enhancements, and more!
+
 ## HUD
 
 * [comfig huds](https://comfig.app/huds)
@@ -38,7 +43,7 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 * [Altered Projectile Trails](https://gamebanana.com/mods/12420)
   — Enhances the quality of various projectiles' trails
 
-* [ Altered Short Circuit Effects](https://gamebanana.com/mods/11900)
+* [Altered Short Circuit Effects](https://gamebanana.com/mods/11900)
   — Enhances the quality of the Short Circuit's effects
 
 ## Graphics simplification
