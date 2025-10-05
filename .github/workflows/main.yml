@@ -9,7 +9,7 @@ on:
         type: string
         default: "true"
   push:
-    branches: [staging]
+    branches: [develop]
     paths-ignore:
       - "docs/**"
       - ".github/**"

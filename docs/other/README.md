@@ -1,19 +1,19 @@
 ---
-description: Узнайте, как можно оптимизировать другие игры и программное обеспечение.
+description: Find out how you can optimize other games and software.
 ...
 
-# Другие игры
+# Other Games
 
-Пока идет работа над более совершенными системами, чтобы сделать mastercomfig более надежным для других игр, это будет служить списком некоторых одноразовых конфигураций, которые можно использовать для некоторых игр/программ, кроме TF2.
+For the time being, while better systems are being worked on to get the robustness of mastercomfig ready for other games, this will serve as a list of some one off configuration you can use for some games/software other than TF2.
 
-## Игры
+## Games
 
-Скоро будет!
+Coming soon!
 
-## Лаунчеры игр
+## Game Launchers
 
 * [Epic Games Store](./egs.md)
 
-## Другое программное обеспечение
+## Other Software
 
-Скоро будет!
+Coming soon!
