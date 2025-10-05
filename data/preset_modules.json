@@ -40,7 +40,8 @@
   "phong": {
     "default": "rim",
     "destitute": "off",
-    "low": "off"
+    "low": "off",
+    "custom": ""
   },
   "shadows": {
     "destitute": "off",
@@ -66,7 +67,8 @@
     "default": "low",
     "medium": "medium",
     "high": "high",
-    "ultra": "high"
+    "ultra": "high",
+    "custom": ""
   },
   "water": {
     "destitute": "very_low",
