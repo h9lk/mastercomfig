@@ -936,10 +936,14 @@
             "display": "Automatic (recommended)"
           },
           {
-            "value": "safe"
+            "value": "off",
+            "display": "Off (not recommended)"
           },
           {
-            "value": "high"
+            "value": "1x"
+          },
+          {
+            "value": "2x"
           },
           {
             "value": "custom"

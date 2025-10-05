@@ -61,15 +61,15 @@ search:
 
 Вы также можете изменить их псевдоним, чтобы использовать собственные настройки сети.
 
-- `net_projectiles`: Псевдоним сетевых параметров для классов использующих снаряды (Soldier, Pyro, Demoman, Medic) (`snapshot_buffer_low`).
-- `net_hitscan`: Псевдоним для параметров сети в классах использующих хитскан (Scout, Heavy, Engineer, Sniper) (`snapshot_buffer_safe`).
-- `net_spy`: Псевдоним для сетевых параметров для Спая (`snapshot_buffer_low`).
+- `net_projectiles`: Псевдоним сетевых параметров для классов использующих снаряды (Soldier, Pyro, Demoman, Medic) (`snapshot_buffer_off`).
+- `net_hitscan`: Псевдоним для параметров сети в классах использующих хитскан (Scout, Heavy, Engineer, Sniper) (`snapshot_buffer_x1`).
+- `net_spy`: Псевдоним для сетевых параметров для Спая (`snapshot_buffer_off`).
 
 ## Изменение вашего пресета
 
 mastercomfig поддерживает выбор предустановки после загрузки. Добавьте файл в папку `overrides` с именем `setup_hook.cfg`. В этот файл поместите требуемый стиль как `preset=presetname`. Предварительно установленные имена:
 
-- none
+- custom
 - ultra
 - high
 - medium

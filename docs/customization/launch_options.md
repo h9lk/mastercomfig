@@ -52,7 +52,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
-    * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after the first launch.
+    * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the Custom Preset. Remove after the first launch.
     * **-audiolanguage english** : Forces the game voiceline audio to English. This can be useful for when you use a different game language but would like the English audio.
     * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
 
@@ -61,7 +61,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
-    * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
+    * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the Custom Preset. Remove after first launch.
     * **-audiolanguage english** : Forces the game voiceline audio to English. This can be useful for when you use a different game language but would like the English audio.
     * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
     * **-snd_openal** : uses OpenAL instead of Mac Audio Queue, which can reduce latency and provide improved audio effects. :warning: **Experimental** as it is unsupported by Valve
@@ -73,7 +73,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
-    * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
+    * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the Custom Preset. Remove after first launch.
     * **-audiolanguage english** : Forces the game voiceline audio to English. This can be useful for when you use a different game language but would like the English audio.
     * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
 
