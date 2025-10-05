@@ -74,7 +74,7 @@ mastercomfig поддерживает выбор предустановки по
 - high
 - medium
 - low
-- destitute
+- very_low
 
 Можно проверить текущий выбранный пресет, введя в консоль `preset_level`.
 

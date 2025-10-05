@@ -1,5 +1,5 @@
 // This script checks the current ingame holiday, and then randomly picks a main menu song to play
-// This is a workaround to preloading causing music to not play normally.
+// This is a workaround to background maps causing music to not play normally.
 
 // we use alias because the sound needs to play after we disconnect, but we can only do RNG while on a listen server.
 // *# before file name tells engine to stream file in and also that it should be affected by the music volume slider

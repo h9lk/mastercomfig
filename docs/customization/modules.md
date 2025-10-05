@@ -180,6 +180,9 @@ Controls advanced shading commands which cause a material system reload.
 !!! warning
     Using any other option than **`shading=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons, but can also cause maps to render incorrectly.
 
+!!! warning
+    Using any other option than **`lighting_ex=high`** can cause visual glitches in items and props. Mainly, this affects weapon War Paints and Australium weapons, but can also cause maps to render incorrectly.
+
 - **CPU usage:** low
 - **GPU usage:** high
 
@@ -500,6 +503,9 @@ Default setting: based on which preset you are currently using.
 ### 3D Sky
 
 Controls the enhanced 3D skybox that is present in most maps.
+
+!!! warning
+    Disabling 3D sky on some AMD graphics cards in DirectX can cause flickering when going underwater. Either use the `-vulkan` launch option, or turn on 3D sky.
 
 - **CPU usage:** medium
 - **GPU usage:** medium
