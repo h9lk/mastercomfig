@@ -248,7 +248,7 @@ Controls weapon effects, particles, and other miscellaneous effects
 Default setting: based on which preset you are currently using.
 
 - **`effects=very_low`**: Disables impact effects, water splash effects, weather particles, muzzle flashes, shell casing ejection, and temp ent collision. Collapses spawning particles into existing particles (including bullet tracers and flames) together, reduces particle density/quality. Disables monitors.
-- **`effects=low`**: Disables impact effects, water splash effects, weather particles, muzzle flashes, shell casing ejection, and temp ent collision. Collapses spawning particles into existing particles (including bullet tracers and flames) together, reduces particle density/quality. Disables monitors.
+- **`effects=low`**: Disables impact effects, water splash effects, weather particles, muzzle flashes, shell casing ejection, and temp ent collision. Reduces particle density/quality. Disables monitors.
 - **`effects=medium`**: Disables weather particles, muzzle flashes, and shell casing ejection. Reduces particle density/quality. Disables monitors.
 - **`effects=high`**: Uses full particle density/quality. 1K render resolution for monitors.
 - **`effects=ultra`**: Uses full particle density/quality, and forces full simulation for all particles. 1K render resolution for monitors.
