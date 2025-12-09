@@ -940,10 +940,10 @@
             "display": "Off (not recommended)"
           },
           {
-            "value": "1x"
+            "value": "x1"
           },
           {
-            "value": "2x"
+            "value": "x2"
           },
           {
             "value": "custom"
