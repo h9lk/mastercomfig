@@ -4,6 +4,8 @@ description: Помогите мне в работе и улучшении maste
 
 # Поддержка
 
+**NEW** Visit the [support me](https://comfig.app/support_me) page for more information on how to support me!
+
 Вы можете поддержать проект mastercoms используя [Liberapay](https://liberapay.com/mastercoms/) или [Ko-fi](https://ko-fi.com/mastercoms) деньгами, или вы можете подарить предметы через [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N). На [Discord сервере](https://discord.com/servers/mastercomfig-389089828249010188) также действует подписка для поддержки за $2,99.
 
 Вы также можете подарить мне подарок, используя средства кошелька Steam! [Добавить меня в друзья в Steam](https://steamcommunity.com/id/mastercoms/) (оставьте комментарий о подарке!) Затем вы можете подарить мне [Цифровую карту Steam](https://store.steampowered.com/digitalgiftcards/selectgiftcard) или подарите мне [игру из списка желаний](https://store.steampowered.com/wishlist/profiles/76561198046110893/#sort=price).
