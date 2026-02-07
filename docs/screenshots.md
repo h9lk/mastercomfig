@@ -6,23 +6,23 @@ description: mastercomfig screenshots for all presets.
 
 ## Ultra
 
-![sawmill ultra](/img/presets/ultra-hq.webp){ loading=lazy }
+![sawmill ultra](../img/presets/ultra-hq.webp){ loading=lazy }
 
 ## High
 
-![sawmill high](/img/presets/high-hq.webp){ loading=lazy }
+![sawmill high](../img/presets/high-hq.webp){ loading=lazy }
 
 ## Medium
 
-![sawmill medium](/img/presets/medium-hq.webp){ loading=lazy }
+![sawmill medium](../img/presets/medium-hq.webp){ loading=lazy }
 
 ## Low
 
-![sawmill low](/img/presets/low-hq.webp){ loading=lazy }
+![sawmill low](../img/presets/low-hq.webp){ loading=lazy }
 
 ## Destitute
 
-![sawmill destitute](/img/presets/destitute-hq.webp){ loading=lazy }
+![sawmill destitute](../img/presets/destitute-hq.webp){ loading=lazy }
 
 ## Preset Screenshot Config
 
