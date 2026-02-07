@@ -21,11 +21,7 @@ mastercomfig is constantly updated with tweaks, new features and documentation i
 
 ## Support me
 
-You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) with money, or you can gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
-
-<!-- You can use Ko-fi to get [a config commission](https://ko-fi.com/mastercoms/commissions), where I personally tune a config exactly to your preferences and PC setup. I can also do this with a trade for 3 keys. There is also an addon where I can do advanced scripting at your request (6 keys if paying with a trade). -->
-
-<!-- Finally, you can buy early access to the config for a month through [Ko-fi](https://ko-fi.com/mastercoms/shop). This will give you access to more frequent updates released throughout the month, rather than the monthly stable releases of the config. -->
+Visit the [support me](https://comfig.app/support_me) page for more information on how to support me!
 
 You have my endless gratitude if you support me with money or gift items, and this support encourages me so much!
 

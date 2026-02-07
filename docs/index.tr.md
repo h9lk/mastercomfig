@@ -21,11 +21,7 @@ mastercomfig, kullanıcı geri bildirimlerine ve karşılaştırmalara dayalı o
 
 ## Bana Destek Olun
 
-mastercoms'u [Liberapay](https://liberapay.com/mastercoms/) ya da [Ko-fi](https://ko-fi.com/mastercoms) kullanarak para ile destekleyebilirsiniz veya [takas teklifleri](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N) aracılığıyla eşya hediye edebilirsiniz.
-
-<!-- [Bir config komisyonu](https://ko-fi.com/mastercoms/commissions) almak için config’i bizzat tercihlerinize ve PC özelliklerinize göre ayarladığım Ko-fi’yi kullanabilirsiniz. Bunu ayrıca 3 anahtar takası ile de gerçekleştirebilirim. İsteğiniz üzerine gelişmiş komut dosyası yazabileceğim bir eklenti de var (takasla ödeme yapıyorsanız 6 anahtar). -->
-
-<!-- Son olarak, [Ko-fi](https://ko-fi.com/mastercoms/shop) aracılığıyla bir aylığına config’e erken erişim satın alabilirsiniz. Bu, aylık sürekli config güncellemelerine erişim yerine bir ay boyunca daha sık yayınlanan güncellemelere erişim imkanı sunar. -->
+Visit the [support me](https://comfig.app/support_me) page for more information on how to support me!
 
 Beni para ya da hediye ile desteklemenize minnet duyarım ve bu destek beni çok tevşik ediyor!
 
