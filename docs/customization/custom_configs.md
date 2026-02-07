@@ -67,9 +67,9 @@ You can run them manually in your class config if you play a subclass, like Demo
 
 You can also re-alias them to use entirely custom network settings.
 
-- `net_projectiles`: Alias for network settings on projectile classes (Soldier, Pyro, Demoman, Medic) (`snapshot_buffer_off`).
-- `net_hitscan`: Alias for network settings on hitscan classes (Scout, Heavy, Engineer, Sniper) (`snapshot_buffer_x1`).
-- `net_spy`: Alias for network settings on Spy (`snapshot_buffer_off`).
+- `net_projectiles`: Alias for network settings on projectile classes (Soldier, Pyro, Demoman, Medic) (`snapshot_buffer_off`, `cl_pred_optimize 1`, `cl_smooth 1`).
+- `net_hitscan`: Alias for network settings on hitscan classes (Scout, Heavy, Engineer, Sniper) (`snapshot_buffer_x1`, `cl_pred_optimize 2`, `cl_smooth 1`).
+- `net_spy`: Alias for network settings on Spy (`snapshot_buffer_off`, `cl_pred_optimize 1`, `cl_smooth 0`).
 
 ## Changing your preset
 
