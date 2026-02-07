@@ -23,6 +23,6 @@ Thus, it's highly appreciated to benchmark mastercomfig and any changes you make
 
 mastercomfig provides a service for recording benchmark data so that we can improve it together based on data.
 
-[**Submission form**](https://airtable.com/shrckjh0jqeZdeIYN)
+[**Submission form**](https://airtable.com/appn2QBq1yIQ8KhbS/pagqUSdVMclVJoeoH/form)
 
-[**Results**](https://airtable.com/shrxpulcQulOi16Wm)
+[**Results**](https://airtable.com/appn2QBq1yIQ8KhbS/shrqM4vyQEaWBDW05)

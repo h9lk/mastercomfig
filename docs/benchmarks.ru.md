@@ -26,6 +26,6 @@ description: Узнайте, как тестировать TF2 и измерят
 
 mastercomfig предоставляет сервис для записи бенчмарков, чтобы мы могли вместе улучшить их на основе данных.
 
-[**Форма подачи**](https://airtable.com/shrckjh0jqeZdeIYN)
+[**Форма подачи**](https://airtable.com/appn2QBq1yIQ8KhbS/pagqUSdVMclVJoeoH/form)
 
-[**Результаты**](https://airtable.com/shrxpulcQulOi16Wm)
+[**Результаты**](https://airtable.com/appn2QBq1yIQ8KhbS/shrqM4vyQEaWBDW05)
