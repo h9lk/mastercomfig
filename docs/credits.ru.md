@@ -33,11 +33,11 @@ mastercomfig не смог бы быть тем, чем он является с
 
 - [JarateKing](https://github.com/JarateKing) за всю удивительную работу над модификацией и конфигурацией TF2.
 
-- jane за shrinkKeyValues bash скрипт
+- wgetJane за shrinkKeyValues bash скрипт
 
 - Fraklin за предустановленные скриншоты и сопровождающий скрипт cfg
 
-- Lucy за скриншоты взрыва и сопровождающий скрипт cfg
+- Niterux за скриншоты взрыва и сопровождающий скрипт cfg
 
 - [Сообщество разработчиков Valve](https://developer.valvesoftware.com/wiki/Main_Page)
   за документацию переменных консоли и механик движка Source
