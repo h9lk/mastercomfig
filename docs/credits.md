@@ -33,11 +33,11 @@ Many people and organizations have helped or inspired mastercomfig in some way:
 
 - [JarateKing](https://github.com/JarateKing) for all their fantastic work on TF2 modding and configuration
 
-- jane for the shrinkKeyValues bash script
+- wgetJane for the shrinkKeyValues bash script
 
 - Fraklin for module/preset previews with accompanying cfg script
 
-- Lucy for explosion screenshots and accompanying cfg script
+- Niterux for explosion screenshots and accompanying cfg script
 
 - The [Valve Developer Community](https://developer.valvesoftware.com/wiki/Main_Page)
   for their documentation of the Source Engine
