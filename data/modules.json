@@ -552,10 +552,6 @@
           },
           {
             "value": "trilinear",
-            "display": "Trilinear filtering without bicubic lightmaps"
-          },
-          {
-            "value": "trilinear_plus",
             "display": "Trilinear filtering"
           },
           {
