@@ -12,7 +12,6 @@ HUD использует обширную систему под название
 
 * [JarateKing HUD reference](https://github.com/JarateKing/TF2-Hud-Reference) - Отличный справочник по всем видам редактирования HUD, от основ до продвинутых и технических аспектов.
 * [DoodleStuff TF2 HUD Editing Guide](https://doodlesstuff.com/?p=tf2hud) - Известное, простое в использовании руководство, в котором рассказывается о том, как освоить большинство функций редактирования HUD.
-* [Flame's Guide to HUDs](https://issuu.com/stefanbunduc/docs/flamehud) - Руководство в формате PDF, в котором рассматриваются общие элементы HUD
 * Путеводитель Боэна по HUDам - [Часть 1](https://mods.fightingamphibians.org/hud1.png) и [Часть 2](https://mods.fightingamphibians.org/hud2.jpg)
 * [Revan's resource file list](https://github.com/cooolbros/tf2-res-file-list) - Список элементов HUD с изображениями и способы их редактирования
 * [Whisker's SourceScheme Documentation](https://imgur.com/a/kRyiWE2) - Пошаговая визуализация по настройке Source Scheme (игровой пользовательский интерфейс в меню, как браузер сервера)
