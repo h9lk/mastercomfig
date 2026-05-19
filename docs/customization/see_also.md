@@ -49,7 +49,7 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 ## Graphics simplification
 
 * [CleanTF2+](https://github.com/JarateKing/CleanTF2plus)
-  — Makes TF2 a lot cleaner and simpler, includes NoHats
+  — Strips down TF2's visuals into simplified textures, includes NoHats. Note: if you want a version allowed for competitive leagues, try [FlatTF2RGL](https://github.com/angiepawing/FlatTF2RGL)!
 
 * [No-Hats-Mod bgum](https://github.com/Fedora31/no-hats-bgum)
   — Removes cosmetics like hats, botkillers, skins, and much more
