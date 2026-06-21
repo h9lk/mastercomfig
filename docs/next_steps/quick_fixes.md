@@ -154,6 +154,12 @@ Check to see if you have `-dxlevel 100` in your TF2 launch options, it may have 
 
 Disabling 3D sky on some AMD graphics cards in DirectX can cause flickering when going underwater. Either use the `-vulkan` launch option, or turn on 3D sky.
 
+## I am not able to join the Discord server
+
+Double Counter is used by default to verify joins, you may get kicked after 10 minutes if you do not verify. This is so we prevent bots from accessing the server and sending scam messages. You can access Double Counter verification by clicking the green Verify button in the #rules channel.
+
+If you wish to appeal Double Counter not accepting your account, or you do not wish to use Double Counter out of privacy concerns, please fill out the [verification form](https://dyno.gg/form/1750593f).
+
 ## I got banned from the Discord server
 
 You can submit a single [ban appeal](https://dyno.gg/form/dae64461) a few days after receiving your ban.
