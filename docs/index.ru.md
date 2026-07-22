@@ -7,7 +7,7 @@
 [![Join the Discord chat](https://img.shields.io/badge/Discord-mastercomfig-5865F2.svg?style=flat-square&logo=discord)](https://comfig.app/discord)
 [![Join the Steam Group](https://img.shields.io/badge/Steam-mastercomfig-00adee.svg?logo=steam&style=flat-square)](https://steamcommunity.com/groups/comfig)
 
-![mastercomfig logo](../img/logo.svg){ width=100 align=right }
+![mastercomfig logo](img/logo.svg){ width=100 align=right }
 
 # mastercomfig
 
@@ -26,3 +26,4 @@ Visit the [support me](https://comfig.app/support_me) page for more information 
 Бесконечная благодарность, всем тем, кто поддерживает меня деньгами или подарками, и эта поддержка меня очень воодушевляет!
 
 Если вы не можете поддержать меня указанными выше способами, это нормально! Я всегда дорожу вашей благодарностью и это много значит для меня!
+
